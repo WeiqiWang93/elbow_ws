@@ -1,0 +1,82 @@
+\hypertarget{class_euler_widget}{}\doxysection{Euler\+Widget Class Reference}
+\label{class_euler_widget}\index{EulerWidget@{EulerWidget}}
+
+
+Inheritance diagram for Euler\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_euler_widget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Euler\+Widget\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{class_euler_widget__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_euler_widget_ab72b35b8bca8a4e15d9dfa2239447c96}\label{class_euler_widget_ab72b35b8bca8a4e15d9dfa2239447c96}} 
+enum {\bfseries Axis} \{ {\bfseries X} = 0, 
+{\bfseries Y} = 1, 
+{\bfseries Z} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_euler_widget_a4417a7aca4667afe0abc5a0c9601049f}\label{class_euler_widget_a4417a7aca4667afe0abc5a0c9601049f}} 
+void {\bfseries set\+Value} (const Eigen\+::\+Quaterniond \&q)
+\item 
+\mbox{\Hypertarget{class_euler_widget_a3898fbf46f65620f63f20b43da1ad793}\label{class_euler_widget_a3898fbf46f65620f63f20b43da1ad793}} 
+void {\bfseries set\+Euler\+Angles} (double e1, double e2, double e3, bool normalize)
+\item 
+\mbox{\Hypertarget{class_euler_widget_acaa914d507890a269a533eb46cf76e4e}\label{class_euler_widget_acaa914d507890a269a533eb46cf76e4e}} 
+void {\bfseries set\+Euler\+Axes} (uint a1, uint a2, uint a3)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_euler_widget_a4986d499a8a20a9918a5a02c71fd0326}\label{class_euler_widget_a4986d499a8a20a9918a5a02c71fd0326}} 
+void \mbox{\hyperlink{class_euler_widget_a4986d499a8a20a9918a5a02c71fd0326}{value\+Changed}} (const Eigen\+::\+Quaterniond \&q)
+\begin{DoxyCompactList}\small\item\em quaternion value has changed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_euler_widget_aab293ab39c6db352bf6a954f155635f5}\label{class_euler_widget_aab293ab39c6db352bf6a954f155635f5}} 
+void \mbox{\hyperlink{class_euler_widget_aab293ab39c6db352bf6a954f155635f5}{axes\+Changed}} (uint a1, uint a2, uint a3)
+\begin{DoxyCompactList}\small\item\em euler axis selection changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_euler_widget_afbf68927d12e466a278fa9358be6171d}\label{class_euler_widget_afbf68927d12e466a278fa9358be6171d}} 
+{\bfseries Euler\+Widget} (Q\+Widget $\ast$parent=0)
+\item 
+\mbox{\Hypertarget{class_euler_widget_aff50b98e91a0e4f43c36f04a4110f108}\label{class_euler_widget_aff50b98e91a0e4f43c36f04a4110f108}} 
+const Eigen\+::\+Quaterniond \& {\bfseries value} () const
+\item 
+\mbox{\Hypertarget{class_euler_widget_ad959a46174c568b91c7758c9b0f370af}\label{class_euler_widget_ad959a46174c568b91c7758c9b0f370af}} 
+void \mbox{\hyperlink{class_euler_widget_ad959a46174c568b91c7758c9b0f370af}{get\+Gui\+Axes}} (uint a\mbox{[}3\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em retrieve indices of axes selected in G\+UI \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_euler_widget_a9fa0fd36e318d3238f39595fddf0cbe8}\label{class_euler_widget_a9fa0fd36e318d3238f39595fddf0cbe8}} 
+void \mbox{\hyperlink{class_euler_widget_a9fa0fd36e318d3238f39595fddf0cbe8}{get\+Gui\+Angles}} (double e\mbox{[}$\,$\mbox{]}) const
+\begin{DoxyCompactList}\small\item\em retrieve angles from G\+UI \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_euler_widget_a0726b94036c939bee23cda4c197f13c9}\label{class_euler_widget_a0726b94036c939bee23cda4c197f13c9}} 
+void {\bfseries axis\+Changed} (int axis)
+\item 
+\mbox{\Hypertarget{class_euler_widget_aef44e913c3f49174a33f71a6acd8aa02}\label{class_euler_widget_aef44e913c3f49174a33f71a6acd8aa02}} 
+void {\bfseries angle\+Changed} (double angle)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld\+\_\+agni\+\_\+tf\+\_\+tools/src/common/Euler\+Widget.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld\+\_\+agni\+\_\+tf\+\_\+tools/src/common/Euler\+Widget.\+cpp\end{DoxyCompactItemize}

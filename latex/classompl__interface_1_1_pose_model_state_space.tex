@@ -1,0 +1,85 @@
+\hypertarget{classompl__interface_1_1_pose_model_state_space}{}\doxysection{ompl\+\_\+interface\+::Pose\+Model\+State\+Space Class Reference}
+\label{classompl__interface_1_1_pose_model_state_space}\index{ompl\_interface::PoseModelStateSpace@{ompl\_interface::PoseModelStateSpace}}
+
+
+Inheritance diagram for ompl\+\_\+interface\+::Pose\+Model\+State\+Space\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classompl__interface_1_1_pose_model_state_space__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ompl\+\_\+interface\+::Pose\+Model\+State\+Space\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classompl__interface_1_1_pose_model_state_space__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classompl__interface_1_1_pose_model_state_space_1_1_state_type}{State\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a31ed045f183404e8719b7c2d3fc3f8e2}\label{classompl__interface_1_1_pose_model_state_space_a31ed045f183404e8719b7c2d3fc3f8e2}} 
+{\bfseries Pose\+Model\+State\+Space} (const \mbox{\hyperlink{structompl__interface_1_1_model_based_state_space_specification}{Model\+Based\+State\+Space\+Specification}} \&spec)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_ac468d411e28aa867b15b4fd4630310db}\label{classompl__interface_1_1_pose_model_state_space_ac468d411e28aa867b15b4fd4630310db}} 
+virtual ompl\+::base\+::\+State $\ast$ {\bfseries alloc\+State} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a69c6822436cf6575e6462c54ba131656}\label{classompl__interface_1_1_pose_model_state_space_a69c6822436cf6575e6462c54ba131656}} 
+virtual void {\bfseries free\+State} (ompl\+::base\+::\+State $\ast$state) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a89f925228a0e984d7cb6854761c5dde6}\label{classompl__interface_1_1_pose_model_state_space_a89f925228a0e984d7cb6854761c5dde6}} 
+virtual void {\bfseries copy\+State} (ompl\+::base\+::\+State $\ast$destination, const ompl\+::base\+::\+State $\ast$source) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a6fae935ccabb262e52c98f43f3cd0140}\label{classompl__interface_1_1_pose_model_state_space_a6fae935ccabb262e52c98f43f3cd0140}} 
+virtual void {\bfseries interpolate} (const ompl\+::base\+::\+State $\ast$from, const ompl\+::base\+::\+State $\ast$to, const double t, ompl\+::base\+::\+State $\ast$state) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_af321680f4c5250975235c164bfcaeb81}\label{classompl__interface_1_1_pose_model_state_space_af321680f4c5250975235c164bfcaeb81}} 
+virtual double {\bfseries distance} (const ompl\+::base\+::\+State $\ast$state1, const ompl\+::base\+::\+State $\ast$state2) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a496adfb78dcad8cd9d2e26970e28d5e7}\label{classompl__interface_1_1_pose_model_state_space_a496adfb78dcad8cd9d2e26970e28d5e7}} 
+virtual double {\bfseries get\+Maximum\+Extent} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a8812631231711661f0685537c341923b}\label{classompl__interface_1_1_pose_model_state_space_a8812631231711661f0685537c341923b}} 
+virtual ompl\+::base\+::\+State\+Sampler\+Ptr {\bfseries alloc\+Default\+State\+Sampler} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a66f70edbea93c843db6c5e13d4b04f31}\label{classompl__interface_1_1_pose_model_state_space_a66f70edbea93c843db6c5e13d4b04f31}} 
+bool {\bfseries compute\+State\+FK} (ompl\+::base\+::\+State $\ast$state) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_afecfd38e747af5a6fa475759c4be2c5d}\label{classompl__interface_1_1_pose_model_state_space_afecfd38e747af5a6fa475759c4be2c5d}} 
+bool {\bfseries compute\+State\+IK} (ompl\+::base\+::\+State $\ast$state) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_a88a8a6c0a839d9a7be234e8cf0a7cf9c}\label{classompl__interface_1_1_pose_model_state_space_a88a8a6c0a839d9a7be234e8cf0a7cf9c}} 
+bool {\bfseries compute\+StateK} (ompl\+::base\+::\+State $\ast$state) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_acc396f92e13a5e5f3ee4caba8706e025}\label{classompl__interface_1_1_pose_model_state_space_acc396f92e13a5e5f3ee4caba8706e025}} 
+virtual void \mbox{\hyperlink{classompl__interface_1_1_pose_model_state_space_acc396f92e13a5e5f3ee4caba8706e025}{set\+Planning\+Volume}} (double minX, double maxX, double minY, double maxY, double minZ, double maxZ)
+\begin{DoxyCompactList}\small\item\em Set the planning volume for the possible S\+E2 and/or S\+E3 components of the state space. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_ac15ce78ce6e5b99100e44bda3f98e821}\label{classompl__interface_1_1_pose_model_state_space_ac15ce78ce6e5b99100e44bda3f98e821}} 
+virtual void \mbox{\hyperlink{classompl__interface_1_1_pose_model_state_space_ac15ce78ce6e5b99100e44bda3f98e821}{copy\+To\+O\+M\+P\+L\+State}} (ompl\+::base\+::\+State $\ast$state, const robot\+\_\+state\+::\+Robot\+State \&rstate) const
+\begin{DoxyCompactList}\small\item\em Copy the data from a set of joint states to an O\+M\+PL state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_aa6d1c3f180db2b16223bc1f997a84a7b}\label{classompl__interface_1_1_pose_model_state_space_aa6d1c3f180db2b16223bc1f997a84a7b}} 
+virtual void {\bfseries sanity\+Checks} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_pose_model_state_space_abbd781da5142fc3958f31ed556170ab6}\label{classompl__interface_1_1_pose_model_state_space_abbd781da5142fc3958f31ed556170ab6}} 
+static const std\+::string {\bfseries P\+A\+R\+A\+M\+E\+T\+E\+R\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+Y\+PE} = \char`\"{}Pose\+Model\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/include/moveit/ompl\+\_\+interface/parameterization/work\+\_\+space/pose\+\_\+model\+\_\+state\+\_\+space.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/src/parameterization/work\+\_\+space/pose\+\_\+model\+\_\+state\+\_\+space.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="scripts.operations.Mission.pause_op" name="scripts.operations.Mission.pause_op">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,240,105"/>
+<area shape="rect" id="node2" href="$classscripts_1_1operations_1_1_operation.html#a0ae727c03b26975eaefb92e9f4f768a6" title=" " alt="" coords="288,5,477,47"/>
+<area shape="rect" id="node3" href="$classscripts_1_1operations_1_1_mission.html#a33fad095a88c152d4c648a175aae06af" title=" " alt="" coords="293,71,472,112"/>
+<area shape="rect" id="node4" href="$classscripts_1_1operations_1_1_mission.html#aec3306654704c22db596cf99c1a06999" title=" " alt="" coords="293,136,472,177"/>
+</map>

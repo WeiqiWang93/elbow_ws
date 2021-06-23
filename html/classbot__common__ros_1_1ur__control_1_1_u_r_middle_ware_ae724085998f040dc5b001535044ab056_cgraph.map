@@ -1,0 +1,8 @@
+<map id="bot_common_ros.ur_control.\lURMiddleWare.check_attack" name="bot_common_ros.ur_control.\lURMiddleWare.check_attack">
+<area shape="rect" id="node1" title=" " alt="" coords="5,143,199,184"/>
+<area shape="rect" id="node2" href="$classbot__common__ros_1_1ur__control_1_1_u_r_middle_ware.html#a4bad4c8c6d5b0e46bb77d44270bfdec6" title=" " alt="" coords="250,5,467,47"/>
+<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__control_1_1_u_r_middle_ware.html#a8b15ad5aec8c00babbc4e06da99147cc" title=" " alt="" coords="253,71,464,112"/>
+<area shape="rect" id="node4" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_slot.html#a171631ed18be76dd8f6a5a2ea0ad7d3f" title=" " alt="" coords="265,135,452,191"/>
+<area shape="rect" id="node5" href="$classbot__common__ros_1_1ur__control_1_1_u_r_middle_ware.html#a12a1146c36ccf38d3053396a82761bae" title=" " alt="" coords="247,215,471,256"/>
+<area shape="rect" id="node6" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#acba9758d2b006d03e72fca62dc037432" title=" " alt="" coords="253,279,464,335"/>
+</map>

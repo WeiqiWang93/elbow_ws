@@ -1,0 +1,8 @@
+prefix=/home/rocky/catkin_ws/devel
+
+Name: ur16e_description
+Description: Description of ur16e_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

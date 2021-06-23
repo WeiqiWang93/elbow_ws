@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+
+  <xacro:property name="pi" value="3.14159265" />
+  <xacro:property name="force_sensor_width" value="0.04" />
+  <xacro:macro name="cylinder_inertial" params="radius length mass *origin">
+    <inertial>
+      <mass value="${mass}" />
+      <xacro:insert_block name="origin" />
+      <inertia ixx="${0.0833333 * mass * (3 * radius * radius + length * length)}" ixy="0.0" ixz="0.0"
+        iyy="${0.0833333 * mass * (3 * radius * radius + length * length)}" iyz="0.0"
+        izz="${0.5 * mass * radius * radius}" />
+    </inertial>
+  </xacro:macro>
+
+
+  <xacro:macro name="ur_ow_robot" params="prefix">
+
+    <link name="${prefix}link">
+      <visual name='visual'>
+        <geometry>
+         <cylinder radius="0.11" length="0.005" />
+        </geometry>
+        <!-- <origin xyz="-0.0 0.138 0.04" rpy="1.57 0 0" /> -->
+        <origin xyz="-0.0 0.0 0.0" rpy="0 1.57 0" />
+      </visual>
+      <collision>
+        <geometry>
+         <cylinder radius="0.11" length="0.005" />
+        </geometry>
+        <!-- <origin xyz="-0.0 0.138 0.04" rpy="1.57 0 0" /> -->
+        <!--origin xyz="-0.0 0.0 0.0" rpy="1.57 0 0" /-->
+      </collision>
+    </link>
+
+        <link name="${prefix}guard_link">
+      <visual name='visual'>
+        <geometry>
+          <!-- <mesh filename="package://bot_digger_description/meshes/Hitachi_w_guard_wowheel.STL" /> -->
+        <mesh filename="package://bot_digger_description/meshes/191114Metabo.STL" 
+              scale="1.0 1.0 1.0"/>
+        </geometry>
+       <!-- <origin xyz="0.116 0.158 -0.265" rpy="0 0 3.14" /> -->
+       <!--origin xyz="0.116 0.05 -0.265" rpy="0 0 3.14" /-->
+      </visual>
+      <collision>
+        <geometry>
+          <!-- <mesh filename="package://bot_digger_description/meshes/Hitachi_w_guard_wowheel.STL" /> -->
+           <mesh filename="package://bot_digger_description/meshes/191114Metabo.STL" 
+                 scale="1.0 1.0 1.0"/>
+        </geometry>
+        <!-- <origin xyz="0.116 0.158 -0.265" rpy="0 0 3.14" /> -->
+        <origin xyz="0.116 0.05 -0.265" rpy="0 0 3.14" />
+      </collision>
+    </link>
+
+      <joint name="${prefix}blade_joint" type="fixed">
+      <parent link = "${prefix}tip_link" />
+      <child link="${prefix}link" />
+      <!-- <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" /> -->
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0" />
+    </joint>
+
+  <!-- attach to tool0  directions: z-pointed towards tool tip, y is "up", x is "out"-->
+
+    <joint name="${prefix}fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}guard_link" />
+      <!-- <origin xyz="0.0 0.0 0.065" rpy="0.0 0.0 3.14" /> -->
+     <origin xyz="0.0 0.0 ${0.0}" rpy="0.0 0.0 0" />
+    </joint>
+  
+    <joint name="${prefix}tip_fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}tip_link" />
+      <!-- <origin xyz="-0.0 0.121 0.1" rpy="0.0 0.0 ${pi/2.0}" /> -->
+      <origin xyz="0.0 -0.079 0.301" rpy="0.0 0.0 ${pi/2.0}" />
+    </joint>
+
+    <link name="${prefix}tip_link">
+      <collision>
+        <geometry>
+          <box size="0.03 0.03 0.03"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 -0.01"/>
+      </collision>
+    </link>
+
+
+
+</xacro:macro>
+
+  
+</robot>

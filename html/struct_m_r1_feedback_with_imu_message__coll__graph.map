@@ -1,0 +1,6 @@
+<map id="MR1FeedbackWithImuMessage" name="MR1FeedbackWithImuMessage">
+<area shape="rect" id="node1" title=" " alt="" coords="69,95,278,121"/>
+<area shape="rect" id="node2" href="$struct_m_r1_status.html" title=" " alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node3" href="$struct_m_r1_imu_status.html" title=" " alt="" coords="118,5,229,32"/>
+<area shape="rect" id="node4" href="$struct_m_r1_packet_header.html" title=" " alt="" coords="253,5,387,32"/>
+</map>

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur_ow" >
+
+  <xacro:arg name="simulation" default="false" />
+  <xacro:arg name="use_metabo" default="false" />
+
+  <link name="base"/>
+
+  <xacro:include filename="$(find bot_digger_description)/urdf/robo_saw.urdf.xacro"/>
+
+  <xacro:if value="$(arg use_metabo)">
+    <xacro:robo_saw type="metabo">
+    </xacro:robo_saw>
+  </xacro:if>
+
+  <xacro:unless value="$(arg use_metabo)">
+    <xacro:robo_saw type="hitachi">
+    </xacro:robo_saw>
+  </xacro:unless>
+  
+  <joint name="base_saw_base_fixed_joint" type="fixed">    
+    <origin xyz="-0.939 0.368 0.21" rpy="-0.0 0.0 0.0"/>
+    <parent link="base"/>
+    <child link="saw_base"/>
+  </joint>
+
+<xacro:include filename="$(find bot_digger_description)/urdf/robo_chisel.urdf.xacro"/>
+
+<joint name="base_chisel_base_fixed_joint" type="fixed">
+    <origin xyz="0.984 0.368 0.21" rpy="0.0 0.0 0.0"/>
+    <parent link="base"/>
+    <child link="chisel_base"/>
+  </joint>
+
+<xacro:include filename="$(find bot_digger_description)/urdf/include/cameras.urdf.xacro"/>
+
+  <xacro:if value="$(arg use_metabo)">
+  <xacro:ow_realcam parent="saw_tip_link" suffix="saw_guard_metabo">
+
+  <origin rpy="1.57 0.0 1.57" xyz="0.14 0.03 -0.135" />
+  </xacro:ow_realcam>
+ </xacro:if>
+  <!--xacro:include filename="$(find bot_digger_description)/urdf/include/zed.urdf.xacro"/>
+
+  <xacro:zed_camera/-->
+
+<!-- <xacro:include filename="$(find bot_digger_description)/urdf/include/zed1.urdf.xacro"/>
+<xacro:zed1_camera/>
+
+<xacro:include filename="$(find bot_digger_description)/urdf/include/zed2.urdf.xacro"/>
+<xacro:zed2_camera/>
+
+
+
+
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_imu.urdf.xacro"/>
+  
+  <xacro:ow_imu xyz="-0.97 0.07 0.35" rpy="0 0 ${pi/2}" parent="base" suffix="left"/>
+  <xacro:ow_imu xyz="0.14 0.07 0.35" rpy="0 0 ${pi/2}" parent="base" suffix="right"/> -->
+
+  <!-- Include mobilebase -->
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_mobilebase_crab.urdf.xacro"/>
+  <xacro:ow_mobilebase />
+
+  <link name="calib_marker">
+    <visual>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/191218UR10BaseCali.STL" />
+      </geometry>
+    </visual>
+    <gravity>true</gravity>
+    <collision>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/191218UR10BaseCali.STL" />
+      </geometry> 
+    </collision>
+  </link>
+
+  <joint name="calib_marker_chisel_base_fixed_joint" type="fixed">    
+    <parent link="chisel_base"/>
+    <child link="calib_marker"/>
+  </joint>
+
+
+<xacro:if value="$(arg simulation)">
+<!--Include Wheels -->
+  <!-- <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_wheels.urdf.xacro"/>
+  <xacro:ow_wheels suffix="1" left_xyz="-0.45 -0.670 0.25" right_xyz="-0.45 0.65 0.25"/>
+  <xacro:ow_wheels suffix="2" left_xyz="-0.25 -0.670 0.25" right_xyz="-0.25 0.65 0.25"/>
+  <xacro:ow_wheels suffix="3" left_xyz="0.05 -0.670 0.25" right_xyz="0.05 0.65 0.25"/>
+  <xacro:ow_wheels suffix="4" left_xyz="0.25 -0.670 0.25" right_xyz="0.25 0.65 0.25"/>
+  <xacro:ow_wheels suffix="5" left_xyz="0.40 -0.670 0.25" right_xyz="0.40 0.65 0.25"/> -->
+  <!-- <gazebo>
+      <plugin name="force_based_move_controller" filename="libgazebo_ros_force_based_move.so">
+        <commandTopic>/mobile_base/commands/velocity</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometryRate>20.0</odometryRate>
+        <robotBaseFrame>base_footprint</robotBaseFrame>
+        <yaw_velocity_p_gain>50000</yaw_velocity_p_gain>
+        <x_velocity_p_gain>300000</x_velocity_p_gain>
+        <y_velocity_p_gain>300000</y_velocity_p_gain>
+        <publishOdometryTf>0</publishOdometryTf>
+      </plugin>
+  </gazebo> -->
+</xacro:if>
+
+</robot>

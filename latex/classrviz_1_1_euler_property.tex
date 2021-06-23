@@ -1,0 +1,99 @@
+\hypertarget{classrviz_1_1_euler_property}{}\doxysection{rviz\+::Euler\+Property Class Reference}
+\label{classrviz_1_1_euler_property}\index{rviz::EulerProperty@{rviz::EulerProperty}}
+
+
+Inheritance diagram for rviz\+::Euler\+Property\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classrviz_1_1_euler_property__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rviz\+::Euler\+Property\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classrviz_1_1_euler_property__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrviz_1_1_euler_property_1_1invalid__axes}{invalid\+\_\+axes}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_a201102a737423ecff07759651047bf10}\label{classrviz_1_1_euler_property_a201102a737423ecff07759651047bf10}} 
+void {\bfseries set\+Quaternion} (const Eigen\+::\+Quaterniond \&q)
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_a0e354cd17d9ccb656117a0aa48532e7d}\label{classrviz_1_1_euler_property_a0e354cd17d9ccb656117a0aa48532e7d}} 
+void {\bfseries set\+Euler\+Angles} (double euler\mbox{[}3\mbox{]}, bool normalize)
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_a080c8dcfa458537070d0f6f26b3c0be5}\label{classrviz_1_1_euler_property_a080c8dcfa458537070d0f6f26b3c0be5}} 
+void {\bfseries set\+Euler\+Angles} (double e1, double e2, double e3, bool normalize)
+\item 
+void \mbox{\hyperlink{classrviz_1_1_euler_property_adf811fd30f9dcd3704cb9a3f75f68da5}{set\+Euler\+Axes}} (const Q\+String \&axes\+\_\+spec)
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classrviz_1_1_euler_property_aac5c330a718bd4acd9d26364e4597205}{quaternion\+Changed}} (Eigen\+::\+Quaterniond q)
+\item 
+void \mbox{\hyperlink{classrviz_1_1_euler_property_a2b07f31299239d94080ece82f6282283}{status\+Update}} (int, const Q\+String \&, const Q\+String \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_a707af76e2cd9e6b3bc9fe737c8bdb89c}\label{classrviz_1_1_euler_property_a707af76e2cd9e6b3bc9fe737c8bdb89c}} 
+{\bfseries Euler\+Property} (Property $\ast$parent=0, const Q\+String \&name=Q\+String(), const Eigen\+::\+Quaterniond \&value=Eigen\+::\+Quaterniond\+::\+Identity(), const char $\ast$changed\+\_\+slot=0, Q\+Object $\ast$receiver=0)
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_acc37a54c0cf818781be7f301b87585b8}\label{classrviz_1_1_euler_property_acc37a54c0cf818781be7f301b87585b8}} 
+Eigen\+::\+Quaterniond {\bfseries get\+Quaternion} () const
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_afe272d0d3550721802207d40ea540d37}\label{classrviz_1_1_euler_property_afe272d0d3550721802207d40ea540d37}} 
+virtual bool {\bfseries set\+Value} (const Q\+Variant \&value)
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_a085a5c013eb955c6055c3a3ea4de59ba}\label{classrviz_1_1_euler_property_a085a5c013eb955c6055c3a3ea4de59ba}} 
+virtual void \mbox{\hyperlink{classrviz_1_1_euler_property_a085a5c013eb955c6055c3a3ea4de59ba}{load}} (const Config \&config)
+\begin{DoxyCompactList}\small\item\em Load the value of this property and/or its children from the given Config node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_ae75cc43cc72150091849e8a15997aa7a}\label{classrviz_1_1_euler_property_ae75cc43cc72150091849e8a15997aa7a}} 
+virtual void {\bfseries save} (Config config) const
+\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_ae29aab5218f8afbde0136cac70965dc7}\label{classrviz_1_1_euler_property_ae29aab5218f8afbde0136cac70965dc7}} 
+virtual void \mbox{\hyperlink{classrviz_1_1_euler_property_ae29aab5218f8afbde0136cac70965dc7}{set\+Read\+Only}} (bool read\+\_\+only)
+\begin{DoxyCompactList}\small\item\em Overridden from Property to propagate read-\/only-\/ness to children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrviz_1_1_euler_property_afa84495be3ec9fd819444239aa77ed2a}\label{classrviz_1_1_euler_property_afa84495be3ec9fd819444239aa77ed2a}} 
+bool {\bfseries get\+Angles\+Read\+Only} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classrviz_1_1_euler_property_aac5c330a718bd4acd9d26364e4597205}\label{classrviz_1_1_euler_property_aac5c330a718bd4acd9d26364e4597205}} 
+\index{rviz::EulerProperty@{rviz::EulerProperty}!quaternionChanged@{quaternionChanged}}
+\index{quaternionChanged@{quaternionChanged}!rviz::EulerProperty@{rviz::EulerProperty}}
+\doxysubsubsection{\texorpdfstring{quaternionChanged}{quaternionChanged}}
+{\footnotesize\ttfamily void rviz\+::\+Euler\+Property\+::quaternion\+Changed (\begin{DoxyParamCaption}\item[{Eigen\+::\+Quaterniond}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+signal emitted when quaternion value has changed \mbox{\Hypertarget{classrviz_1_1_euler_property_adf811fd30f9dcd3704cb9a3f75f68da5}\label{classrviz_1_1_euler_property_adf811fd30f9dcd3704cb9a3f75f68da5}} 
+\index{rviz::EulerProperty@{rviz::EulerProperty}!setEulerAxes@{setEulerAxes}}
+\index{setEulerAxes@{setEulerAxes}!rviz::EulerProperty@{rviz::EulerProperty}}
+\doxysubsubsection{\texorpdfstring{setEulerAxes}{setEulerAxes}}
+{\footnotesize\ttfamily void rviz\+::\+Euler\+Property\+::set\+Euler\+Axes (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{axes\+\_\+spec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+select Euler axes from string, allowed values are \char`\"{}rpy\char`\"{}, \char`\"{}ypr\char`\"{}, x,y,z r or s in front of x,y,z chooses application order, i.\+e. with respect to rotated or fixed frame \mbox{\Hypertarget{classrviz_1_1_euler_property_a2b07f31299239d94080ece82f6282283}\label{classrviz_1_1_euler_property_a2b07f31299239d94080ece82f6282283}} 
+\index{rviz::EulerProperty@{rviz::EulerProperty}!statusUpdate@{statusUpdate}}
+\index{statusUpdate@{statusUpdate}!rviz::EulerProperty@{rviz::EulerProperty}}
+\doxysubsubsection{\texorpdfstring{statusUpdate}{statusUpdate}}
+{\footnotesize\ttfamily void rviz\+::\+Euler\+Property\+::status\+Update (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{const Q\+String \&}]{,  }\item[{const Q\+String \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+signal emitted when there was an error, e.\+g. with Euler axes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld\+\_\+agni\+\_\+tf\+\_\+tools/src/plugin/euler\+\_\+property.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld\+\_\+agni\+\_\+tf\+\_\+tools/src/plugin/euler\+\_\+property.\+cpp\end{DoxyCompactItemize}

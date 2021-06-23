@@ -1,0 +1,188 @@
+\hypertarget{classompl__interface_1_1_planning_context_manager}{}\doxysection{ompl\+\_\+interface\+::Planning\+Context\+Manager Class Reference}
+\label{classompl__interface_1_1_planning_context_manager}\index{ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structompl__interface_1_1_planning_context_manager_1_1_cached_contexts}{Cached\+Contexts}}
+\item 
+class \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_1_1_last_planning_context}{Last\+Planning\+Context}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a7e7d5e2306f7d9a597f46c2609f865ef}\label{classompl__interface_1_1_planning_context_manager_a7e7d5e2306f7d9a597f46c2609f865ef}} 
+{\bfseries Planning\+Context\+Manager} (const robot\+\_\+model\+::\+Robot\+Model\+Const\+Ptr \&kmodel, const constraint\+\_\+samplers\+::\+Constraint\+Sampler\+Manager\+Ptr \&csm)
+\item 
+void \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_ab55e9feeb02639489e0e2f91a27ac050}{set\+Planner\+Configurations}} (const planning\+\_\+interface\+::\+Planner\+Configuration\+Map \&pconfig)
+\begin{DoxyCompactList}\small\item\em Specify configurations for the planners. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_afdab2d3520e0d9043f6b7fbea44db6e3}\label{classompl__interface_1_1_planning_context_manager_afdab2d3520e0d9043f6b7fbea44db6e3}} 
+const planning\+\_\+interface\+::\+Planner\+Configuration\+Map \& \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_afdab2d3520e0d9043f6b7fbea44db6e3}{get\+Planner\+Configurations}} () const
+\begin{DoxyCompactList}\small\item\em Return the previously set planner configurations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a93b3bd01d6e7bcf0541f6a9a096e79b9}\label{classompl__interface_1_1_planning_context_manager_a93b3bd01d6e7bcf0541f6a9a096e79b9}} 
+unsigned int {\bfseries get\+Maximum\+State\+Sampling\+Attempts} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a2ee06a7b384b428e8c70c47d7bc63b86}\label{classompl__interface_1_1_planning_context_manager_a2ee06a7b384b428e8c70c47d7bc63b86}} 
+void {\bfseries set\+Maximum\+State\+Sampling\+Attempts} (unsigned int max\+\_\+state\+\_\+sampling\+\_\+attempts)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a810dce14ddd7a9b74a821f8aa2603ecb}\label{classompl__interface_1_1_planning_context_manager_a810dce14ddd7a9b74a821f8aa2603ecb}} 
+unsigned int {\bfseries get\+Maximum\+Goal\+Sampling\+Attempts} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_ab84bbf0c3305f7867c4e51a6883009a0}\label{classompl__interface_1_1_planning_context_manager_ab84bbf0c3305f7867c4e51a6883009a0}} 
+void {\bfseries set\+Maximum\+Goal\+Sampling\+Attempts} (unsigned int max\+\_\+goal\+\_\+sampling\+\_\+attempts)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a4599ef81da112e92dc6cf09d04f830c9}\label{classompl__interface_1_1_planning_context_manager_a4599ef81da112e92dc6cf09d04f830c9}} 
+unsigned int {\bfseries get\+Maximum\+Goal\+Samples} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a8d51467951d373c22917df3273998886}\label{classompl__interface_1_1_planning_context_manager_a8d51467951d373c22917df3273998886}} 
+void {\bfseries set\+Maximum\+Goal\+Samples} (unsigned int max\+\_\+goal\+\_\+samples)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_af704856547baa70537311d34e2c27084}\label{classompl__interface_1_1_planning_context_manager_af704856547baa70537311d34e2c27084}} 
+unsigned int {\bfseries get\+Maximum\+Planning\+Threads} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_ad4bbbfb0aab956093222c7cd45c66cd2}\label{classompl__interface_1_1_planning_context_manager_ad4bbbfb0aab956093222c7cd45c66cd2}} 
+void {\bfseries set\+Maximum\+Planning\+Threads} (unsigned int max\+\_\+planning\+\_\+threads)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a2be6cad03464cf1be7594b14b09121ec}\label{classompl__interface_1_1_planning_context_manager_a2be6cad03464cf1be7594b14b09121ec}} 
+double {\bfseries get\+Maximum\+Solution\+Segment\+Length} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a06889a18bb7453ad0347d7d18e560c67}\label{classompl__interface_1_1_planning_context_manager_a06889a18bb7453ad0347d7d18e560c67}} 
+void {\bfseries set\+Maximum\+Solution\+Segment\+Length} (double mssl)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a91f2561ec7949c2acbb43c7735ece806}\label{classompl__interface_1_1_planning_context_manager_a91f2561ec7949c2acbb43c7735ece806}} 
+unsigned int {\bfseries get\+Minimum\+Waypoint\+Count} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_ab768b2992ddbfdc4281f86af5a027f15}\label{classompl__interface_1_1_planning_context_manager_ab768b2992ddbfdc4281f86af5a027f15}} 
+void \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_ab768b2992ddbfdc4281f86af5a027f15}{set\+Minimum\+Waypoint\+Count}} (unsigned int mwc)
+\begin{DoxyCompactList}\small\item\em Get the minimum number of waypoints along the solution path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_adc59788de3904e3aa6c59768d391703d}\label{classompl__interface_1_1_planning_context_manager_adc59788de3904e3aa6c59768d391703d}} 
+const robot\+\_\+model\+::\+Robot\+Model\+Const\+Ptr \& {\bfseries get\+Robot\+Model} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a26ee82d21ce977239e08748a09063998}\label{classompl__interface_1_1_planning_context_manager_a26ee82d21ce977239e08748a09063998}} 
+Model\+Based\+Planning\+Context\+Ptr {\bfseries get\+Last\+Planning\+Context} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a3f9c7a668af0d8f632e39163ff2d4692}\label{classompl__interface_1_1_planning_context_manager_a3f9c7a668af0d8f632e39163ff2d4692}} 
+Model\+Based\+Planning\+Context\+Ptr {\bfseries get\+Planning\+Context} (const std\+::string \&config, const std\+::string \&factory\+\_\+type=\char`\"{}\char`\"{}) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a5e36b33a34ff72107c4843d332129263}\label{classompl__interface_1_1_planning_context_manager_a5e36b33a34ff72107c4843d332129263}} 
+Model\+Based\+Planning\+Context\+Ptr {\bfseries get\+Planning\+Context} (const planning\+\_\+scene\+::\+Planning\+Scene\+Const\+Ptr \&planning\+\_\+scene, const planning\+\_\+interface\+::\+Motion\+Plan\+Request \&req, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a56febfc39f477850b9400a95db344f2e}\label{classompl__interface_1_1_planning_context_manager_a56febfc39f477850b9400a95db344f2e}} 
+void {\bfseries register\+Planner\+Allocator} (const std\+::string \&planner\+\_\+id, const Configured\+Planner\+Allocator \&pa)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_af2999326be8f7f1020349f5349708c62}\label{classompl__interface_1_1_planning_context_manager_af2999326be8f7f1020349f5349708c62}} 
+void {\bfseries register\+State\+Space\+Factory} (const Model\+Based\+State\+Space\+Factory\+Ptr \&factory)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_aef830e28a99ce24e10dad9bfe525d576}\label{classompl__interface_1_1_planning_context_manager_aef830e28a99ce24e10dad9bfe525d576}} 
+const std\+::map$<$ std\+::string, Configured\+Planner\+Allocator $>$ \& {\bfseries get\+Registered\+Planner\+Allocators} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a2edc149db78575a29c21fc93e82ba0f1}\label{classompl__interface_1_1_planning_context_manager_a2edc149db78575a29c21fc93e82ba0f1}} 
+const std\+::map$<$ std\+::string, Model\+Based\+State\+Space\+Factory\+Ptr $>$ \& {\bfseries get\+Registered\+State\+Space\+Factories} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_af5fbb85a4601d0e49a8d53cb93d9363f}\label{classompl__interface_1_1_planning_context_manager_af5fbb85a4601d0e49a8d53cb93d9363f}} 
+Configured\+Planner\+Selector {\bfseries get\+Planner\+Selector} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a71548aae7d3bb781c2237427568cfd30}\label{classompl__interface_1_1_planning_context_manager_a71548aae7d3bb781c2237427568cfd30}} 
+typedef boost\+::function$<$ const Model\+Based\+State\+Space\+Factory\+Ptr \&(const std\+::string \&)$>$ {\bfseries State\+Space\+Factory\+Type\+Selector}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a5c8ec3dc4fc34b5241d2019a1750c84a}\label{classompl__interface_1_1_planning_context_manager_a5c8ec3dc4fc34b5241d2019a1750c84a}} 
+Configured\+Planner\+Allocator {\bfseries planner\+Selector} (const std\+::string \&planner) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_ab5d1d5a5e5c94767bb3fe4c5180b0f3e}\label{classompl__interface_1_1_planning_context_manager_ab5d1d5a5e5c94767bb3fe4c5180b0f3e}} 
+void {\bfseries register\+Default\+Planners} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a3b8084e6b943b242cad9e54598cebfd2}\label{classompl__interface_1_1_planning_context_manager_a3b8084e6b943b242cad9e54598cebfd2}} 
+void {\bfseries register\+Default\+State\+Spaces} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_afaaf287595a5700ed6821344e1d7cc4a}\label{classompl__interface_1_1_planning_context_manager_afaaf287595a5700ed6821344e1d7cc4a}} 
+Model\+Based\+Planning\+Context\+Ptr \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_afaaf287595a5700ed6821344e1d7cc4a}{get\+Planning\+Context}} (const planning\+\_\+interface\+::\+Planner\+Configuration\+Settings \&config, const State\+Space\+Factory\+Type\+Selector \&factory\+\_\+selector, const moveit\+\_\+msgs\+::\+Motion\+Plan\+Request \&req) const
+\begin{DoxyCompactList}\small\item\em This is the function that constructs new planning contexts if no previous ones exist that are suitable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_ab36a17a2c9aaae9ecbde4c69e176d140}\label{classompl__interface_1_1_planning_context_manager_ab36a17a2c9aaae9ecbde4c69e176d140}} 
+const Model\+Based\+State\+Space\+Factory\+Ptr \& {\bfseries get\+State\+Space\+Factory1} (const std\+::string \&group\+\_\+name, const std\+::string \&factory\+\_\+type) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a681a7b66961213168ba72f54a93f1fb8}\label{classompl__interface_1_1_planning_context_manager_a681a7b66961213168ba72f54a93f1fb8}} 
+const Model\+Based\+State\+Space\+Factory\+Ptr \& {\bfseries get\+State\+Space\+Factory2} (const std\+::string \&group\+\_\+name, const moveit\+\_\+msgs\+::\+Motion\+Plan\+Request \&req) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a5200e9ae7663125c4cc59c05304af416}\label{classompl__interface_1_1_planning_context_manager_a5200e9ae7663125c4cc59c05304af416}} 
+robot\+\_\+model\+::\+Robot\+Model\+Const\+Ptr \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a5200e9ae7663125c4cc59c05304af416}{kmodel\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The kinematic model for which motion plans are computed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a60c49a4535ee9b82e6e1650bdae68bf5}\label{classompl__interface_1_1_planning_context_manager_a60c49a4535ee9b82e6e1650bdae68bf5}} 
+constraint\+\_\+samplers\+::\+Constraint\+Sampler\+Manager\+Ptr {\bfseries constraint\+\_\+sampler\+\_\+manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a3f4514e9a8fd49198164879c98b176dc}\label{classompl__interface_1_1_planning_context_manager_a3f4514e9a8fd49198164879c98b176dc}} 
+std\+::map$<$ std\+::string, Configured\+Planner\+Allocator $>$ {\bfseries known\+\_\+planners\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a993762073473a90231fec5108c53053f}\label{classompl__interface_1_1_planning_context_manager_a993762073473a90231fec5108c53053f}} 
+std\+::map$<$ std\+::string, Model\+Based\+State\+Space\+Factory\+Ptr $>$ {\bfseries state\+\_\+space\+\_\+factories\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a09e6ed4635d98823ac3a1a42e0fb2a1c}\label{classompl__interface_1_1_planning_context_manager_a09e6ed4635d98823ac3a1a42e0fb2a1c}} 
+planning\+\_\+interface\+::\+Planner\+Configuration\+Map \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a09e6ed4635d98823ac3a1a42e0fb2a1c}{planner\+\_\+configs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em All the existing planning configurations. The name of the configuration is the key of the map. This name can be of the form \char`\"{}group\+\_\+name\mbox{[}config\+\_\+name\mbox{]}\char`\"{} if there are particular configurations specified for a group, or of the form \char`\"{}group\+\_\+name\char`\"{} if default settings are to be used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a6fbfcf95fc415721d115979a9569f310}\label{classompl__interface_1_1_planning_context_manager_a6fbfcf95fc415721d115979a9569f310}} 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a6fbfcf95fc415721d115979a9569f310}{max\+\_\+goal\+\_\+samples\+\_\+}}
+\begin{DoxyCompactList}\small\item\em maximum number of states to sample in the goal region for any planning request (when such sampling is possible) \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_abde0bcd3589e63091619d333740487c1}{max\+\_\+state\+\_\+sampling\+\_\+attempts\+\_\+}}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a26537607df8ad2668ef5fac94a220a7a}\label{classompl__interface_1_1_planning_context_manager_a26537607df8ad2668ef5fac94a220a7a}} 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a26537607df8ad2668ef5fac94a220a7a}{max\+\_\+goal\+\_\+sampling\+\_\+attempts\+\_\+}}
+\begin{DoxyCompactList}\small\item\em maximum number of attempts to be made at sampling goals \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a6b3c3344e8c19712e2d04b296b5fa94e}\label{classompl__interface_1_1_planning_context_manager_a6b3c3344e8c19712e2d04b296b5fa94e}} 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a6b3c3344e8c19712e2d04b296b5fa94e}{max\+\_\+planning\+\_\+threads\+\_\+}}
+\begin{DoxyCompactList}\small\item\em when planning in parallel, this is the maximum number of threads to use at one time \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a5809d97434deba2fa6431126eaa424e2}{max\+\_\+solution\+\_\+segment\+\_\+length\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_planning_context_manager_a7e71d8f9e7cd8bb764210a77e1a0e034}{minimum\+\_\+waypoint\+\_\+count\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_ab55e9feeb02639489e0e2f91a27ac050}\label{classompl__interface_1_1_planning_context_manager_ab55e9feeb02639489e0e2f91a27ac050}} 
+\index{ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}!setPlannerConfigurations@{setPlannerConfigurations}}
+\index{setPlannerConfigurations@{setPlannerConfigurations}!ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}}
+\doxysubsubsection{\texorpdfstring{setPlannerConfigurations()}{setPlannerConfigurations()}}
+{\footnotesize\ttfamily void ompl\+\_\+interface\+::\+Planning\+Context\+Manager\+::set\+Planner\+Configurations (\begin{DoxyParamCaption}\item[{const planning\+\_\+interface\+::\+Planner\+Configuration\+Map \&}]{pconfig }\end{DoxyParamCaption})}
+
+
+
+Specify configurations for the planners. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pconfig} & Configurations for the different planners \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a5809d97434deba2fa6431126eaa424e2}\label{classompl__interface_1_1_planning_context_manager_a5809d97434deba2fa6431126eaa424e2}} 
+\index{ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}!max\_solution\_segment\_length\_@{max\_solution\_segment\_length\_}}
+\index{max\_solution\_segment\_length\_@{max\_solution\_segment\_length\_}!ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}}
+\doxysubsubsection{\texorpdfstring{max\_solution\_segment\_length\_}{max\_solution\_segment\_length\_}}
+{\footnotesize\ttfamily double ompl\+\_\+interface\+::\+Planning\+Context\+Manager\+::max\+\_\+solution\+\_\+segment\+\_\+length\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+the maximum length that is allowed for segments that make up the motion plan; by default this is 1\% from the extent of the space \mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_abde0bcd3589e63091619d333740487c1}\label{classompl__interface_1_1_planning_context_manager_abde0bcd3589e63091619d333740487c1}} 
+\index{ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}!max\_state\_sampling\_attempts\_@{max\_state\_sampling\_attempts\_}}
+\index{max\_state\_sampling\_attempts\_@{max\_state\_sampling\_attempts\_}!ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}}
+\doxysubsubsection{\texorpdfstring{max\_state\_sampling\_attempts\_}{max\_state\_sampling\_attempts\_}}
+{\footnotesize\ttfamily unsigned int ompl\+\_\+interface\+::\+Planning\+Context\+Manager\+::max\+\_\+state\+\_\+sampling\+\_\+attempts\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+maximum number of attempts to be made at sampling a state when attempting to find valid states that satisfy some set of constraints \mbox{\Hypertarget{classompl__interface_1_1_planning_context_manager_a7e71d8f9e7cd8bb764210a77e1a0e034}\label{classompl__interface_1_1_planning_context_manager_a7e71d8f9e7cd8bb764210a77e1a0e034}} 
+\index{ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}!minimum\_waypoint\_count\_@{minimum\_waypoint\_count\_}}
+\index{minimum\_waypoint\_count\_@{minimum\_waypoint\_count\_}!ompl\_interface::PlanningContextManager@{ompl\_interface::PlanningContextManager}}
+\doxysubsubsection{\texorpdfstring{minimum\_waypoint\_count\_}{minimum\_waypoint\_count\_}}
+{\footnotesize\ttfamily unsigned int ompl\+\_\+interface\+::\+Planning\+Context\+Manager\+::minimum\+\_\+waypoint\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+the minimum number of points to include on the solution path (interpolation is used to reach this number, if needed) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/include/moveit/ompl\+\_\+interface/planning\+\_\+context\+\_\+manager.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/src/planning\+\_\+context\+\_\+manager.\+cpp\end{DoxyCompactItemize}

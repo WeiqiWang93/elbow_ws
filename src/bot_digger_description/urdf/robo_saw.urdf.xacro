@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur_ow" >
+
+  <xacro:macro name="robo_saw" params="type">
+  <!-- common stuff -->
+  <!-- <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" /> -->
+
+  <!-- ur10 -->
+  <xacro:include filename="$(find ur_description)/urdf/ur10.urdf.xacro" />
+  <xacro:ur10_robot prefix="saw_" joint_limited="true"
+		 shoulder_pan_lower_limit="${-2*pi}" shoulder_pan_upper_limit="${2*pi}"
+		 shoulder_lift_lower_limit="${-2*pi}" shoulder_lift_upper_limit="${2*pi}"
+		 elbow_joint_lower_limit="${-2*pi}" elbow_joint_upper_limit="${2*pi}"
+		 wrist_1_lower_limit="${-2*pi}" wrist_1_upper_limit="${2*pi}"
+		 wrist_2_lower_limit="${-2*pi}" wrist_2_upper_limit="${2*pi}"
+		 wrist_3_lower_limit="${-4*pi}" wrist_3_upper_limit="${4*pi}">
+  </xacro:ur10_robot>
+  <!-- ROS base_link to UR 'Base' Coordinates transform -->
+  <link name="saw_base"/>
+  <joint name="saw_base_link-base_fixed_joint" type="fixed">
+    <!-- NOTE: this rotation is only needed as long as base_link itself is
+                not corrected wrt the real robot (ie: rotated over 180
+                degrees)
+    -->
+    <origin xyz="0 0 0" rpy="-0.0 -1.5707963267948966 0.0"/>
+    <parent link="saw_base"/>
+    <child link="saw_base_link"/>
+  </joint>
+
+  <!-- arm -->
+
+
+  <!-- end effector -->
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/saw_${type}.urdf.xacro" />
+ 
+  <!-- attach -->
+  <xacro:ur_ow_robot prefix="saw_" />
+  
+  </xacro:macro>
+
+</robot>

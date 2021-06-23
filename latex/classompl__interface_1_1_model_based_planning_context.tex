@@ -1,0 +1,306 @@
+\hypertarget{classompl__interface_1_1_model_based_planning_context}{}\doxysection{ompl\+\_\+interface\+::Model\+Based\+Planning\+Context Class Reference}
+\label{classompl__interface_1_1_model_based_planning_context}\index{ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}}
+
+
+Inheritance diagram for ompl\+\_\+interface\+::Model\+Based\+Planning\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classompl__interface_1_1_model_based_planning_context__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ompl\+\_\+interface\+::Model\+Based\+Planning\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classompl__interface_1_1_model_based_planning_context__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a4bc253bf6e37d00cf414a3e2fa33fb75}\label{classompl__interface_1_1_model_based_planning_context_a4bc253bf6e37d00cf414a3e2fa33fb75}} 
+{\bfseries Model\+Based\+Planning\+Context} (const std\+::string \&name, const \mbox{\hyperlink{structompl__interface_1_1_model_based_planning_context_specification}{Model\+Based\+Planning\+Context\+Specification}} \&spec)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a0434354c28f6d14564a7fb2804c429ef}\label{classompl__interface_1_1_model_based_planning_context_a0434354c28f6d14564a7fb2804c429ef}} 
+virtual bool {\bfseries solve} (planning\+\_\+interface\+::\+Motion\+Plan\+Response \&res)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a861b5f98f8444997c83966e2ba072a97}\label{classompl__interface_1_1_model_based_planning_context_a861b5f98f8444997c83966e2ba072a97}} 
+virtual bool {\bfseries solve} (planning\+\_\+interface\+::\+Motion\+Plan\+Detailed\+Response \&res)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a58a25f8998199ac1f6530a9a85455ae4}\label{classompl__interface_1_1_model_based_planning_context_a58a25f8998199ac1f6530a9a85455ae4}} 
+virtual void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aec96f7463dfb47503d353746a1921476}\label{classompl__interface_1_1_model_based_planning_context_aec96f7463dfb47503d353746a1921476}} 
+virtual bool {\bfseries terminate} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a59fde4bdae103374f52acd4da1f57195}\label{classompl__interface_1_1_model_based_planning_context_a59fde4bdae103374f52acd4da1f57195}} 
+const \mbox{\hyperlink{structompl__interface_1_1_model_based_planning_context_specification}{Model\+Based\+Planning\+Context\+Specification}} \& {\bfseries get\+Specification} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a856bd2d0c8563b5d41d5b190d48adb17}\label{classompl__interface_1_1_model_based_planning_context_a856bd2d0c8563b5d41d5b190d48adb17}} 
+const std\+::map$<$ std\+::string, std\+::string $>$ \& {\bfseries get\+Specification\+Config} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_adcc8e47f78e3af6086ddb6c4cc579731}\label{classompl__interface_1_1_model_based_planning_context_adcc8e47f78e3af6086ddb6c4cc579731}} 
+void {\bfseries set\+Specification\+Config} (const std\+::map$<$ std\+::string, std\+::string $>$ \&config)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a33abcf200ccf2dcd23992f62252cf8e5}\label{classompl__interface_1_1_model_based_planning_context_a33abcf200ccf2dcd23992f62252cf8e5}} 
+const robot\+\_\+model\+::\+Robot\+Model\+Const\+Ptr \& {\bfseries get\+Robot\+Model} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a55bc57691cd1003123aaa94cc2593895}\label{classompl__interface_1_1_model_based_planning_context_a55bc57691cd1003123aaa94cc2593895}} 
+const robot\+\_\+model\+::\+Joint\+Model\+Group $\ast$ {\bfseries get\+Joint\+Model\+Group} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a17df3a994ea2ec6c607986ac0ede3c15}\label{classompl__interface_1_1_model_based_planning_context_a17df3a994ea2ec6c607986ac0ede3c15}} 
+const robot\+\_\+state\+::\+Robot\+State \& {\bfseries get\+Complete\+Initial\+Robot\+State} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ab7251e1868421903113383c7a21e7009}\label{classompl__interface_1_1_model_based_planning_context_ab7251e1868421903113383c7a21e7009}} 
+const Model\+Based\+State\+Space\+Ptr \& {\bfseries get\+O\+M\+P\+L\+State\+Space} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac526fe5adff32dfc06ad227ba3d199f4}\label{classompl__interface_1_1_model_based_planning_context_ac526fe5adff32dfc06ad227ba3d199f4}} 
+const og\+::\+Simple\+Setup\+Ptr \& {\bfseries get\+O\+M\+P\+L\+Simple\+Setup} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a07057312e4b5d310cee6aa9f101426b1}\label{classompl__interface_1_1_model_based_planning_context_a07057312e4b5d310cee6aa9f101426b1}} 
+og\+::\+Simple\+Setup\+Ptr \& {\bfseries get\+O\+M\+P\+L\+Simple\+Setup} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a6e8f8847c9341221a29920b2812c791d}\label{classompl__interface_1_1_model_based_planning_context_a6e8f8847c9341221a29920b2812c791d}} 
+const ot\+::\+Benchmark \& {\bfseries get\+O\+M\+P\+L\+Benchmark} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac29d1448cb2e95db5250f15256877819}\label{classompl__interface_1_1_model_based_planning_context_ac29d1448cb2e95db5250f15256877819}} 
+ot\+::\+Benchmark \& {\bfseries get\+O\+M\+P\+L\+Benchmark} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a3f18ed34be23347055554a75319aa18a}\label{classompl__interface_1_1_model_based_planning_context_a3f18ed34be23347055554a75319aa18a}} 
+const kinematic\+\_\+constraints\+::\+Kinematic\+Constraint\+Set\+Ptr \& {\bfseries get\+Path\+Constraints} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ab4e322a9f2513601ed50933e5fafe318}\label{classompl__interface_1_1_model_based_planning_context_ab4e322a9f2513601ed50933e5fafe318}} 
+unsigned int {\bfseries get\+Maximum\+State\+Sampling\+Attempts} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a60bcb4c335d09a68bc68776374702b60}\label{classompl__interface_1_1_model_based_planning_context_a60bcb4c335d09a68bc68776374702b60}} 
+void {\bfseries set\+Maximum\+State\+Sampling\+Attempts} (unsigned int max\+\_\+state\+\_\+sampling\+\_\+attempts)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a83842a70a2ba09a47445f757583cae33}\label{classompl__interface_1_1_model_based_planning_context_a83842a70a2ba09a47445f757583cae33}} 
+unsigned int {\bfseries get\+Maximum\+Goal\+Sampling\+Attempts} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a790ef3b74793decc59a32cbb9be9b58d}\label{classompl__interface_1_1_model_based_planning_context_a790ef3b74793decc59a32cbb9be9b58d}} 
+void {\bfseries set\+Maximum\+Goal\+Sampling\+Attempts} (unsigned int max\+\_\+goal\+\_\+sampling\+\_\+attempts)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a8d0bbc3adad83cf331fa771e0eeb144d}\label{classompl__interface_1_1_model_based_planning_context_a8d0bbc3adad83cf331fa771e0eeb144d}} 
+unsigned int {\bfseries get\+Maximum\+Goal\+Samples} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac9e08fcbcd2b40bc9b8ed30c2c3dd5cb}\label{classompl__interface_1_1_model_based_planning_context_ac9e08fcbcd2b40bc9b8ed30c2c3dd5cb}} 
+void {\bfseries set\+Maximum\+Goal\+Samples} (unsigned int max\+\_\+goal\+\_\+samples)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_adef60aeae1e8ceafc2b9e50caf6d03e6}\label{classompl__interface_1_1_model_based_planning_context_adef60aeae1e8ceafc2b9e50caf6d03e6}} 
+unsigned int {\bfseries get\+Maximum\+Planning\+Threads} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a442ddfd5d667e4e5127bc3b70ef5711e}\label{classompl__interface_1_1_model_based_planning_context_a442ddfd5d667e4e5127bc3b70ef5711e}} 
+void {\bfseries set\+Maximum\+Planning\+Threads} (unsigned int max\+\_\+planning\+\_\+threads)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_addeb2ac667bda523bf500989cdf36747}\label{classompl__interface_1_1_model_based_planning_context_addeb2ac667bda523bf500989cdf36747}} 
+double {\bfseries get\+Maximum\+Solution\+Segment\+Length} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a3c1a571607e634f63d9e78b21c8e2733}\label{classompl__interface_1_1_model_based_planning_context_a3c1a571607e634f63d9e78b21c8e2733}} 
+void {\bfseries set\+Maximum\+Solution\+Segment\+Length} (double mssl)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a97392e0dce5cab1a9275175ddeafd0c2}\label{classompl__interface_1_1_model_based_planning_context_a97392e0dce5cab1a9275175ddeafd0c2}} 
+unsigned int {\bfseries get\+Minimum\+Waypoint\+Count} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac33ee9373d0be202e80db68206798d2d}\label{classompl__interface_1_1_model_based_planning_context_ac33ee9373d0be202e80db68206798d2d}} 
+void \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_ac33ee9373d0be202e80db68206798d2d}{set\+Minimum\+Waypoint\+Count}} (unsigned int mwc)
+\begin{DoxyCompactList}\small\item\em Get the minimum number of waypoints along the solution path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a7a9242ea82bf29d63ffdefca82904abe}\label{classompl__interface_1_1_model_based_planning_context_a7a9242ea82bf29d63ffdefca82904abe}} 
+const constraint\+\_\+samplers\+::\+Constraint\+Sampler\+Manager\+Ptr \& {\bfseries get\+Constraint\+Sampler\+Manager} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aaa3b718c9f631f35e9a52a77e0d04f0c}\label{classompl__interface_1_1_model_based_planning_context_aaa3b718c9f631f35e9a52a77e0d04f0c}} 
+void {\bfseries set\+Constraint\+Sampler\+Manager} (const constraint\+\_\+samplers\+::\+Constraint\+Sampler\+Manager\+Ptr \&csm)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a1cf2aefc2059251902b0e49f9ca63598}\label{classompl__interface_1_1_model_based_planning_context_a1cf2aefc2059251902b0e49f9ca63598}} 
+void {\bfseries set\+Verbose\+State\+Validity\+Checks} (bool flag)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac93b0c6364d87a903dec03f5281871e5}\label{classompl__interface_1_1_model_based_planning_context_ac93b0c6364d87a903dec03f5281871e5}} 
+void {\bfseries set\+Projection\+Evaluator} (const std\+::string \&peval)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a4ce13de1701206994320c75cf205d91e}\label{classompl__interface_1_1_model_based_planning_context_a4ce13de1701206994320c75cf205d91e}} 
+void {\bfseries set\+Planning\+Volume} (const moveit\+\_\+msgs\+::\+Workspace\+Parameters \&wparams)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a67ff0b2bfba798cba70ad5c1b08510bf}\label{classompl__interface_1_1_model_based_planning_context_a67ff0b2bfba798cba70ad5c1b08510bf}} 
+void {\bfseries set\+Complete\+Initial\+State} (const robot\+\_\+state\+::\+Robot\+State \&complete\+\_\+initial\+\_\+robot\+\_\+state)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aad7188babc0f6f84a692fd1725097834}\label{classompl__interface_1_1_model_based_planning_context_aad7188babc0f6f84a692fd1725097834}} 
+bool {\bfseries set\+Goal\+Constraints} (const std\+::vector$<$ moveit\+\_\+msgs\+::\+Constraints $>$ \&goal\+\_\+constraints, const moveit\+\_\+msgs\+::\+Constraints \&path\+\_\+constraints, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes $\ast$error)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a7d1d9c000c43926d8b8e3e0ab0c9c6ff}\label{classompl__interface_1_1_model_based_planning_context_a7d1d9c000c43926d8b8e3e0ab0c9c6ff}} 
+bool {\bfseries set\+Path\+Constraints} (const moveit\+\_\+msgs\+::\+Constraints \&path\+\_\+constraints, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes $\ast$error)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ad96c9fac42feff1c8cb920c6e4f4f4f6}\label{classompl__interface_1_1_model_based_planning_context_ad96c9fac42feff1c8cb920c6e4f4f4f6}} 
+void {\bfseries set\+Constraints\+Approximations} (const Constraints\+Library\+Const\+Ptr \&constraints\+\_\+library)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aa5079f515500d4258802812dbce24829}\label{classompl__interface_1_1_model_based_planning_context_aa5079f515500d4258802812dbce24829}} 
+bool {\bfseries use\+State\+Validity\+Cache} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a6c63c2b7a064219a2cd26612a6723ddc}\label{classompl__interface_1_1_model_based_planning_context_a6c63c2b7a064219a2cd26612a6723ddc}} 
+void {\bfseries use\+State\+Validity\+Cache} (bool flag)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_acac276e3d86dc11dd4ea3d21783ee546}\label{classompl__interface_1_1_model_based_planning_context_acac276e3d86dc11dd4ea3d21783ee546}} 
+bool {\bfseries simplify\+Solutions} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a8dd34a289b8e782b8946facc751db6d0}\label{classompl__interface_1_1_model_based_planning_context_a8dd34a289b8e782b8946facc751db6d0}} 
+void {\bfseries simplify\+Solutions} (bool flag)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ad0ca13fb2ca458d0209e5d4848d63166}\label{classompl__interface_1_1_model_based_planning_context_ad0ca13fb2ca458d0209e5d4848d63166}} 
+bool {\bfseries solve} (double timeout, unsigned int count)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ab8d2fdafc78d787561b6ca204877522a}\label{classompl__interface_1_1_model_based_planning_context_ab8d2fdafc78d787561b6ca204877522a}} 
+bool {\bfseries benchmark} (double timeout, unsigned int count, const std\+::string \&filename=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a5ba94c9193d2506ae984636156c5917f}\label{classompl__interface_1_1_model_based_planning_context_a5ba94c9193d2506ae984636156c5917f}} 
+double {\bfseries get\+Last\+Plan\+Time} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aac68fbbf7eeb5931d16f5cde2651fc32}\label{classompl__interface_1_1_model_based_planning_context_aac68fbbf7eeb5931d16f5cde2651fc32}} 
+double {\bfseries get\+Last\+Simplify\+Time} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac738062e6c1fe4518cd0f31f21a49b43}\label{classompl__interface_1_1_model_based_planning_context_ac738062e6c1fe4518cd0f31f21a49b43}} 
+void {\bfseries simplify\+Solution} (double timeout)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a4fc428e4e6af604ec1c09564cd858501}\label{classompl__interface_1_1_model_based_planning_context_a4fc428e4e6af604ec1c09564cd858501}} 
+void {\bfseries interpolate\+Solution} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a2427bec09b70fb0a7524487f827016bf}\label{classompl__interface_1_1_model_based_planning_context_a2427bec09b70fb0a7524487f827016bf}} 
+bool {\bfseries get\+Solution\+Path} (robot\+\_\+trajectory\+::\+Robot\+Trajectory \&traj) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a7c98e2b24df6a458e5b43654905aaebc}\label{classompl__interface_1_1_model_based_planning_context_a7c98e2b24df6a458e5b43654905aaebc}} 
+void {\bfseries convert\+Path} (const og\+::\+Path\+Geometric \&pg, robot\+\_\+trajectory\+::\+Robot\+Trajectory \&traj) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a8691840f10af1ef8da6caaa8ca4f8c1b}\label{classompl__interface_1_1_model_based_planning_context_a8691840f10af1ef8da6caaa8ca4f8c1b}} 
+virtual void {\bfseries configure} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aaa11c4c5d58af6ea0ca00d5386fb35d2}\label{classompl__interface_1_1_model_based_planning_context_aaa11c4c5d58af6ea0ca00d5386fb35d2}} 
+void {\bfseries pre\+Solve} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_abe5958996b93a3f12f7bf2612c9e299f}\label{classompl__interface_1_1_model_based_planning_context_abe5958996b93a3f12f7bf2612c9e299f}} 
+void {\bfseries post\+Solve} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a719c8470dcd04eda96e82d16d37a4224}\label{classompl__interface_1_1_model_based_planning_context_a719c8470dcd04eda96e82d16d37a4224}} 
+void {\bfseries start\+Sampling} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a3ad0b32b3bca27a2cdcf5f9250b0678f}\label{classompl__interface_1_1_model_based_planning_context_a3ad0b32b3bca27a2cdcf5f9250b0678f}} 
+void {\bfseries stop\+Sampling} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a1e09cc90f5aec5d308f090b4160b2593}\label{classompl__interface_1_1_model_based_planning_context_a1e09cc90f5aec5d308f090b4160b2593}} 
+virtual ob\+::\+Projection\+Evaluator\+Ptr {\bfseries get\+Projection\+Evaluator} (const std\+::string \&peval) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac220ab7de080e32fcb91f3644e7bb1f2}\label{classompl__interface_1_1_model_based_planning_context_ac220ab7de080e32fcb91f3644e7bb1f2}} 
+virtual ob\+::\+State\+Sampler\+Ptr {\bfseries alloc\+Path\+Constrained\+Sampler} (const ompl\+::base\+::\+State\+Space $\ast$ss) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_af4d6caae7383b9d7c17212439cdab327}\label{classompl__interface_1_1_model_based_planning_context_af4d6caae7383b9d7c17212439cdab327}} 
+virtual void {\bfseries use\+Config} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aee14229aca593e33a73106cc6275ed73}\label{classompl__interface_1_1_model_based_planning_context_aee14229aca593e33a73106cc6275ed73}} 
+virtual ob\+::\+Goal\+Ptr {\bfseries construct\+Goal} ()
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a266e27b53bfaf06c333f70244f5142ac}\label{classompl__interface_1_1_model_based_planning_context_a266e27b53bfaf06c333f70244f5142ac}} 
+void {\bfseries register\+Termination\+Condition} (const ob\+::\+Planner\+Termination\+Condition \&ptc)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aad9416c550817656627a486511a85e5b}\label{classompl__interface_1_1_model_based_planning_context_aad9416c550817656627a486511a85e5b}} 
+void {\bfseries unregister\+Termination\+Condition} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ad8a64835e7cafe89eb4b75334bb05184}\label{classompl__interface_1_1_model_based_planning_context_ad8a64835e7cafe89eb4b75334bb05184}} 
+\mbox{\hyperlink{structompl__interface_1_1_model_based_planning_context_specification}{Model\+Based\+Planning\+Context\+Specification}} {\bfseries spec\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac5e6eae8d088f6b323a7a6c2b0b69684}\label{classompl__interface_1_1_model_based_planning_context_ac5e6eae8d088f6b323a7a6c2b0b69684}} 
+robot\+\_\+state\+::\+Robot\+State {\bfseries complete\+\_\+initial\+\_\+robot\+\_\+state\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a9c95a504df5817ae94cd4315c5b38fc6}\label{classompl__interface_1_1_model_based_planning_context_a9c95a504df5817ae94cd4315c5b38fc6}} 
+og\+::\+Simple\+Setup\+Ptr \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_a9c95a504df5817ae94cd4315c5b38fc6}{ompl\+\_\+simple\+\_\+setup\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the O\+M\+PL planning context; this contains the problem definition and the planner used \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aad59f0f03c57deacde764b98be6ae12b}\label{classompl__interface_1_1_model_based_planning_context_aad59f0f03c57deacde764b98be6ae12b}} 
+ot\+::\+Benchmark \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_aad59f0f03c57deacde764b98be6ae12b}{ompl\+\_\+benchmark\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the O\+M\+PL tool for benchmarking planners \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ae27a43f5755e2c9c0cf777d0e19c1b20}\label{classompl__interface_1_1_model_based_planning_context_ae27a43f5755e2c9c0cf777d0e19c1b20}} 
+ot\+::\+Parallel\+Plan \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_ae27a43f5755e2c9c0cf777d0e19c1b20}{ompl\+\_\+parallel\+\_\+plan\+\_\+}}
+\begin{DoxyCompactList}\small\item\em tool used to compute multiple plans in parallel; this uses the problem definition maintained by ompl\+\_\+simple\+\_\+setup\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a3ff4331447b9dc6c6372061f0a08433a}\label{classompl__interface_1_1_model_based_planning_context_a3ff4331447b9dc6c6372061f0a08433a}} 
+std\+::vector$<$ int $>$ {\bfseries space\+\_\+signature\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a8354555d23eea6aa2917e867fa904248}\label{classompl__interface_1_1_model_based_planning_context_a8354555d23eea6aa2917e867fa904248}} 
+kinematic\+\_\+constraints\+::\+Kinematic\+Constraint\+Set\+Ptr {\bfseries path\+\_\+constraints\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a9f1133dbf64aefcbed5d522e89612f65}\label{classompl__interface_1_1_model_based_planning_context_a9f1133dbf64aefcbed5d522e89612f65}} 
+moveit\+\_\+msgs\+::\+Constraints {\bfseries path\+\_\+constraints\+\_\+msg\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a7ee36b6edc72868b46fd61df93dd5018}\label{classompl__interface_1_1_model_based_planning_context_a7ee36b6edc72868b46fd61df93dd5018}} 
+std\+::vector$<$ kinematic\+\_\+constraints\+::\+Kinematic\+Constraint\+Set\+Ptr $>$ {\bfseries goal\+\_\+constraints\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a27d1bbc0ba438521faf685784e70836b}\label{classompl__interface_1_1_model_based_planning_context_a27d1bbc0ba438521faf685784e70836b}} 
+const ob\+::\+Planner\+Termination\+Condition $\ast$ {\bfseries ptc\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a21efa4df499f56c9a4c5ec789ad236e1}\label{classompl__interface_1_1_model_based_planning_context_a21efa4df499f56c9a4c5ec789ad236e1}} 
+boost\+::mutex {\bfseries ptc\+\_\+lock\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a25ab7404462fdcd6809706aa1ef694f2}\label{classompl__interface_1_1_model_based_planning_context_a25ab7404462fdcd6809706aa1ef694f2}} 
+double \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_a25ab7404462fdcd6809706aa1ef694f2}{last\+\_\+plan\+\_\+time\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the time spent computing the last plan \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_af1f68cab95a49c61a28325c2d1db0ac0}\label{classompl__interface_1_1_model_based_planning_context_af1f68cab95a49c61a28325c2d1db0ac0}} 
+double \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_af1f68cab95a49c61a28325c2d1db0ac0}{last\+\_\+simplify\+\_\+time\+\_\+}}
+\begin{DoxyCompactList}\small\item\em the time spent simplifying the last plan \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_aa83e58f375f0eec5f160cc21de7c76eb}{max\+\_\+goal\+\_\+samples\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_ac654dea9017165c402f2c151f4da7e1a}{max\+\_\+state\+\_\+sampling\+\_\+attempts\+\_\+}}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a86bdd1416ab63476c0f38dd99bc5fbd0}\label{classompl__interface_1_1_model_based_planning_context_a86bdd1416ab63476c0f38dd99bc5fbd0}} 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_a86bdd1416ab63476c0f38dd99bc5fbd0}{max\+\_\+goal\+\_\+sampling\+\_\+attempts\+\_\+}}
+\begin{DoxyCompactList}\small\item\em maximum number of attempts to be made at sampling a goal states \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a31c65327a9f89965905f4bc12e724b75}\label{classompl__interface_1_1_model_based_planning_context_a31c65327a9f89965905f4bc12e724b75}} 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_a31c65327a9f89965905f4bc12e724b75}{max\+\_\+planning\+\_\+threads\+\_\+}}
+\begin{DoxyCompactList}\small\item\em when planning in parallel, this is the maximum number of threads to use at one time \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_af1f70094d51bab889d75410a93390cb6}{max\+\_\+solution\+\_\+segment\+\_\+length\+\_\+}}
+\item 
+unsigned int \mbox{\hyperlink{classompl__interface_1_1_model_based_planning_context_a2072a1f70ef179d06a72faacd1b7e88b}{minimum\+\_\+waypoint\+\_\+count\+\_\+}}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac2a60bc1045d497ea52f8e125119e8c4}\label{classompl__interface_1_1_model_based_planning_context_ac2a60bc1045d497ea52f8e125119e8c4}} 
+bool {\bfseries use\+\_\+state\+\_\+validity\+\_\+cache\+\_\+}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a4671c062d7fe92011b5d455fc7ad0867}\label{classompl__interface_1_1_model_based_planning_context_a4671c062d7fe92011b5d455fc7ad0867}} 
+bool {\bfseries simplify\+\_\+solutions\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_aa83e58f375f0eec5f160cc21de7c76eb}\label{classompl__interface_1_1_model_based_planning_context_aa83e58f375f0eec5f160cc21de7c76eb}} 
+\index{ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}!max\_goal\_samples\_@{max\_goal\_samples\_}}
+\index{max\_goal\_samples\_@{max\_goal\_samples\_}!ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}}
+\doxysubsubsection{\texorpdfstring{max\_goal\_samples\_}{max\_goal\_samples\_}}
+{\footnotesize\ttfamily unsigned int ompl\+\_\+interface\+::\+Model\+Based\+Planning\+Context\+::max\+\_\+goal\+\_\+samples\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+maximum number of valid states to store in the goal region for any planning request (when such sampling is possible) \mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_af1f70094d51bab889d75410a93390cb6}\label{classompl__interface_1_1_model_based_planning_context_af1f70094d51bab889d75410a93390cb6}} 
+\index{ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}!max\_solution\_segment\_length\_@{max\_solution\_segment\_length\_}}
+\index{max\_solution\_segment\_length\_@{max\_solution\_segment\_length\_}!ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}}
+\doxysubsubsection{\texorpdfstring{max\_solution\_segment\_length\_}{max\_solution\_segment\_length\_}}
+{\footnotesize\ttfamily double ompl\+\_\+interface\+::\+Model\+Based\+Planning\+Context\+::max\+\_\+solution\+\_\+segment\+\_\+length\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+the maximum length that is allowed for segments that make up the motion plan; by default this is 1\% from the extent of the space \mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_ac654dea9017165c402f2c151f4da7e1a}\label{classompl__interface_1_1_model_based_planning_context_ac654dea9017165c402f2c151f4da7e1a}} 
+\index{ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}!max\_state\_sampling\_attempts\_@{max\_state\_sampling\_attempts\_}}
+\index{max\_state\_sampling\_attempts\_@{max\_state\_sampling\_attempts\_}!ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}}
+\doxysubsubsection{\texorpdfstring{max\_state\_sampling\_attempts\_}{max\_state\_sampling\_attempts\_}}
+{\footnotesize\ttfamily unsigned int ompl\+\_\+interface\+::\+Model\+Based\+Planning\+Context\+::max\+\_\+state\+\_\+sampling\+\_\+attempts\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+maximum number of attempts to be made at sampling a state when attempting to find valid states that satisfy some set of constraints \mbox{\Hypertarget{classompl__interface_1_1_model_based_planning_context_a2072a1f70ef179d06a72faacd1b7e88b}\label{classompl__interface_1_1_model_based_planning_context_a2072a1f70ef179d06a72faacd1b7e88b}} 
+\index{ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}!minimum\_waypoint\_count\_@{minimum\_waypoint\_count\_}}
+\index{minimum\_waypoint\_count\_@{minimum\_waypoint\_count\_}!ompl\_interface::ModelBasedPlanningContext@{ompl\_interface::ModelBasedPlanningContext}}
+\doxysubsubsection{\texorpdfstring{minimum\_waypoint\_count\_}{minimum\_waypoint\_count\_}}
+{\footnotesize\ttfamily unsigned int ompl\+\_\+interface\+::\+Model\+Based\+Planning\+Context\+::minimum\+\_\+waypoint\+\_\+count\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+the minimum number of points to include on the solution path (interpolation is used to reach this number, if needed) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/include/moveit/ompl\+\_\+interface/model\+\_\+based\+\_\+planning\+\_\+context.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/src/model\+\_\+based\+\_\+planning\+\_\+context.\+cpp\end{DoxyCompactItemize}

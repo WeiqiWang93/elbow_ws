@@ -1,0 +1,62 @@
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ur_ow">
+
+<xacro:macro name="ow_cameras" params="chassis_type calibration_data chisel_tool">
+  <xacro:property name="saw_front_tool" value="${calibration_data[chassis_type]['sia20']['saw']['cameras']['saw_tool_front']}"/>
+  <xacro:property name="chisel_tool_makita" value="${calibration_data[chassis_type]['ur10']['chisel']['cameras']['chisel_tool']}"/>
+  <xacro:property name="chisel_tool_bosch" value="${calibration_data[chassis_type]['ur16']['cameras']['chisel_tool_bosch']}"/>
+  <xacro:property name="chisel_track_up_right" value="${calibration_data[chassis_type]['ur10']['chisel']['cameras']['chisel_track_up_right']}"/>
+  <xacro:property name="chisel_track_up_left" value="${calibration_data[chassis_type]['ur10']['chisel']['cameras']['chisel_track_up_left']}"/>
+  <xacro:property name="chisel_track_down_right" value="${calibration_data[chassis_type]['ur10']['chisel']['cameras']['chisel_track_down_right']}"/>
+  <xacro:property name="chisel_track_down_left" value="${calibration_data[chassis_type]['ur10']['chisel']['cameras']['chisel_track_down_left']}"/>
+
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_astra_emb_s.urdf.xacro" />
+    <xacro:ow_astra_emb_s parent="saw_tip_link" suffix="saw_tool">
+
+
+    <!-- <origin rpy="0.0027476111249517196 0.014153336887979612 -2.102773125480859" xyz="-0.142347618417  -0.0760854463429 0.0911127891956" /> -->
+    <origin rpy="-0.077769 0.0406411 -0.0088937" xyz="0.258107606628 -0.0726435806652 0.0128804708478" />
+    <!-- <origin rpy="-1.5685055548233418 -0.5270323973615851 -1.5324164708014618" xyz="0.265260204781 -0.0779582781817 0.0177655563372" /> -->
+    </xacro:ow_astra_emb_s>
+
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_astra_emb_s.urdf.xacro" />
+    <xacro:ow_astra_emb_s parent="saw_tip_link" suffix="saw_tool_front">
+    <!-- <origin rpy="-1.618 -0.594 -1.531" xyz="0.2670 -0.0834 -0.00902" /> -->
+    <!-- <origin rpy="-1.5685055548233418 -0.5270323973615851 -1.5324164708014618" xyz="0.265260204781 -0.0779582781817 0.0177655563372" /> <! calibrated wide rack 09/27/2020-->
+    <origin rpy="${saw_front_tool['rpy'][0]} ${saw_front_tool['rpy'][1]} ${saw_front_tool['rpy'][2]}" xyz="${saw_front_tool['pos'][0]} ${saw_front_tool['pos'][1]} ${saw_front_tool['pos'][2]}" />
+    </xacro:ow_astra_emb_s>
+
+  <xacro:if value="${chisel_tool == 'makita'}">
+      <xacro:ow_astra_emb_s parent="chisel_tool0" suffix="chisel_tool">
+        <origin rpy="${chisel_tool_makita['rpy'][0]} ${chisel_tool_makita['rpy'][1]} ${chisel_tool_makita['rpy'][2]}" xyz="${chisel_tool_makita['pos'][0]} ${chisel_tool_makita['pos'][1]} ${chisel_tool_makita['pos'][2]}" />
+      </xacro:ow_astra_emb_s>
+  </xacro:if>
+
+  <xacro:if value="${chisel_tool == 'bosch'}">
+      <xacro:ow_astra_emb_s parent="chisel_tool0" suffix="chisel_tool">
+        <origin rpy="${chisel_tool_bosch['rpy'][0]} ${chisel_tool_bosch['rpy'][1]} ${chisel_tool_bosch['rpy'][2]}" xyz="${chisel_tool_bosch['pos'][0]} ${chisel_tool_bosch['pos'][1]} ${chisel_tool_bosch['pos'][2]}" />
+      </xacro:ow_astra_emb_s>
+  </xacro:if>
+
+    <xacro:ow_astra_emb_s parent="chisel_base" suffix="chisel_track_up_right">
+      <!-- <origin xyz="0.047996 0.361831 0.123532" rpy="3.09828 -0.18341371 1.1700" /> -->
+      <origin rpy="${chisel_track_up_right['rpy'][0]} ${chisel_track_up_right['rpy'][1]} ${chisel_track_up_right['rpy'][2]}" xyz="${chisel_track_up_right['pos'][0]} ${chisel_track_up_right['pos'][1]} ${chisel_track_up_right['pos'][2]}" />
+    </xacro:ow_astra_emb_s>
+
+    <xacro:ow_astra_emb_s parent="chisel_base" suffix="chisel_track_up_left">
+      <!-- <origin xyz="-0.04620 0.42845 0.0904" rpy="-3.11444 -0.2336123 2.089670" /> -->
+      <origin rpy="${chisel_track_up_left['rpy'][0]} ${chisel_track_up_left['rpy'][1]} ${chisel_track_up_left['rpy'][2]}" xyz="${chisel_track_up_left['pos'][0]} ${chisel_track_up_left['pos'][1]} ${chisel_track_up_left['pos'][2]}" />
+    </xacro:ow_astra_emb_s>
+    
+
+    <xacro:ow_astra_emb_s parent="chisel_base" suffix="chisel_track_down_right">
+      <!-- <origin xyz="-0.05316 0.44373 0.16638" rpy="-0.0087175 0.519718 1.13123" /> -->
+      <origin rpy="${chisel_track_down_right['rpy'][0]} ${chisel_track_down_right['rpy'][1]} ${chisel_track_down_right['rpy'][2]}" xyz="${chisel_track_down_right['pos'][0]} ${chisel_track_down_right['pos'][1]} ${chisel_track_down_right['pos'][2]}" />
+    </xacro:ow_astra_emb_s>
+
+    <xacro:ow_astra_emb_s parent="chisel_base" suffix="chisel_track_down_left">
+      <!-- <origin xyz="-0.17922 0.376246 0.16296" rpy="0.038952 0.5144956 2.0994865" /> -->
+      <origin rpy="${chisel_track_down_left['rpy'][0]} ${chisel_track_down_left['rpy'][1]} ${chisel_track_down_left['rpy'][2]}" xyz="${chisel_track_down_left['pos'][0]} ${chisel_track_down_left['pos'][1]} ${chisel_track_down_left['pos'][2]}" />
+    </xacro:ow_astra_emb_s>
+
+</xacro:macro>
+</robot>

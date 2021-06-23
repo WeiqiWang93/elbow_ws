@@ -1,0 +1,355 @@
+\hypertarget{classscripts_1_1operations_1_1_mission}{}\doxysection{scripts.\+operations.\+Mission Class Reference}
+\label{classscripts_1_1operations_1_1_mission}\index{scripts.operations.Mission@{scripts.operations.Mission}}
+
+
+Inheritance diagram for scripts.\+operations.\+Mission\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classscripts_1_1operations_1_1_mission__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for scripts.\+operations.\+Mission\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classscripts_1_1operations_1_1_mission__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a8461ca35627f582feb30b90e8c68a7f3}\label{classscripts_1_1operations_1_1_mission_a8461ca35627f582feb30b90e8c68a7f3}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, redis, operation\+\_\+builder)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a7490851040800aca8db93f878ec1198c}\label{classscripts_1_1operations_1_1_mission_a7490851040800aca8db93f878ec1198c}} 
+def {\bfseries get\+\_\+state} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a3dcc5bedf216c5517bd04019ceb78102}\label{classscripts_1_1operations_1_1_mission_a3dcc5bedf216c5517bd04019ceb78102}} 
+def {\bfseries get\+\_\+active\+\_\+op\+\_\+name} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a6260f3207b1a4190726475a5e592f9e2}\label{classscripts_1_1operations_1_1_mission_a6260f3207b1a4190726475a5e592f9e2}} 
+def {\bfseries is\+\_\+active\+\_\+op\+\_\+last} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a783564bfb2ddd2469797a1560ce63535}\label{classscripts_1_1operations_1_1_mission_a783564bfb2ddd2469797a1560ce63535}} 
+def {\bfseries load\+\_\+from\+\_\+file} (self, file\+\_\+path)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_ad096ecff20ee8a3879b11a52c824554d}{save\+\_\+as}} (self, mission\+\_\+name=None, note=None, author=None)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a5dbfbd3b40ce4d7c95e205a15e294c77}{exec\+\_\+script}} (self, script)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_abdccb820a81ad781b0a178ecf7b6fc41}\label{classscripts_1_1operations_1_1_mission_abdccb820a81ad781b0a178ecf7b6fc41}} 
+def {\bfseries \+\_\+\+\_\+getitem\+\_\+\+\_\+} (self, key)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a2e4c8301ed2baa3e515f4f1f0d8b1d4b}{append\+\_\+operation}} (self, operation\+\_\+name, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_aac5b0e13b57806339668295d790ccaa7}{insert\+\_\+op\+\_\+for\+\_\+script}} (self, operation\+\_\+name, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a7f2018082146556285cfdb6012a4c76e}{insert\+\_\+op\+\_\+after\+\_\+active}} (self, operation\+\_\+name, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_aadb5a25b69f5da3a05fa2431ee66e336}{insert\+\_\+op}} (self, operation\+\_\+name, index, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a9ca334fd6d791569319b14a06d4118b3}{delete\+\_\+op}} (self, index)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_af8bc0f4982f27223ceae6684c346aca6}\label{classscripts_1_1operations_1_1_mission_af8bc0f4982f27223ceae6684c346aca6}} 
+def {\bfseries run\+\_\+op} (self, operation\+\_\+name=None, $\ast$args, $\ast$$\ast$kwargs)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_af562ef2c56f8188b250746695626bb2d}\label{classscripts_1_1operations_1_1_mission_af562ef2c56f8188b250746695626bb2d}} 
+def {\bfseries set\+\_\+op\+\_\+arg} (self, op\+\_\+index, arg\+\_\+name, arg\+\_\+value)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_aee9e04bab42da9e3b42b857acfc5655d}{insert\+\_\+mission}} (self, mission\+\_\+name, repeats=1)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_ab21dbdf7f203802b347f53c2d7366d2c}\label{classscripts_1_1operations_1_1_mission_ab21dbdf7f203802b347f53c2d7366d2c}} 
+def {\bfseries start} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a35df90e4ebec1c184d0d56e6a619f9e5}\label{classscripts_1_1operations_1_1_mission_a35df90e4ebec1c184d0d56e6a619f9e5}} 
+def {\bfseries stop} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_aa9ea4a76786555d95ad4bd13bb068ffd}\label{classscripts_1_1operations_1_1_mission_aa9ea4a76786555d95ad4bd13bb068ffd}} 
+def {\bfseries pause} (self)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a4d9963e57a2671e779cc9f916857b538}{pause\+\_\+op}} (self, index=1)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a455c0c7638d263d2a2ae763a0b32bd3b}\label{classscripts_1_1operations_1_1_mission_a455c0c7638d263d2a2ae763a0b32bd3b}} 
+def {\bfseries resume} (self)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a9c32456a94dcfc03ba568906aeab15fa}{resume\+\_\+op}} (self, index=1)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a9cfac80cd55154646bd454dd49f37cd4}{jump\+\_\+to\+\_\+op}} (self, index=1)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_aa69558b0f98f937b5253113d0d92ec3b}\label{classscripts_1_1operations_1_1_mission_aa69558b0f98f937b5253113d0d92ec3b}} 
+def {\bfseries is\+\_\+active} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a11ea7c0342d4772e3f3f73c97cac0a6b}\label{classscripts_1_1operations_1_1_mission_a11ea7c0342d4772e3f3f73c97cac0a6b}} 
+def {\bfseries complete} (self)
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_ac977c544e2371a2b4528d3ebd8410c3f}\label{classscripts_1_1operations_1_1_mission_ac977c544e2371a2b4528d3ebd8410c3f}} 
+def {\bfseries notify\+\_\+op\+\_\+update} (self, operation)
+\item 
+def \mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a7e759ffb58230e274d2281c30b6b4f52}{\+\_\+\+\_\+getstate\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a09a9a3657713f9daffeb428e64fb78dd}\label{classscripts_1_1operations_1_1_mission_a09a9a3657713f9daffeb428e64fb78dd}} 
+{\bfseries operations}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a7fd23ae2370c6f87727f65664828f278}\label{classscripts_1_1operations_1_1_mission_a7fd23ae2370c6f87727f65664828f278}} 
+{\bfseries last\+\_\+mission\+\_\+control\+\_\+operations}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a3b4be728c833cc6d756b459924eb566d}\label{classscripts_1_1operations_1_1_mission_a3b4be728c833cc6d756b459924eb566d}} 
+{\bfseries last\+\_\+result}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a425f6ba9ccdba86787785072db4e36f7}\label{classscripts_1_1operations_1_1_mission_a425f6ba9ccdba86787785072db4e36f7}} 
+\mbox{\hyperlink{classscripts_1_1operations_1_1_mission_a425f6ba9ccdba86787785072db4e36f7}{state}}
+\begin{DoxyCompactList}\small\item\em Insert the mission repeats times. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a0cda858f2023495eabc5c5e9e86ec08c}\label{classscripts_1_1operations_1_1_mission_a0cda858f2023495eabc5c5e9e86ec08c}} 
+{\bfseries state\+\_\+details}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a201ad9bcfc841ddeaaeefb3d0e52281d}\label{classscripts_1_1operations_1_1_mission_a201ad9bcfc841ddeaaeefb3d0e52281d}} 
+{\bfseries active\+\_\+op\+\_\+index}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_add0da20cf5caab986d3f87624500a4d3}\label{classscripts_1_1operations_1_1_mission_add0da20cf5caab986d3f87624500a4d3}} 
+{\bfseries start\+\_\+time}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_abd948267898fb0ae398a9818108c1079}\label{classscripts_1_1operations_1_1_mission_abd948267898fb0ae398a9818108c1079}} 
+{\bfseries end\+\_\+time}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a1578b4124a5ca2ed7b90d1c748671bd5}\label{classscripts_1_1operations_1_1_mission_a1578b4124a5ca2ed7b90d1c748671bd5}} 
+{\bfseries file\+\_\+path}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a882bae5daaa42b1a6a9db6768d546486}\label{classscripts_1_1operations_1_1_mission_a882bae5daaa42b1a6a9db6768d546486}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a203395f432936a7d6f2a8dad694173cb}\label{classscripts_1_1operations_1_1_mission_a203395f432936a7d6f2a8dad694173cb}} 
+{\bfseries note}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a16ae95d2a89f99b6db9b1964611a084c}\label{classscripts_1_1operations_1_1_mission_a16ae95d2a89f99b6db9b1964611a084c}} 
+{\bfseries edited}
+\item 
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a1022ddff70573568d906c0eb1b7b1f27}\label{classscripts_1_1operations_1_1_mission_a1022ddff70573568d906c0eb1b7b1f27}} 
+{\bfseries author}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Defines and executes a mission, a sequence of operations   
+\end{DoxyVerb}
+ ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a7e759ffb58230e274d2281c30b6b4f52}\label{classscripts_1_1operations_1_1_mission_a7e759ffb58230e274d2281c30b6b4f52}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!\_\_getstate\_\_@{\_\_getstate\_\_}}
+\index{\_\_getstate\_\_@{\_\_getstate\_\_}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{\_\_getstate\_\_()}{\_\_getstate\_\_()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+\_\+\+\_\+getstate\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the dictionnary used by json pickle to encode/pickle the 
+    mission object
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a7e759ffb58230e274d2281c30b6b4f52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a2e4c8301ed2baa3e515f4f1f0d8b1d4b}\label{classscripts_1_1operations_1_1_mission_a2e4c8301ed2baa3e515f4f1f0d8b1d4b}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!append\_operation@{append\_operation}}
+\index{append\_operation@{append\_operation}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{append\_operation()}{append\_operation()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+append\+\_\+operation (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{operation\+\_\+name,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Appends an operation at the end of the mission
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a2e4c8301ed2baa3e515f4f1f0d8b1d4b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a9ca334fd6d791569319b14a06d4118b3}\label{classscripts_1_1operations_1_1_mission_a9ca334fd6d791569319b14a06d4118b3}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!delete\_op@{delete\_op}}
+\index{delete\_op@{delete\_op}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{delete\_op()}{delete\_op()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+delete\+\_\+op (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes the operation at the given index of the mission
+    Only PENDING operations can be removed 
+    
+    First operation is at index 1
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a9ca334fd6d791569319b14a06d4118b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a5dbfbd3b40ce4d7c95e205a15e294c77}\label{classscripts_1_1operations_1_1_mission_a5dbfbd3b40ce4d7c95e205a15e294c77}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!exec\_script@{exec\_script}}
+\index{exec\_script@{exec\_script}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{exec\_script()}{exec\_script()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+exec\+\_\+script (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{script }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Executes script in mission scope
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_aee9e04bab42da9e3b42b857acfc5655d}\label{classscripts_1_1operations_1_1_mission_aee9e04bab42da9e3b42b857acfc5655d}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!insert\_mission@{insert\_mission}}
+\index{insert\_mission@{insert\_mission}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{insert\_mission()}{insert\_mission()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+insert\+\_\+mission (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mission\+\_\+name,  }\item[{}]{repeats = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Inserts mission repeasts x times just after the active operation
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_aee9e04bab42da9e3b42b857acfc5655d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_aadb5a25b69f5da3a05fa2431ee66e336}\label{classscripts_1_1operations_1_1_mission_aadb5a25b69f5da3a05fa2431ee66e336}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!insert\_op@{insert\_op}}
+\index{insert\_op@{insert\_op}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{insert\_op()}{insert\_op()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+insert\+\_\+op (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{operation\+\_\+name,  }\item[{}]{index,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds an operation at the given index of the mission
+
+    The operation is inserted before the given index
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_aadb5a25b69f5da3a05fa2431ee66e336_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_aadb5a25b69f5da3a05fa2431ee66e336_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a7f2018082146556285cfdb6012a4c76e}\label{classscripts_1_1operations_1_1_mission_a7f2018082146556285cfdb6012a4c76e}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!insert\_op\_after\_active@{insert\_op\_after\_active}}
+\index{insert\_op\_after\_active@{insert\_op\_after\_active}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{insert\_op\_after\_active()}{insert\_op\_after\_active()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+insert\+\_\+op\+\_\+after\+\_\+active (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{operation\+\_\+name,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds an operation right after current active operation
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a7f2018082146556285cfdb6012a4c76e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_aac5b0e13b57806339668295d790ccaa7}\label{classscripts_1_1operations_1_1_mission_aac5b0e13b57806339668295d790ccaa7}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!insert\_op\_for\_script@{insert\_op\_for\_script}}
+\index{insert\_op\_for\_script@{insert\_op\_for\_script}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{insert\_op\_for\_script()}{insert\_op\_for\_script()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+insert\+\_\+op\+\_\+for\+\_\+script (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{operation\+\_\+name,  }\item[{$\ast$}]{args,  }\item[{$\ast$$\ast$}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds an operation right after current active operation
+    or after last inserted operation
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_aac5b0e13b57806339668295d790ccaa7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a9cfac80cd55154646bd454dd49f37cd4}\label{classscripts_1_1operations_1_1_mission_a9cfac80cd55154646bd454dd49f37cd4}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!jump\_to\_op@{jump\_to\_op}}
+\index{jump\_to\_op@{jump\_to\_op}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{jump\_to\_op()}{jump\_to\_op()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+jump\+\_\+to\+\_\+op (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Jump to the operation at index provided as argument
+    First operation is at index 1
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a9cfac80cd55154646bd454dd49f37cd4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a4d9963e57a2671e779cc9f916857b538}\label{classscripts_1_1operations_1_1_mission_a4d9963e57a2671e779cc9f916857b538}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!pause\_op@{pause\_op}}
+\index{pause\_op@{pause\_op}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{pause\_op()}{pause\_op()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+pause\+\_\+op (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pause operation at index providFirst operation is at index 1ed as argument
+    First operation is at index 1
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a4d9963e57a2671e779cc9f916857b538_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_a9c32456a94dcfc03ba568906aeab15fa}\label{classscripts_1_1operations_1_1_mission_a9c32456a94dcfc03ba568906aeab15fa}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!resume\_op@{resume\_op}}
+\index{resume\_op@{resume\_op}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{resume\_op()}{resume\_op()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+resume\+\_\+op (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{index = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Resume operation at index provided as argument
+    First operation is at index 1
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_a9c32456a94dcfc03ba568906aeab15fa_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classscripts_1_1operations_1_1_mission_ad096ecff20ee8a3879b11a52c824554d}\label{classscripts_1_1operations_1_1_mission_ad096ecff20ee8a3879b11a52c824554d}} 
+\index{scripts.operations.Mission@{scripts.operations.Mission}!save\_as@{save\_as}}
+\index{save\_as@{save\_as}!scripts.operations.Mission@{scripts.operations.Mission}}
+\doxysubsubsection{\texorpdfstring{save\_as()}{save\_as()}}
+{\footnotesize\ttfamily def scripts.\+operations.\+Mission.\+save\+\_\+as (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mission\+\_\+name = {\ttfamily None},  }\item[{}]{note = {\ttfamily None},  }\item[{}]{author = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Save to a new file and update mission file and name accordingly, 
+    when given
+    
+    When no name parameter given, overwrite the original mission file
+\end{DoxyVerb}
+ Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classscripts_1_1operations_1_1_mission_ad096ecff20ee8a3879b11a52c824554d_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+overseer/scripts/operations.\+py\end{DoxyCompactItemize}

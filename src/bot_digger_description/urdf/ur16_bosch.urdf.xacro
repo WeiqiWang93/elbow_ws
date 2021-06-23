@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur_ow" >
+<xacro:macro name="robo_chisel" params="chassis_type calibration_data">
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+
+  <!-- ur10 -->
+  <xacro:include filename="$(find ur16e_description)/urdf/ur16.urdf.xacro" />
+    <xacro:ur16_robot prefix="chisel_">
+  </xacro:ur16_robot>
+  <!-- ROS base_link to UR 'Base' Coordinates transform -->
+  <link name="chisel_base"/>
+  <joint name="chisel_base_link-base_fixed_joint" type="fixed">
+    <!-- NOTE: this rotation is only needed as long as base_link itself is
+                not corrected wrt the real robot (ie: rotated over 180
+                degrees)
+    -->
+    <origin xyz="0 0 0" rpy= "0.0 1.5707963267948966 0.0" /> <!--"3.14 -1.5707963267948966 0.0"/-->
+    <parent link="chisel_base"/>
+    <child link="chisel_base_link"/>
+  </joint>
+
+  <!-- arm -->
+
+
+  <!-- end effector -->
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/chisel_bosch.urdf.xacro" />
+  <!-- attach -->
+  <xacro:ow_chisel prefix="chisel_" chassis_type="${chassis_type}" calibration_data="${calibration_data}"/>
+  
+  </xacro:macro>
+
+</robot>

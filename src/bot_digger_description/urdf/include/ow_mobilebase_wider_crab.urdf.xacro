@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:macro name="ow_mobilebase">
+ <joint name="mobile_base_joint" type="fixed">
+    <parent link="base" />
+    <child link = "mobile_base" />
+    <!-- <origin xyz="-0.925 -0.697 0.0" rpy="1.57 0.0 1.57" /> -->
+  </joint>
+  <link name="mobile_base">
+    <visual>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/20200930WideDiggerDummy.STL" />
+      </geometry>
+    </visual>
+    <gravity>false</gravity>
+    <collision>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/20200930WideDiggerDummy.STL" scale="1.0 1.0 1.0" />
+      </geometry>
+    </collision>
+
+  </link>
+
+  <joint name="base_footprint_fixed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 3.14"/>
+    <parent link="base_footprint"/>
+    <child link="base"/>
+  </joint>
+
+  <link name="base_footprint"/>
+
+
+  
+    <gazebo>
+      <gravity>0</gravity>
+      <collision>
+      <surface>
+        <friction>
+          <ode>
+            <mu>1000.0</mu>
+            <mu2>1000.0</mu2>
+          <slip1>0.0</slip1>
+          <slip2>0.0</slip2>
+          </ode>
+        </friction> 
+      </surface>
+    </collision>
+   
+    </gazebo>
+</xacro:macro>
+</robot>

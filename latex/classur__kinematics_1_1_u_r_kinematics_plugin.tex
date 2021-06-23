@@ -1,0 +1,118 @@
+\hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin}{}\doxysection{ur\+\_\+kinematics\+::U\+R\+Kinematics\+Plugin Class Reference}
+\label{classur__kinematics_1_1_u_r_kinematics_plugin}\index{ur\_kinematics::URKinematicsPlugin@{ur\_kinematics::URKinematicsPlugin}}
+
+
+Specific implementation of kinematics using K\+DL. This version can be used with any robot.  
+
+
+
+
+{\ttfamily \#include $<$ur\+\_\+moveit\+\_\+plugin.\+h$>$}
+
+
+
+Inheritance diagram for ur\+\_\+kinematics\+::U\+R\+Kinematics\+Plugin\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classur__kinematics_1_1_u_r_kinematics_plugin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ur\+\_\+kinematics\+::U\+R\+Kinematics\+Plugin\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classur__kinematics_1_1_u_r_kinematics_plugin__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a0d2a26581992b69ad9bbe8ea4fb95ad4}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a0d2a26581992b69ad9bbe8ea4fb95ad4}} 
+\mbox{\hyperlink{classur__kinematics_1_1_u_r_kinematics_plugin_a0d2a26581992b69ad9bbe8ea4fb95ad4}{U\+R\+Kinematics\+Plugin}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a9fd71f052bab88e1fa8d2a571a4398a8}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a9fd71f052bab88e1fa8d2a571a4398a8}} 
+virtual bool {\bfseries get\+Position\+IK} (const geometry\+\_\+msgs\+::\+Pose \&ik\+\_\+pose, const std\+::vector$<$ double $>$ \&ik\+\_\+seed\+\_\+state, std\+::vector$<$ double $>$ \&solution, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code, const kinematics\+::\+Kinematics\+Query\+Options \&options=kinematics\+::\+Kinematics\+Query\+Options()) const
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_ab10d2c2164ea68b04f76b9e4710557d8}\label{classur__kinematics_1_1_u_r_kinematics_plugin_ab10d2c2164ea68b04f76b9e4710557d8}} 
+virtual bool {\bfseries search\+Position\+IK} (const geometry\+\_\+msgs\+::\+Pose \&ik\+\_\+pose, const std\+::vector$<$ double $>$ \&ik\+\_\+seed\+\_\+state, double timeout, std\+::vector$<$ double $>$ \&solution, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code, const kinematics\+::\+Kinematics\+Query\+Options \&options=kinematics\+::\+Kinematics\+Query\+Options()) const
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_ac6c04731d27f228fef16b10ed7cfda0f}\label{classur__kinematics_1_1_u_r_kinematics_plugin_ac6c04731d27f228fef16b10ed7cfda0f}} 
+virtual bool {\bfseries search\+Position\+IK} (const geometry\+\_\+msgs\+::\+Pose \&ik\+\_\+pose, const std\+::vector$<$ double $>$ \&ik\+\_\+seed\+\_\+state, double timeout, const std\+::vector$<$ double $>$ \&consistency\+\_\+limits, std\+::vector$<$ double $>$ \&solution, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code, const kinematics\+::\+Kinematics\+Query\+Options \&options=kinematics\+::\+Kinematics\+Query\+Options()) const
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a951ce4b2707659a96ee084dbb9bc90ba}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a951ce4b2707659a96ee084dbb9bc90ba}} 
+virtual bool {\bfseries search\+Position\+IK} (const geometry\+\_\+msgs\+::\+Pose \&ik\+\_\+pose, const std\+::vector$<$ double $>$ \&ik\+\_\+seed\+\_\+state, double timeout, std\+::vector$<$ double $>$ \&solution, const I\+K\+Callback\+Fn \&solution\+\_\+callback, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code, const kinematics\+::\+Kinematics\+Query\+Options \&options=kinematics\+::\+Kinematics\+Query\+Options()) const
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a7f599d6dbdf4acfbadfbfbd149e46771}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a7f599d6dbdf4acfbadfbfbd149e46771}} 
+virtual bool {\bfseries search\+Position\+IK} (const geometry\+\_\+msgs\+::\+Pose \&ik\+\_\+pose, const std\+::vector$<$ double $>$ \&ik\+\_\+seed\+\_\+state, double timeout, const std\+::vector$<$ double $>$ \&consistency\+\_\+limits, std\+::vector$<$ double $>$ \&solution, const I\+K\+Callback\+Fn \&solution\+\_\+callback, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code, const kinematics\+::\+Kinematics\+Query\+Options \&options=kinematics\+::\+Kinematics\+Query\+Options()) const
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a3df7ee83ae11f3159c4517b16714bed5}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a3df7ee83ae11f3159c4517b16714bed5}} 
+virtual bool {\bfseries get\+Position\+FK} (const std\+::vector$<$ std\+::string $>$ \&link\+\_\+names, const std\+::vector$<$ double $>$ \&joint\+\_\+angles, std\+::vector$<$ geometry\+\_\+msgs\+::\+Pose $>$ \&poses) const
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a332a10e2fa4b844b4671e3d38d495564}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a332a10e2fa4b844b4671e3d38d495564}} 
+virtual bool {\bfseries initialize} (const std\+::string \&robot\+\_\+description, const std\+::string \&group\+\_\+name, const std\+::string \&base\+\_\+name, const std\+::string \&tip\+\_\+name, double search\+\_\+discretization)
+\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_ad7de3c663f533804d8a4d2eedcec17d4}\label{classur__kinematics_1_1_u_r_kinematics_plugin_ad7de3c663f533804d8a4d2eedcec17d4}} 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classur__kinematics_1_1_u_r_kinematics_plugin_ad7de3c663f533804d8a4d2eedcec17d4}{get\+Joint\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Return all the joint names in the order they are used internally. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_aa89ead31cc73c54f203f96b81c9bcb16}\label{classur__kinematics_1_1_u_r_kinematics_plugin_aa89ead31cc73c54f203f96b81c9bcb16}} 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classur__kinematics_1_1_u_r_kinematics_plugin_aa89ead31cc73c54f203f96b81c9bcb16}{get\+Link\+Names}} () const
+\begin{DoxyCompactList}\small\item\em Return all the link names in the order they are represented internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classur__kinematics_1_1_u_r_kinematics_plugin_a431f4eb5ec2bd7976b2a6afd36539f45}{search\+Position\+IK}} (const geometry\+\_\+msgs\+::\+Pose \&ik\+\_\+pose, const std\+::vector$<$ double $>$ \&ik\+\_\+seed\+\_\+state, double timeout, std\+::vector$<$ double $>$ \&solution, const I\+K\+Callback\+Fn \&solution\+\_\+callback, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code, const std\+::vector$<$ double $>$ \&consistency\+\_\+limits, const kinematics\+::\+Kinematics\+Query\+Options \&options=kinematics\+::\+Kinematics\+Query\+Options()) const
+\begin{DoxyCompactList}\small\item\em Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_ad2ff6f037904d90ae1d9309ef6d07724}\label{classur__kinematics_1_1_u_r_kinematics_plugin_ad2ff6f037904d90ae1d9309ef6d07724}} 
+virtual bool {\bfseries set\+Redundant\+Joints} (const std\+::vector$<$ unsigned int $>$ \&redundant\+\_\+joint\+\_\+indices)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specific implementation of kinematics using K\+DL. This version can be used with any robot. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classur__kinematics_1_1_u_r_kinematics_plugin_a431f4eb5ec2bd7976b2a6afd36539f45}\label{classur__kinematics_1_1_u_r_kinematics_plugin_a431f4eb5ec2bd7976b2a6afd36539f45}} 
+\index{ur\_kinematics::URKinematicsPlugin@{ur\_kinematics::URKinematicsPlugin}!searchPositionIK@{searchPositionIK}}
+\index{searchPositionIK@{searchPositionIK}!ur\_kinematics::URKinematicsPlugin@{ur\_kinematics::URKinematicsPlugin}}
+\doxysubsubsection{\texorpdfstring{searchPositionIK()}{searchPositionIK()}}
+{\footnotesize\ttfamily bool ur\+\_\+kinematics\+::\+U\+R\+Kinematics\+Plugin\+::search\+Position\+IK (\begin{DoxyParamCaption}\item[{const geometry\+\_\+msgs\+::\+Pose \&}]{ik\+\_\+pose,  }\item[{const std\+::vector$<$ double $>$ \&}]{ik\+\_\+seed\+\_\+state,  }\item[{double}]{timeout,  }\item[{std\+::vector$<$ double $>$ \&}]{solution,  }\item[{const I\+K\+Callback\+Fn \&}]{solution\+\_\+callback,  }\item[{moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&}]{error\+\_\+code,  }\item[{const std\+::vector$<$ double $>$ \&}]{consistency\+\_\+limits,  }\item[{const kinematics\+::\+Kinematics\+Query\+Options \&}]{options = {\ttfamily kinematics\+:\+:KinematicsQueryOptions()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Given a desired pose of the end-\/effector, search for the joint angles required to reach it. This particular method is intended for \char`\"{}searching\char`\"{} for a solutions by stepping through the redundancy (or other numerical routines). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ik\+\_\+pose} & the desired pose of the link \\
+\hline
+{\em ik\+\_\+seed\+\_\+state} & an initial guess solution for the inverse kinematics \\
+\hline
+{\em timeout} & The amount of time (in seconds) available to the solver \\
+\hline
+{\em solution} & the solution vector \\
+\hline
+{\em solution\+\_\+callback} & A callback solution for the IK solution \\
+\hline
+{\em error\+\_\+code} & an error code that encodes the reason for failure or success \\
+\hline
+{\em check\+\_\+consistency} & Set to true if consistency check needs to be performed \\
+\hline
+{\em redundancy} & The index of the redundant joint \\
+\hline
+{\em consistency\+\_\+limit} & The returned solutuion will contain a value for the redundant joint in the range \mbox{[}seed\+\_\+state(redundancy\+\_\+limit)-\/consistency\+\_\+limit,seed\+\_\+state(redundancy\+\_\+limit)+consistency\+\_\+limit\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a valid solution was found, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/ur\+\_\+kinematics/include/ur\+\_\+kinematics/ur\+\_\+moveit\+\_\+plugin.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/ur\+\_\+kinematics/src/ur\+\_\+moveit\+\_\+plugin.\+cpp\end{DoxyCompactItemize}

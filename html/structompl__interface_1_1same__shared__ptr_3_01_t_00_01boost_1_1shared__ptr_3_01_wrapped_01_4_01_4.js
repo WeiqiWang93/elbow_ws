@@ -1,0 +1,4 @@
+var structompl__interface_1_1same__shared__ptr_3_01_t_00_01boost_1_1shared__ptr_3_01_wrapped_01_4_01_4 =
+[
+    [ "type", "structompl__interface_1_1same__shared__ptr_3_01_t_00_01boost_1_1shared__ptr_3_01_wrapped_01_4_01_4.html#a800934ff1297af70256dbe422916852d", null ]
+];

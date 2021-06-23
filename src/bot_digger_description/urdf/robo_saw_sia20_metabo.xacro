@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="robo_saw_sia20" >
+  
+	<xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+
+	<xacro:include filename="$(find motoman_sia20d_support)/urdf/sia20d_macro.urdf.xacro" />
+	<xacro:motoman_sia20d prefix="saw_" transmission_hw_interface="$(arg transmission_hw_interface)"/>
+
+  <!-- end effector -->
+  <!-- <xacro:include filename="$(find bot_digger_description)/urdf/include/saw_${type}.urdf.xacro" /> -->
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/saw_metabo.urdf.xacro" />
+  <!-- attach -->
+  <xacro:ur_ow_robot prefix="saw_" />
+  
+
+
+</robot>

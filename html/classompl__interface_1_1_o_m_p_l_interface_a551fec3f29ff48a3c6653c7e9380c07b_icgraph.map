@@ -1,0 +1,4 @@
+<map id="ompl_interface::OMPLInterface\l::setPlannerConfigurations" name="ompl_interface::OMPLInterface\l::setPlannerConfigurations">
+<area shape="rect" id="node1" title="Specify configurations for the planners." alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node2" href="$classompl__interface_1_1_o_m_p_l_interface.html#a245b5effa0350be58231a4a2a60375ba" title="Initialize OMPL&#45;based planning for a particular robot model. ROS configuration is read from the speci..." alt="" coords="5,5,208,47"/>
+</map>

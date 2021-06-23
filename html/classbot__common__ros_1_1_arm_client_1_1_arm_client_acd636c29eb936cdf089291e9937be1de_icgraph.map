@@ -1,0 +1,10 @@
+<map id="bot_common_ros.arm_client.\lArmClient.get_pose" name="bot_common_ros.arm_client.\lArmClient.get_pose">
+<area shape="rect" id="node1" title="data #################################" alt="" coords="975,89,1163,130"/>
+<area shape="rect" id="node2" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#a950e7715b4a7f7aa68de245724c60fa2" title=" " alt="" coords="735,89,927,130"/>
+<area shape="rect" id="node3" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#ab8f496a9fd7650749e7276ff32f12310" title=" " alt="" coords="495,53,687,94"/>
+<area shape="rect" id="node7" href="$classbot__common__ros_1_1ur__gazebo__driver_1_1_u_r_gazebo_driver.html#a2211547010c8f1be073662dd164c56b8" title=" " alt="" coords="497,117,684,173"/>
+<area shape="rect" id="node4" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#a088f8afc273ed94161c9f0b30481e781" title=" " alt="" coords="253,53,445,94"/>
+<area shape="rect" id="node5" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#aa301bad3c787d70d91f142153df10fdd" title=" " alt="" coords="13,5,196,61"/>
+<area shape="rect" id="node6" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#a49354b12f9800f6fedd310943bca9f07" title=" " alt="" coords="5,85,204,141"/>
+<area shape="rect" id="node8" href="$classbot__common__ros_1_1ur__gazebo__driver_1_1_u_r_gazebo_driver.html#a463afb9b685ecddf7d6b2123dfdbad52" title=" " alt="" coords="252,125,447,166"/>
+</map>

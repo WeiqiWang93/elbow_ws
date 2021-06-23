@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="ow_chisel" params="prefix chassis_type calibration_data">
+  <xacro:property name="chisel_TCP" value="${calibration_data[chassis_type]['ur16']['TCP']}" />
+  <xacro:property name="pi" value="3.14159265" />
+
+  <!-- Inertia parameters -->
+  <xacro:property name="makita_mass" value="4.0" />
+  <xacro:property name="chisel_mass" value="1.0" />
+
+  <!-- link lengths used in model -->
+  <xacro:property name="force_sensor_width" value="0.04" />
+  <xacro:property name="makita_length" value="0.15" />
+  <xacro:property name="makita_width" value="0.23" />
+  <xacro:property name="makita_height" value="0.15" />
+
+ <!-- change the below value for different chisel lengths -->
+  <!-- <xacro:property name="chisel_rod_length" value="0.175" /> -->
+  <xacro:property name="chisel_rod_length" value="0.24" />
+  <xacro:property name="chisel_inflation" value="0.04" />
+  <xacro:property name="chisel_length" value="0.41" />
+
+  <xacro:property name="chisel_radius" value="0.015" />
+
+  <xacro:macro name="cylinder_inertial" params="radius length mass *origin">
+    <inertial>
+      <mass value="${mass}" />
+      <xacro:insert_block name="origin" />
+      <inertia ixx="${0.0833333 * mass * (3 * radius * radius + length * length)}" ixy="0.0" ixz="0.0"
+        iyy="${0.0833333 * mass * (3 * radius * radius + length * length)}" iyz="0.0"
+        izz="${0.5 * mass * radius * radius}" />
+    </inertial>
+  </xacro:macro>
+
+
+  <!-- attach to tool0  directions: z-pointed towards tool tip, y is "up", x is "out"-->
+
+    <joint name="${prefix}makita_fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}makita_link" />
+      <!-- <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 3.14" /> -->
+    </joint>
+
+    <link name="${prefix}makita_link">
+      <visual name='visual'>
+        <geometry>
+          <mesh filename="package://bot_digger_description/meshes/20210408Bosch_top45camera.STL" />
+        </geometry>
+        <origin xyz="0 0.0 0.0" rpy="0.0 0 0.0" />
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://bot_digger_description/meshes/20210408Bosch_top45camera.STL" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0 0.0" />
+      </collision>     
+    </link>
+
+    <joint name="${prefix}chisel_fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}chisel_link" />
+      <origin xyz="0.0 0.0 0.54" rpy="0.0 0.0 1.57" />
+    </joint>
+
+    <link name="${prefix}chisel_link">
+      <visual name='visual'>
+        <geometry>
+          <cylinder radius="${chisel_radius}" length="${chisel_rod_length + chisel_inflation}" />
+        </geometry>
+        <material name="LightGrey">
+          <color rgba="0.7 0.7 0.7 1.0"/>
+        </material>
+        <origin xyz="0 0 ${chisel_rod_length / 2}" rpy="0 0 0" />
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder radius="${chisel_radius}" length="${chisel_rod_length + chisel_inflation}" />
+        </geometry>
+        <origin xyz="0 0 ${chisel_rod_length / 2}" rpy="0 0 0" />
+      </collision>
+      <xacro:cylinder_inertial radius="${chisel_radius}" length="${chisel_rod_length}" mass="${chisel_mass}">
+        <origin xyz="0.0 0.0 ${chisel_rod_length / 2}" rpy="0 0 0" />
+      </xacro:cylinder_inertial>
+    </link>
+
+    <joint name="${prefix}tip_fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}tip_link" />
+      <origin xyz="${chisel_TCP['pos'][0]} ${chisel_TCP['pos'][1]} ${chisel_TCP['pos'][2]}" rpy="${chisel_TCP['rpy'][0]} ${chisel_TCP['rpy'][1]} ${chisel_TCP['rpy'][2]}"/>
+    </joint>
+
+
+    <!-- frame directions: z along rotation axis, x out top of drill, y out side of drill -->
+
+
+    <link name="${prefix}tip_link">
+      <collision>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 -0.01"/>
+      </collision>
+    </link>
+
+
+
+</xacro:macro>
+
+  
+</robot>

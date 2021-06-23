@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:macro name="ow_mobilebase">
+ <joint name="mobile_base_joint" type="fixed">
+    <parent link="base" />
+    <child link = "mobile_base" />
+  </joint>
+  <link name="mobile_base">
+    <visual>
+      <geometry>
+        <box size="0.20 0.20 0.50"/>
+      </geometry>
+    </visual>
+    <gravity>true</gravity>
+    <collision>
+      <geometry>
+        <box size="0.20 0.20 0.50"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_footprint_fixed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="base_footprint"/>
+    <child link="base"/>
+  </joint>
+
+  <link name="base_footprint"/>
+
+ <link name="world"/>
+
+  <joint name="fixed_bf_world" type="fixed">
+    <parent link="world"/>
+    <child link="base_footprint"/>
+  </joint>
+  
+    <gazebo reference="mobile_base">
+    
+      <collision>
+      <surface>
+        <friction>
+          <ode>
+            <mu>1000.0</mu>
+            <mu2>1000.0</mu2>
+          <slip1>0.0</slip1>
+          <slip2>0.0</slip2>
+          </ode>
+        </friction> 
+      </surface>
+    </collision>
+    </gazebo>
+</xacro:macro>
+</robot>

@@ -1,0 +1,48 @@
+\hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager}{}\doxysection{ompl\+\_\+interface\+::O\+M\+P\+L\+Planner\+Manager Class Reference}
+\label{classompl__interface_1_1_o_m_p_l_planner_manager}\index{ompl\_interface::OMPLPlannerManager@{ompl\_interface::OMPLPlannerManager}}
+
+
+Inheritance diagram for ompl\+\_\+interface\+::O\+M\+P\+L\+Planner\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classompl__interface_1_1_o_m_p_l_planner_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ompl\+\_\+interface\+::O\+M\+P\+L\+Planner\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classompl__interface_1_1_o_m_p_l_planner_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager_ad894f132db5aa438eee9d98ba1fdb758}\label{classompl__interface_1_1_o_m_p_l_planner_manager_ad894f132db5aa438eee9d98ba1fdb758}} 
+virtual bool {\bfseries initialize} (const robot\+\_\+model\+::\+Robot\+Model\+Const\+Ptr \&model, const std\+::string \&ns)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager_ae17d8a565d886ba92211bf05bced8a6b}\label{classompl__interface_1_1_o_m_p_l_planner_manager_ae17d8a565d886ba92211bf05bced8a6b}} 
+virtual bool {\bfseries can\+Service\+Request} (const moveit\+\_\+msgs\+::\+Motion\+Plan\+Request \&req) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager_aa2aba990fa99131c70fe7a87847ba877}\label{classompl__interface_1_1_o_m_p_l_planner_manager_aa2aba990fa99131c70fe7a87847ba877}} 
+virtual std\+::string {\bfseries get\+Description} () const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager_ab72d5e4248da67db1a7434280dfe1277}\label{classompl__interface_1_1_o_m_p_l_planner_manager_ab72d5e4248da67db1a7434280dfe1277}} 
+virtual void {\bfseries get\+Planning\+Algorithms} (std\+::vector$<$ std\+::string $>$ \&algs) const
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager_ad374716dbd57b0a0f163634390d117ec}\label{classompl__interface_1_1_o_m_p_l_planner_manager_ad374716dbd57b0a0f163634390d117ec}} 
+virtual void {\bfseries set\+Planner\+Configurations} (const planning\+\_\+interface\+::\+Planner\+Configuration\+Map \&pconfig)
+\item 
+\mbox{\Hypertarget{classompl__interface_1_1_o_m_p_l_planner_manager_aa8ba8a2158bb3e895514b088a8b6eb7e}\label{classompl__interface_1_1_o_m_p_l_planner_manager_aa8ba8a2158bb3e895514b088a8b6eb7e}} 
+virtual planning\+\_\+interface\+::\+Planning\+Context\+Ptr {\bfseries get\+Planning\+Context} (const planning\+\_\+scene\+::\+Planning\+Scene\+Const\+Ptr \&planning\+\_\+scene, const planning\+\_\+interface\+::\+Motion\+Plan\+Request \&req, moveit\+\_\+msgs\+::\+Move\+It\+Error\+Codes \&error\+\_\+code) const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+planning\+\_\+ros/ompl/ompl\+\_\+interface/src/ompl\+\_\+planner\+\_\+manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="ur_ow" >
+
+  <xacro:arg name="simulation" default="false" />
+  <xacro:arg name="use_metabo" default="false" />
+  <xacro:arg name="track_camera_calib_marker" default="false" />
+  <xacro:property name="diggerbot_calibration_file" value="$(find bot_digger_description)/extrinsics.yaml"/>
+  <xacro:property name="calibration_data" value="${load_yaml(diggerbot_calibration_file)}"/>
+  <xacro:property name="chassis_type" value="bot_digger_wide_rack" />
+  <xacro:property name="vive_pos" value="${calibration_data[chassis_type]['htc_vive_tracker']['pos']}"/>
+  <xacro:property name="vive_rpy" value="${calibration_data[chassis_type]['htc_vive_tracker']['rpy']}"/>
+
+  <link name="base"/>
+
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/robo_saw_sia20.urdf.xacro"/>
+
+  <xacro:if value="$(arg use_metabo)">
+    <xacro:robo_saw type="metabo" chassis_type="${chassis_type}" calibration_data="${calibration_data}">
+    </xacro:robo_saw>
+  </xacro:if>
+
+  <xacro:unless value="$(arg use_metabo)">
+    <xacro:robo_saw type="goelz" chassis_type="${chassis_type}" calibration_data="${calibration_data}">
+    </xacro:robo_saw>
+  </xacro:unless>
+  
+  <joint name="base_saw_base_fixed_joint" type="fixed">    
+    <origin xyz="0.727 -0.4405 0.405" rpy="0.0 0.0 3.14"/>
+    <parent link="base"/>
+    <child link="saw_base"/>
+  </joint>
+
+<xacro:include filename="$(find bot_digger_description)/urdf/robo_chisel.urdf.xacro"/>
+<xacro:robo_chisel chassis_type="${chassis_type}" calibration_data="${calibration_data}">
+  </xacro:robo_chisel>
+
+<joint name="base_chisel_base_fixed_joint" type="fixed">
+    <origin xyz="-0.933 -0.539 0.325" rpy="0.0 0.0 3.14"/>
+    <parent link="base"/>
+    <child link="chisel_base"/>
+  </joint>
+
+<!-- HTC Vive Tracker-->
+<link name="htc_vive_tracker"/>
+<joint name="chisel_base_htc_tracker_fixed_joint" type="fixed">
+    <!-- <origin xyz="-0.930 -1.490 0.146" rpy="1.3090 0.0 3.1415"/> -->
+    <!-- <origin xyz="-0.93706 -1.1051 0.16329" rpy="1.32587903331536 0.034584052053399844 3.1307191051314867"/> -->    
+    <!-- <origin xyz="-0.91959378 -1.5321692   0.11883212" rpy="1.345694108259053 0.02110238745805116 3.0997863324893946"/> calibrated vive tracker for new mount on wide rack 10/06/2020 -->
+    <origin xyz="${vive_pos[0]} ${vive_pos[1]} ${vive_pos[2]}" rpy="${vive_rpy[0]} ${vive_rpy[1]} ${vive_rpy[2]}"/>
+    <parent link="chisel_base"/>
+    <child link="htc_vive_tracker"/>
+  </joint>
+
+<xacro:include filename="$(find bot_digger_description)/urdf/include/cameras.urdf.xacro"/>
+<xacro:ow_cameras chassis_type="${chassis_type}" calibration_data="${calibration_data}" chisel_tool="makita">
+  </xacro:ow_cameras>
+
+<!-- Calibration marker on the chisel side - UR10 -->
+    <link name="calib_marker_chisel">
+    <visual>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/201203UR10CaliGrid.STL" />
+      </geometry>
+    </visual>
+    <gravity>true</gravity>
+    <collision>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/201203UR10CaliGrid.STL" />
+      </geometry> 
+    </collision>
+  </link>
+
+  <joint name="calib_marker_chisel_base_fixed_joint" type="fixed">    
+    <parent link="chisel_base"/>
+    <child link="calib_marker_chisel"/>
+  </joint>
+  
+  <xacro:include filename=
+  "$(find bot_digger_description)/urdf/include/zed.urdf.xacro"/>
+
+  <xacro:zed_camera/>
+
+<!-- <xacro:include filename="$(find bot_digger_description)/urdf/include/zed1.urdf.xacro"/>
+<xacro:zed1_camera/>
+
+<xacro:include filename="$(find bot_digger_description)/urdf/include/zed2.urdf.xacro"/>
+<xacro:zed2_camera/>
+
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_imu.urdf.xacro"/>
+  
+  <xacro:ow_imu xyz="-0.97 0.07 0.35" rpy="0 0 ${pi/2}" parent="base" suffix="left"/>
+  <xacro:ow_imu xyz="0.14 0.07 0.35" rpy="0 0 ${pi/2}" parent="base" suffix="right"/> -->
+
+
+  <!-- Include mobilebase -->
+  <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_mobilebase_wider_crab.urdf.xacro"/>
+  <xacro:ow_mobilebase />
+
+<!-- Calibration marker on the saw side - SIA20 -->
+
+  <link name="calib_marker_saw">
+    <visual>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/200109SIA20BaseCaliv3_fix.STL" />
+      </geometry>
+    </visual>
+    <gravity>true</gravity>
+    <collision>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/200109SIA20BaseCaliv3_fix.STL" />
+      </geometry> 
+    </collision>
+  </link>
+
+  <joint name="calib_marker_saw_base_fixed_joint" type="fixed">    
+    <parent link="saw_base"/>
+    <child link="calib_marker_saw"/>
+  </joint>
+
+  <link name="camera_track_mount">
+    <visual>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/200731TrackSideCamQuad_2.STL"  scale="1.0 1.5 1.5" />
+      </geometry>
+    </visual>
+    <gravity>true</gravity>
+    <collision>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/200731TrackSideCamQuad_2.STL"   scale="1.0 1.5 1.5"/>
+      </geometry> 
+    </collision>
+  </link>
+
+  <joint name="camera_track_mount_fixed_joint" type="fixed"> 
+   <origin xyz="-0.059 0.334 0.106" rpy="1.57 0.0 3.14"/>
+    <parent link="chisel_base"/>
+    <child link="camera_track_mount"/>
+  </joint>
+
+
+
+
+<xacro:if value="$(arg track_camera_calib_marker)">
+
+  <link name="calib_marker_chisel_tool">
+    <visual>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/200827UR10Grid.STL" />
+      </geometry>
+    </visual>
+    <gravity>true</gravity>
+  </link>
+
+  <joint name="calib_marker_chisel_tool_fixed_joint" type="fixed">    
+   <parent link="chisel_tip_link"/>
+    <child link="calib_marker_chisel_tool"/>
+  </joint>
+
+</xacro:if>
+
+
+<xacro:if value="$(arg simulation)">
+  
+  <joint name="world_fixed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="world"/>
+    <child link="base_footprint"/>
+  </joint>
+
+  <link name="world"/>
+<!--Include Wheels -->
+  <!-- <xacro:include filename="$(find bot_digger_description)/urdf/include/ow_wheels.urdf.xacro"/>
+  <xacro:ow_wheels suffix="1" left_xyz="-0.45 -0.670 0.25" right_xyz="-0.45 0.65 0.25"/>
+  <xacro:ow_wheels suffix="2" left_xyz="-0.25 -0.670 0.25" right_xyz="-0.25 0.65 0.25"/>
+  <xacro:ow_wheels suffix="3" left_xyz="0.05 -0.670 0.25" right_xyz="0.05 0.65 0.25"/>
+  <xacro:ow_wheels suffix="4" left_xyz="0.25 -0.670 0.25" right_xyz="0.25 0.65 0.25"/>
+  <xacro:ow_wheels suffix="5" left_xyz="0.40 -0.670 0.25" right_xyz="0.40 0.65 0.25"/> -->
+  <!-- <gazebo>
+      <plugin name="force_based_move_controller" filename="libgazebo_ros_force_based_move.so">
+        <commandTopic>/mobile_base/commands/velocity</commandTopic>
+        <odometryTopic>odom</odometryTopic>
+        <odometryFrame>odom</odometryFrame>
+        <odometryRate>20.0</odometryRate>
+        <robotBaseFrame>base_footprint</robotBaseFrame>
+        <yaw_velocity_p_gain>50000</yaw_velocity_p_gain>
+        <x_velocity_p_gain>300000</x_velocity_p_gain>
+        <y_velocity_p_gain>300000</y_velocity_p_gain>
+        <publishOdometryTf>0</publishOdometryTf>
+      </plugin>
+  </gazebo> -->
+</xacro:if>
+
+</robot>

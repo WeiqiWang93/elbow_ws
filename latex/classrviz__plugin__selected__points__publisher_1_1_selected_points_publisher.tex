@@ -1,0 +1,115 @@
+\hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher}{}\doxysection{rviz\+\_\+plugin\+\_\+selected\+\_\+points\+\_\+publisher\+::Selected\+Points\+Publisher Class Reference}
+\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher}\index{rviz\_plugin\_selected\_points\_publisher::SelectedPointsPublisher@{rviz\_plugin\_selected\_points\_publisher::SelectedPointsPublisher}}
+
+
+Inheritance diagram for rviz\+\_\+plugin\+\_\+selected\+\_\+points\+\_\+publisher\+::Selected\+Points\+Publisher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for rviz\+\_\+plugin\+\_\+selected\+\_\+points\+\_\+publisher\+::Selected\+Points\+Publisher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ab971bc453b84aa70a95c0f50ba999e7f}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ab971bc453b84aa70a95c0f50ba999e7f}} 
+void {\bfseries update\+Topic} ()
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a537e50d0d69cba343a6a14b2f373aa4f}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a537e50d0d69cba343a6a14b2f373aa4f}} 
+void {\bfseries Point\+Clouds\+Callback} (const sensor\+\_\+msgs\+::\+Point\+Cloud2\+Const\+Ptr \&pc\+\_\+msg)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_afbac5ed48908e6a0d3fd5a3ac434b230}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_afbac5ed48908e6a0d3fd5a3ac434b230}} 
+virtual int {\bfseries process\+Mouse\+Event} (rviz\+::\+Viewport\+Mouse\+Event \&event)
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a6900ccb0b3b8c36931f87d9faf6ab756}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a6900ccb0b3b8c36931f87d9faf6ab756}} 
+virtual int {\bfseries process\+Key\+Event} (Q\+Key\+Event $\ast$event, rviz\+::\+Render\+Panel $\ast$panel)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ad8a35f0608420dd82eee95a357f48f30}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ad8a35f0608420dd82eee95a357f48f30}} 
+int {\bfseries \+\_\+process\+Selected\+Area\+And\+Find\+Points} ()
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a273f170dc6ab6038f6987489d179c908}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a273f170dc6ab6038f6987489d179c908}} 
+int {\bfseries \+\_\+publish\+Accumulated\+Points} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a1baffd96bd2024968045e237bab6d210}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a1baffd96bd2024968045e237bab6d210}} 
+ros\+::\+Node\+Handle {\bfseries nh\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a52bd40f1658efce33de88879017c326f}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a52bd40f1658efce33de88879017c326f}} 
+ros\+::\+Publisher {\bfseries rviz\+\_\+selected\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a81936b0aea4d5f3a9884fd89f580722a}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a81936b0aea4d5f3a9884fd89f580722a}} 
+ros\+::\+Publisher {\bfseries real\+\_\+selected\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a1ac85d47d04e2a67f14d73361867e52c}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a1ac85d47d04e2a67f14d73361867e52c}} 
+ros\+::\+Publisher {\bfseries partial\+\_\+pc\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_accbbee76d07c39b3803b0a6ee7f23976}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_accbbee76d07c39b3803b0a6ee7f23976}} 
+ros\+::\+Publisher {\bfseries bb\+\_\+marker\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ae51dd859152049faa43f595c2f30352d}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ae51dd859152049faa43f595c2f30352d}} 
+ros\+::\+Publisher {\bfseries nominal\+\_\+y\+\_\+pub\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a682cbdbc9ba99637fa64527c394210a7}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a682cbdbc9ba99637fa64527c394210a7}} 
+ros\+::\+Subscriber {\bfseries pc\+\_\+subs\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a4b901647dfc560fcacd82c0950c6f4ae}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a4b901647dfc560fcacd82c0950c6f4ae}} 
+std\+::string {\bfseries tf\+\_\+frame\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a095a79e15fc5a0a0606a827d4891f7e5}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a095a79e15fc5a0a0606a827d4891f7e5}} 
+std\+::string {\bfseries rviz\+\_\+cloud\+\_\+topic\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a57ea71fc30492f5bae82b97baf96c000}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a57ea71fc30492f5bae82b97baf96c000}} 
+std\+::string {\bfseries real\+\_\+cloud\+\_\+topic\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ae3fce15d9174bd7d9a556cc84dcf4769}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ae3fce15d9174bd7d9a556cc84dcf4769}} 
+std\+::string {\bfseries subs\+\_\+cloud\+\_\+topic\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a6910f3f94f60df549ff35a39f5bc7aba}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a6910f3f94f60df549ff35a39f5bc7aba}} 
+std\+::string {\bfseries bb\+\_\+marker\+\_\+topic\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a8a44d441269677f28814c667e707075b}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a8a44d441269677f28814c667e707075b}} 
+bool {\bfseries selecting\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a0f8ae2c2c09bf9c7a5ba993b058b69b5}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a0f8ae2c2c09bf9c7a5ba993b058b69b5}} 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr {\bfseries current\+\_\+pc\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ac031d46b03ccac3fa13c93776d5552eb}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_ac031d46b03ccac3fa13c93776d5552eb}} 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr {\bfseries selected\+\_\+segment\+\_\+pc\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a58279f6509bd279152c98e35bd9d506e}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a58279f6509bd279152c98e35bd9d506e}} 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr {\bfseries accumulated\+\_\+segment\+\_\+pc\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a2c1a21b775f7f1777b61662e451d4b9f}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a2c1a21b775f7f1777b61662e451d4b9f}} 
+pcl\+::\+Extract\+Indices$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr {\bfseries extract\+\_\+indices\+\_\+filter\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_aa4c482a41c492a33f2ddb29ec3e04b00}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_aa4c482a41c492a33f2ddb29ec3e04b00}} 
+int {\bfseries num\+\_\+acc\+\_\+points\+\_\+}
+\item 
+\mbox{\Hypertarget{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a0ad3a2dff18bcb91209d1ad0fe24dd2b}\label{classrviz__plugin__selected__points__publisher_1_1_selected_points_publisher_a0ad3a2dff18bcb91209d1ad0fe24dd2b}} 
+int {\bfseries num\+\_\+selected\+\_\+points\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld-\/turbo-\/ros-\/pkg/selected\+\_\+points\+\_\+publisher/include/selected\+\_\+points\+\_\+publisher/Selected\+Points\+Publisher.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld-\/turbo-\/ros-\/pkg/selected\+\_\+points\+\_\+publisher/src/Selected\+Points\+Publisher.\+cpp\end{DoxyCompactItemize}

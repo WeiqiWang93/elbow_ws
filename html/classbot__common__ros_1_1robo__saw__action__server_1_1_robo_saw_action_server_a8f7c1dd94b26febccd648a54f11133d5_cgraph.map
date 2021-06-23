@@ -1,0 +1,15 @@
+<map id="bot_common_ros.robo\l_saw_action_server.RoboSaw\lActionServer.ur10_bringup" name="bot_common_ros.robo\l_saw_action_server.RoboSaw\lActionServer.ur10_bringup">
+<area shape="rect" id="node1" title=" " alt="" coords="5,320,204,376"/>
+<area shape="rect" id="node2" href="$classbot__common__ros_1_1actions_1_1_f_s_m_action_server.html#a755f57678be47a033d190cf4e77a1bf3" title=" " alt="" coords="531,6,769,48"/>
+<area shape="rect" id="node3" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#ace657ed87d9b0fa7bc84b31f73370b6f" title=" " alt="" coords="531,262,769,318"/>
+<area shape="rect" id="node4" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#a1e91c7813ac18f7e732d7aa8450b70dd" title=" " alt="" coords="549,342,751,398"/>
+<area shape="rect" id="node5" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_slot.html#a6ea9b5499b521ac4afdb1e98d23ed210" title=" " alt="" coords="274,459,461,515"/>
+<area shape="rect" id="node6" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#afc256888b6d489526b8269c9aab21727" title=" " alt="" coords="262,539,473,595"/>
+<area shape="rect" id="node7" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#adebc33585dab31b1d92d643ecc0c33f7" title=" " alt="" coords="276,313,459,384"/>
+<area shape="rect" id="node9" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#a62175f528df7ec41fc5db339aa908d59" title=" " alt="" coords="252,619,483,675"/>
+<area shape="rect" id="node10" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#a3e854425e3aef62cadabe03865a3c484" title=" " alt="" coords="276,72,459,142"/>
+<area shape="rect" id="node12" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#a57216635d61dd7e6cd2a209eeeb17c0f" title=" " alt="" coords="268,166,467,237"/>
+<area shape="rect" id="node8" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#a856a7b076ea46f873186fe58954a823a" title=" " alt="" coords="559,422,741,493"/>
+<area shape="rect" id="node11" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#a841c2685bffd0e4e711a1be324c1e499" title=" " alt="" coords="553,72,747,142"/>
+<area shape="rect" id="node13" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#a7c859157f546b3b6dfd0fb029e34abc7" title=" " alt="" coords="551,166,749,237"/>
+</map>

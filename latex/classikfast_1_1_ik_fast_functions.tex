@@ -1,0 +1,82 @@
+\hypertarget{classikfast_1_1_ik_fast_functions}{}\doxysection{ikfast\+::Ik\+Fast\+Functions$<$ T $>$ Class Template Reference}
+\label{classikfast_1_1_ik_fast_functions}\index{ikfast::IkFastFunctions$<$ T $>$@{ikfast::IkFastFunctions$<$ T $>$}}
+
+
+holds function pointers for all the exported functions of ikfast  
+
+
+
+
+{\ttfamily \#include $<$ikfast.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_aed283615c59d1cf876a7640a7b245a4b}\label{classikfast_1_1_ik_fast_functions_aed283615c59d1cf876a7640a7b245a4b}} 
+typedef bool($\ast$ {\bfseries Compute\+Ik\+Fn}) (const T $\ast$, const T $\ast$, const T $\ast$, \mbox{\hyperlink{classikfast_1_1_ik_solution_list_base}{Ik\+Solution\+List\+Base}}$<$ T $>$ \&)
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a64230b13b0cf43660d806a334fa3a304}\label{classikfast_1_1_ik_fast_functions_a64230b13b0cf43660d806a334fa3a304}} 
+typedef void($\ast$ {\bfseries Compute\+Fk\+Fn}) (const T $\ast$, T $\ast$, T $\ast$)
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a58ce4fc02928e9474fb07879df050b3d}\label{classikfast_1_1_ik_fast_functions_a58ce4fc02928e9474fb07879df050b3d}} 
+typedef int($\ast$ {\bfseries Get\+Num\+Free\+Parameters\+Fn}) ()
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_ac08677cae4d5c096a210b0748b053b94}\label{classikfast_1_1_ik_fast_functions_ac08677cae4d5c096a210b0748b053b94}} 
+typedef int $\ast$($\ast$ {\bfseries Get\+Free\+Parameters\+Fn}) ()
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a1c8f833a979943fcd89ab3bbb559ed3c}\label{classikfast_1_1_ik_fast_functions_a1c8f833a979943fcd89ab3bbb559ed3c}} 
+typedef int($\ast$ {\bfseries Get\+Num\+Joints\+Fn}) ()
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a4430676454369afb285aead8a6a4e6c6}\label{classikfast_1_1_ik_fast_functions_a4430676454369afb285aead8a6a4e6c6}} 
+typedef int($\ast$ {\bfseries Get\+Ik\+Real\+Size\+Fn}) ()
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a913b447c96c988e2df6a55ad5c7223b2}\label{classikfast_1_1_ik_fast_functions_a913b447c96c988e2df6a55ad5c7223b2}} 
+typedef int($\ast$ {\bfseries Get\+Ik\+Type\+Fn}) ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a05300a9e1a8bd541813297150da76fed}\label{classikfast_1_1_ik_fast_functions_a05300a9e1a8bd541813297150da76fed}} 
+const typedef char $\ast$($\ast$ {\bfseries Get\+Ik\+Fast\+Version\+Fn} )()
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a8f745b02718dc3945f6f076ead7e5fa9}\label{classikfast_1_1_ik_fast_functions_a8f745b02718dc3945f6f076ead7e5fa9}} 
+const typedef char $\ast$($\ast$ {\bfseries Get\+Kinematics\+Hash\+Fn} )()
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a75775a9a8c284f52cb6cc473c434163c}\label{classikfast_1_1_ik_fast_functions_a75775a9a8c284f52cb6cc473c434163c}} 
+Compute\+Ik\+Fn {\bfseries \+\_\+\+Compute\+Ik}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a5a30a89afe6314eb86a05c3bd5a1a303}\label{classikfast_1_1_ik_fast_functions_a5a30a89afe6314eb86a05c3bd5a1a303}} 
+Compute\+Fk\+Fn {\bfseries \+\_\+\+Compute\+Fk}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_ac78c6f4a428df5b34944510af3abd68f}\label{classikfast_1_1_ik_fast_functions_ac78c6f4a428df5b34944510af3abd68f}} 
+Get\+Num\+Free\+Parameters\+Fn {\bfseries \+\_\+\+Get\+Num\+Free\+Parameters}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a2c57255d31921839afb1ed5c5f86c7cc}\label{classikfast_1_1_ik_fast_functions_a2c57255d31921839afb1ed5c5f86c7cc}} 
+Get\+Free\+Parameters\+Fn {\bfseries \+\_\+\+Get\+Free\+Parameters}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_aa7aadc4d797b2ecc3811a7887b0b0dfc}\label{classikfast_1_1_ik_fast_functions_aa7aadc4d797b2ecc3811a7887b0b0dfc}} 
+Get\+Num\+Joints\+Fn {\bfseries \+\_\+\+Get\+Num\+Joints}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a6e0b57e5123af02f5d27c894eac23181}\label{classikfast_1_1_ik_fast_functions_a6e0b57e5123af02f5d27c894eac23181}} 
+Get\+Ik\+Real\+Size\+Fn {\bfseries \+\_\+\+Get\+Ik\+Real\+Size}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a1deac46b905d3d6fa2186e4fb52a75a4}\label{classikfast_1_1_ik_fast_functions_a1deac46b905d3d6fa2186e4fb52a75a4}} 
+Get\+Ik\+Fast\+Version\+Fn {\bfseries \+\_\+\+Get\+Ik\+Fast\+Version}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a22b3424efa52b1c611ad6ec426259aca}\label{classikfast_1_1_ik_fast_functions_a22b3424efa52b1c611ad6ec426259aca}} 
+Get\+Ik\+Type\+Fn {\bfseries \+\_\+\+Get\+Ik\+Type}
+\item 
+\mbox{\Hypertarget{classikfast_1_1_ik_fast_functions_a838b34f459abceb7b0f537ad3d4f834b}\label{classikfast_1_1_ik_fast_functions_a838b34f459abceb7b0f537ad3d4f834b}} 
+Get\+Kinematics\+Hash\+Fn {\bfseries \+\_\+\+Get\+Kinematics\+Hash}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class ikfast\+::\+Ik\+Fast\+Functions$<$ T $>$}
+
+holds function pointers for all the exported functions of ikfast 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/ur\+\_\+kinematics/include/ur\+\_\+kinematics/ikfast.\+h\end{DoxyCompactItemize}

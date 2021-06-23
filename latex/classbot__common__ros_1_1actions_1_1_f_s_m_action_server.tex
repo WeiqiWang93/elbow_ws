@@ -1,0 +1,616 @@
+\hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server}{}\doxysection{bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server Class Reference}
+\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server}\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+
+
+Inheritance diagram for bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ad6ab9d952a59524cd43c82978ba8646c}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ad6ab9d952a59524cd43c82978ba8646c}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, action\+\_\+name, action\+\_\+type, state\+\_\+structure, initial\+\_\+state)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a44d2b122195eeab1f9792d16f5f47683}{update\+\_\+status}} (self, status, publish=False)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a5f321af32d7f72324510151b079033c2}{revert\+\_\+state}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a36078761bafdea23d6e4118d73c3eb15}{print\+\_\+prior\+\_\+states}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0fed5da862fbf75da40086fb7c6816f8}{check\+\_\+status}} (self, status)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ae0b1494e430f7ef9890c579bc764161d}{check\+\_\+flags}} (self)
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a71b4984a0536f0abc07e718ad32cfb66}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a71b4984a0536f0abc07e718ad32cfb66}} 
+def {\bfseries get\+\_\+status\+\_\+change\+\_\+from\+\_\+action} (self, action\+\_\+type\+\_\+value)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3b1d586fe12fca1b57a5404ebb815f4d}{get\+\_\+valid\+\_\+op\+\_\+transitions}} (self, state)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0898959699c06d7d043ebaaf14302c07}{get\+\_\+valid\+\_\+op\+\_\+wait\+\_\+states}} (self, state)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa776e426af2cdea186409730eda58efe}{check\+\_\+op\+\_\+transition\+\_\+valid}} (self, status)
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aef491cb0a717d5e686ce78b1293d491b}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aef491cb0a717d5e686ce78b1293d491b}} 
+def {\bfseries get\+\_\+state} (self)
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ac11856593c8bb37c953191bcf8667297}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ac11856593c8bb37c953191bcf8667297}} 
+def {\bfseries is\+\_\+locked} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a72c70cc594a165c3fad38b969aacee4f}{lock\+\_\+gate}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abf236da64fffd24bbd55624816ddfb6e}{as\+\_\+pause}} (self, goal, wait=True)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a2728bf9c9a8ad769c29241ca887d8be2}{unlock\+\_\+gate}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a11a3d6400a89424e69655f636b7e0d42}{as\+\_\+continue}} (self, goal, wait=True)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a88dd9350db5c2c17a6e8e7396974cfbd}{P\+A\+U\+S\+ED}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3693eb1795dcf161058f16152752dbd7}{C\+O\+N\+T\+I\+N\+UE}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a02d393977a7d850da7e7ef9b164510d4}{is\+\_\+continued}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a1f0781996db5b002a6d929ef902be95d}{reset\+\_\+continued}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a111184101ad17ba93392e7846af1f3af}{fsm\+\_\+is\+\_\+preempted}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a14f0c6dabd7774131b423e7e8137bd3f}{reset\+\_\+fsm\+\_\+preempted}} (self)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a755f57678be47a033d190cf4e77a1bf3}{as\+\_\+assert}} (self, b\+\_\+flag)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a79ece56905c0d16530bae565e2f9552e}{gate}} (self)
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a9da6c1de7159e9e63f2a16a2f395e0c4}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a9da6c1de7159e9e63f2a16a2f395e0c4}} 
+def {\bfseries fsm\+\_\+register\+\_\+op\+\_\+variables} (self, mapping)
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a69248cf2f90021332f3a8240f3c36313}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a69248cf2f90021332f3a8240f3c36313}} 
+def {\bfseries fsm\+\_\+register\+\_\+variable\+\_\+limits} (self, mapping)
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3583dab85a4db23adeefff48d73f79da}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3583dab85a4db23adeefff48d73f79da}} 
+def {\bfseries fsm\+\_\+register\+\_\+variable\+\_\+types} (self, mapping)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a78611353c46b181f0b5a7dfd8e347d25}{fsm\+\_\+register\+\_\+op\+\_\+transitions}} (self, mapping)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab0e3c8e4056e5dabf855106d625617f9}{wait\+\_\+for\+\_\+complete}} (self, valid\+\_\+final\+\_\+states)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab35399ed04a5705df74a6ccfb22720a7}{fsm\+\_\+register\+\_\+op\+\_\+waits}} (self, mapping)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aff3cb5b4c3b03693c21e32aaf5c9e99f}{fsm\+\_\+register\+\_\+status\+\_\+changes}} (self, mapping)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0c51e8c924a118ea00e7438f50f10991}{fsm\+\_\+register\+\_\+state\+\_\+functions}} (self, fxns)
+\item 
+def \mbox{\hyperlink{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a55a0a3dad73f2f225275aeab3a1917cc}{fsm\+\_\+loop}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa262be29b3ffc46c9f0564012aea832b}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa262be29b3ffc46c9f0564012aea832b}} 
+{\bfseries pub\+\_\+status}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abd5da5ee2bb759b3b4205b22b37fbb0d}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abd5da5ee2bb759b3b4205b22b37fbb0d}} 
+{\bfseries S\+T\+A\+T\+ES}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_af47dee807a6136d7d0963d7fdff33770}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_af47dee807a6136d7d0963d7fdff33770}} 
+{\bfseries current\+\_\+state}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a8891577819ff7f858c39990ecb0976c8}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a8891577819ff7f858c39990ecb0976c8}} 
+{\bfseries pause\+\_\+state}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a119b0f52aff8397e21c40780a6d418d5}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a119b0f52aff8397e21c40780a6d418d5}} 
+{\bfseries continue\+\_\+state}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ad50cd02f6ebc700fb6451d65256cc3a8}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ad50cd02f6ebc700fb6451d65256cc3a8}} 
+{\bfseries previous\+\_\+states}
+\item 
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a8bb1c80ff9729eaf54dd7c59469cd2f9}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a8bb1c80ff9729eaf54dd7c59469cd2f9}} 
+{\bfseries fsm\+\_\+gate}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}This is an action-server AND an FSM
+    User defines transitions in an FSM, and a mapping from 'operations' and 'states'
+    This mapping is not necessarily 1-to-1, meaning that the inheritor may have
+    many states and few operations or vice-versa.
+
+    Paradigm:
+        Action-server operations update the FSM state, and the FSM callbacks are where all the logic lives.
+        The infinite loop is run on the main thread which periodically checks for blocking flags at evenly spaced "gates" in the code
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a755f57678be47a033d190cf4e77a1bf3}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a755f57678be47a033d190cf4e77a1bf3}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!as\_assert@{as\_assert}}
+\index{as\_assert@{as\_assert}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{as\_assert()}{as\_assert()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+as\+\_\+assert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{b\+\_\+flag }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}takes a boolean flag as input, and if the flag is false, it aborts the current action.
+Usage: same as built-in 'assert', but this way the server simply aborts instead of crashes.
+example: self.as_assert( important_variable > 2.0 )
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a755f57678be47a033d190cf4e77a1bf3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a11a3d6400a89424e69655f636b7e0d42}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a11a3d6400a89424e69655f636b7e0d42}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!as\_continue@{as\_continue}}
+\index{as\_continue@{as\_continue}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{as\_continue()}{as\_continue()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+as\+\_\+continue (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{goal,  }\item[{}]{wait = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called when user clicks 'continue'. Acts as a psuedo-state
+Called by AS thread
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a11a3d6400a89424e69655f636b7e0d42_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a11a3d6400a89424e69655f636b7e0d42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abf236da64fffd24bbd55624816ddfb6e}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abf236da64fffd24bbd55624816ddfb6e}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!as\_pause@{as\_pause}}
+\index{as\_pause@{as\_pause}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{as\_pause()}{as\_pause()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+as\+\_\+pause (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{goal,  }\item[{}]{wait = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called when user clicks 'pause'. Acts as a psuedo-state
+Called by AS thread
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abf236da64fffd24bbd55624816ddfb6e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_abf236da64fffd24bbd55624816ddfb6e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ae0b1494e430f7ef9890c579bc764161d}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ae0b1494e430f7ef9890c579bc764161d}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!check\_flags@{check\_flags}}
+\index{check\_flags@{check\_flags}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{check\_flags()}{check\_flags()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+check\+\_\+flags (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Check operational flags
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server_a9d623ff124ddcb3b67b843b19e99eca2}{bot\+\_\+common\+\_\+ros.\+robo\+\_\+saw\+\_\+action\+\_\+server.\+Robo\+Saw\+Action\+Server}}, and \mbox{\hyperlink{classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server_a3562ab551c8e739379001d93de8fa64a}{bot\+\_\+common\+\_\+ros.\+robo\+\_\+chisel\+\_\+action\+\_\+server.\+Robo\+Chisel\+Action\+Server}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ae0b1494e430f7ef9890c579bc764161d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ae0b1494e430f7ef9890c579bc764161d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa776e426af2cdea186409730eda58efe}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa776e426af2cdea186409730eda58efe}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!check\_op\_transition\_valid@{check\_op\_transition\_valid}}
+\index{check\_op\_transition\_valid@{check\_op\_transition\_valid}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{check\_op\_transition\_valid()}{check\_op\_transition\_valid()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+check\+\_\+op\+\_\+transition\+\_\+valid (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{status }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensure the state transition due to an operation is valid in the FSM
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa776e426af2cdea186409730eda58efe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aa776e426af2cdea186409730eda58efe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0fed5da862fbf75da40086fb7c6816f8}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0fed5da862fbf75da40086fb7c6816f8}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!check\_status@{check\_status}}
+\index{check\_status@{check\_status}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{check\_status()}{check\_status()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+check\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{status }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}allows list inputs. Outputs True if current state is any listed state
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0fed5da862fbf75da40086fb7c6816f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3693eb1795dcf161058f16152752dbd7}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3693eb1795dcf161058f16152752dbd7}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!CONTINUE@{CONTINUE}}
+\index{CONTINUE@{CONTINUE}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{CONTINUE()}{CONTINUE()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+C\+O\+N\+T\+I\+N\+UE (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called by FSM thread
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server_aa0e23ae2d8354a131f0cfacbf09ffce5}{bot\+\_\+common\+\_\+ros.\+robo\+\_\+saw\+\_\+action\+\_\+server.\+Robo\+Saw\+Action\+Server}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3693eb1795dcf161058f16152752dbd7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3693eb1795dcf161058f16152752dbd7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a111184101ad17ba93392e7846af1f3af}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a111184101ad17ba93392e7846af1f3af}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!fsm\_is\_preempted@{fsm\_is\_preempted}}
+\index{fsm\_is\_preempted@{fsm\_is\_preempted}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{fsm\_is\_preempted()}{fsm\_is\_preempted()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+fsm\+\_\+is\+\_\+preempted (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}return if the FSM has been preempted. Assumes incoming action is 'valid' and not 'pause' nor 'continue'
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a111184101ad17ba93392e7846af1f3af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a55a0a3dad73f2f225275aeab3a1917cc}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a55a0a3dad73f2f225275aeab3a1917cc}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!fsm\_loop@{fsm\_loop}}
+\index{fsm\_loop@{fsm\_loop}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{fsm\_loop()}{fsm\_loop()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+fsm\+\_\+loop (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the FSM game-loop
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a55a0a3dad73f2f225275aeab3a1917cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a55a0a3dad73f2f225275aeab3a1917cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a78611353c46b181f0b5a7dfd8e347d25}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a78611353c46b181f0b5a7dfd8e347d25}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!fsm\_register\_op\_transitions@{fsm\_register\_op\_transitions}}
+\index{fsm\_register\_op\_transitions@{fsm\_register\_op\_transitions}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{fsm\_register\_op\_transitions()}{fsm\_register\_op\_transitions()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+fsm\+\_\+register\+\_\+op\+\_\+transitions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mapping }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register the valid transitions for operations in the FSM
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a78611353c46b181f0b5a7dfd8e347d25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab35399ed04a5705df74a6ccfb22720a7}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab35399ed04a5705df74a6ccfb22720a7}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!fsm\_register\_op\_waits@{fsm\_register\_op\_waits}}
+\index{fsm\_register\_op\_waits@{fsm\_register\_op\_waits}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{fsm\_register\_op\_waits()}{fsm\_register\_op\_waits()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+fsm\+\_\+register\+\_\+op\+\_\+waits (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mapping }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register the final state to wait for when processing an operation
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab35399ed04a5705df74a6ccfb22720a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0c51e8c924a118ea00e7438f50f10991}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0c51e8c924a118ea00e7438f50f10991}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!fsm\_register\_state\_functions@{fsm\_register\_state\_functions}}
+\index{fsm\_register\_state\_functions@{fsm\_register\_state\_functions}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{fsm\_register\_state\_functions()}{fsm\_register\_state\_functions()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+fsm\+\_\+register\+\_\+state\+\_\+functions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fxns }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Registers one function per state to be called in the FSM-loop
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0c51e8c924a118ea00e7438f50f10991_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aff3cb5b4c3b03693c21e32aaf5c9e99f}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aff3cb5b4c3b03693c21e32aaf5c9e99f}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!fsm\_register\_status\_changes@{fsm\_register\_status\_changes}}
+\index{fsm\_register\_status\_changes@{fsm\_register\_status\_changes}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{fsm\_register\_status\_changes()}{fsm\_register\_status\_changes()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+fsm\+\_\+register\+\_\+status\+\_\+changes (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{mapping }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Register the mapping from operations to state changes. Keys are ActionType.type, Values are status_msg.status
+Assumes 1 state transition per operation
+Convert state changes to "callbacks" in order to interface with 
+register_callbacks function naturally
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aff3cb5b4c3b03693c21e32aaf5c9e99f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_aff3cb5b4c3b03693c21e32aaf5c9e99f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a79ece56905c0d16530bae565e2f9552e}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a79ece56905c0d16530bae565e2f9552e}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!gate@{gate}}
+\index{gate@{gate}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{gate()}{gate()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+gate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check gated transition between state[x] and PAUSED through ops pause & continue
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a79ece56905c0d16530bae565e2f9552e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a79ece56905c0d16530bae565e2f9552e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3b1d586fe12fca1b57a5404ebb815f4d}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3b1d586fe12fca1b57a5404ebb815f4d}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!get\_valid\_op\_transitions@{get\_valid\_op\_transitions}}
+\index{get\_valid\_op\_transitions@{get\_valid\_op\_transitions}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{get\_valid\_op\_transitions()}{get\_valid\_op\_transitions()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+get\+\_\+valid\+\_\+op\+\_\+transitions (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get valid operation transitions for 'state'
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a3b1d586fe12fca1b57a5404ebb815f4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0898959699c06d7d043ebaaf14302c07}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0898959699c06d7d043ebaaf14302c07}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!get\_valid\_op\_wait\_states@{get\_valid\_op\_wait\_states}}
+\index{get\_valid\_op\_wait\_states@{get\_valid\_op\_wait\_states}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{get\_valid\_op\_wait\_states()}{get\_valid\_op\_wait\_states()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+get\+\_\+valid\+\_\+op\+\_\+wait\+\_\+states (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{state }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Get valid operation transitions for 'state'
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a0898959699c06d7d043ebaaf14302c07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a02d393977a7d850da7e7ef9b164510d4}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a02d393977a7d850da7e7ef9b164510d4}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!is\_continued@{is\_continued}}
+\index{is\_continued@{is\_continued}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{is\_continued()}{is\_continued()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+is\+\_\+continued (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}check for valid exit from PAUSED state \end{DoxyVerb}
+ \mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a72c70cc594a165c3fad38b969aacee4f}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a72c70cc594a165c3fad38b969aacee4f}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!lock\_gate@{lock\_gate}}
+\index{lock\_gate@{lock\_gate}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{lock\_gate()}{lock\_gate()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+lock\+\_\+gate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Abstraction on the threading object
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a72c70cc594a165c3fad38b969aacee4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a88dd9350db5c2c17a6e8e7396974cfbd}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a88dd9350db5c2c17a6e8e7396974cfbd}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!PAUSED@{PAUSED}}
+\index{PAUSED@{PAUSED}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{PAUSED()}{PAUSED()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+P\+A\+U\+S\+ED (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Called by FSM thread
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server_a8e148ace1798874763b368b3c98ad724}{bot\+\_\+common\+\_\+ros.\+robo\+\_\+saw\+\_\+action\+\_\+server.\+Robo\+Saw\+Action\+Server}}, and \mbox{\hyperlink{classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server_a8b9d7476f0e2c8b45db413073b0fce1a}{bot\+\_\+common\+\_\+ros.\+robo\+\_\+chisel\+\_\+action\+\_\+server.\+Robo\+Chisel\+Action\+Server}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a88dd9350db5c2c17a6e8e7396974cfbd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a88dd9350db5c2c17a6e8e7396974cfbd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a36078761bafdea23d6e4118d73c3eb15}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a36078761bafdea23d6e4118d73c3eb15}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!print\_prior\_states@{print\_prior\_states}}
+\index{print\_prior\_states@{print\_prior\_states}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{print\_prior\_states()}{print\_prior\_states()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+print\+\_\+prior\+\_\+states (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}print stack of prior states \end{DoxyVerb}
+ \mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a1f0781996db5b002a6d929ef902be95d}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a1f0781996db5b002a6d929ef902be95d}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!reset\_continued@{reset\_continued}}
+\index{reset\_continued@{reset\_continued}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{reset\_continued()}{reset\_continued()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+reset\+\_\+continued (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}reset boolean for valid exit from PAUSED state \end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a1f0781996db5b002a6d929ef902be95d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a14f0c6dabd7774131b423e7e8137bd3f}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a14f0c6dabd7774131b423e7e8137bd3f}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!reset\_fsm\_preempted@{reset\_fsm\_preempted}}
+\index{reset\_fsm\_preempted@{reset\_fsm\_preempted}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{reset\_fsm\_preempted()}{reset\_fsm\_preempted()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+reset\+\_\+fsm\+\_\+preempted (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}reset fsm-preemption flag. To be ran from the FSM side \end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a14f0c6dabd7774131b423e7e8137bd3f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a5f321af32d7f72324510151b079033c2}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a5f321af32d7f72324510151b079033c2}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!revert\_state@{revert\_state}}
+\index{revert\_state@{revert\_state}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{revert\_state()}{revert\_state()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+revert\+\_\+state (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}revert state to previous \end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a5f321af32d7f72324510151b079033c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a5f321af32d7f72324510151b079033c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a2728bf9c9a8ad769c29241ca887d8be2}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a2728bf9c9a8ad769c29241ca887d8be2}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!unlock\_gate@{unlock\_gate}}
+\index{unlock\_gate@{unlock\_gate}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{unlock\_gate()}{unlock\_gate()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+unlock\+\_\+gate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Abstraction on the threading object
+\end{DoxyVerb}
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a2728bf9c9a8ad769c29241ca887d8be2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a44d2b122195eeab1f9792d16f5f47683}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a44d2b122195eeab1f9792d16f5f47683}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!update\_status@{update\_status}}
+\index{update\_status@{update\_status}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{update\_status()}{update\_status()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+update\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{status,  }\item[{}]{publish = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}update class status with checks
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a44d2b122195eeab1f9792d16f5f47683_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_a44d2b122195eeab1f9792d16f5f47683_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab0e3c8e4056e5dabf855106d625617f9}\label{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab0e3c8e4056e5dabf855106d625617f9}} 
+\index{bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}!wait\_for\_complete@{wait\_for\_complete}}
+\index{wait\_for\_complete@{wait\_for\_complete}!bot\_common\_ros.actions.FSMActionServer@{bot\_common\_ros.actions.FSMActionServer}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_complete()}{wait\_for\_complete()}}
+{\footnotesize\ttfamily def bot\+\_\+common\+\_\+ros.\+actions.\+F\+S\+M\+Action\+Server.\+wait\+\_\+for\+\_\+complete (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{valid\+\_\+final\+\_\+states }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}wait for the FSM to complete its state transition, while allowing _as preemption
+\end{DoxyVerb}
+ Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab0e3c8e4056e5dabf855106d625617f9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbot__common__ros_1_1actions_1_1_f_s_m_action_server_ab0e3c8e4056e5dabf855106d625617f9_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/bot\+\_\+common\+\_\+ros/scripts/bot\+\_\+common\+\_\+ros/actions.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:macro name="ow_saw" params="prefix chassis_type calibration_data">
+  <xacro:property name="saw_TCP" value="${calibration_data[chassis_type]['sia20']['saw']['TCP']}" />
+
+  <xacro:property name="pi" value="3.14159265" />
+  <xacro:property name="force_sensor_width" value="0.04" />
+  <xacro:macro name="cylinder_inertial" params="radius length mass *origin">
+    <inertial>
+      <mass value="${mass}" />
+      <xacro:insert_block name="origin" />
+      <inertia ixx="${0.0833333 * mass * (3 * radius * radius + length * length)}" ixy="0.0" ixz="0.0"
+        iyy="${0.0833333 * mass * (3 * radius * radius + length * length)}" iyz="0.0"
+        izz="${0.5 * mass * radius * radius}" />
+    </inertial>
+  </xacro:macro>
+
+
+    <material name="silver2">
+    <color rgba="0.8 0.8 0.8 1"/>
+  </material>
+    <link name="${prefix}link">
+      <visual name='visual'>
+        <geometry>
+         <cylinder radius="0.20" length="0.005" />
+        </geometry>
+        <!-- <origin xyz="-0.0 0.138 0.04" rpy="1.57 0 0" /> -->
+        <origin xyz="0 0 0" rpy="0 0 0" />
+         <material name="silver2"/>
+      </visual>
+      <collision>
+        <geometry>
+         <cylinder radius="0.25" length="0.005" />
+        </geometry>
+        <!-- <origin xyz="-0.0 0.138 0.04" rpy="1.57 0 0" /> -->
+        <origin xyz="0 0 0" rpy="0 0 0" />
+         <material name="silver2"/>
+      </collision>
+    </link>
+
+    <!-- <link name="${prefix}guard_link">
+      <visual name='visual'>
+        <geometry>
+        <mesh filename="package://bot_digger_description/meshes/GoelzArmConfig.STL" scale="1.0 1.0 1.0"/>          
+        </geometry>
+     
+      <origin xyz="-0.083 -0.15 -0.397" rpy="0 0 0" /> 
+      </visual>
+      <collision>
+        <geometry>    
+           <mesh filename="package://bot_digger_description/meshes/GoelzArmConfig.STL" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <origin xyz="-0.083 -0.15 -0.397" rpy="0 0 0" /> 
+      </collision>
+    </link> -->
+
+    <link name="${prefix}guard_link">
+      <visual name='visual'>
+        <geometry>
+        <mesh filename="package://bot_digger_description/meshes/210530GoelzArmConfig_camerafix.STL" scale="1.0 1.0 1.0"/>          
+        </geometry> 
+      </visual>
+      <collision>
+        <geometry>    
+           <mesh filename="package://bot_digger_description/meshes/210530GoelzArmConfig_camerafix.STL" scale="1.0 1.0 1.0"/>
+        </geometry>
+
+       
+      </collision>
+    </link>
+
+  <!-- attachment between saw_link (blade) and tool0 -->
+      <!-- <joint name="${prefix}blade_joint" type="fixed">
+      <parent link = "${prefix}tool0" />
+      <child link="${prefix}link" /> -->
+      <!-- <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" /> -->
+      <!-- <origin xyz="0 0 0.08" rpy="0.00 0.0 2.64" />    rz = -0.45? -->
+    <!-- </joint> -->
+
+  <!-- attachment between saw_link (blade) and tool0 (1/14) -->
+      <joint name="${prefix}blade_joint" type="fixed">
+      <parent link = "${prefix}tip_link" />
+      <child link="${prefix}link" />
+      <!-- <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" /> -->
+      <origin xyz="-0.000 0 0.00" rpy="0.00 1.57 0.00" />    <!-- rz = -0.45?-->
+    </joint>
+
+  <!-- attach to tool0  directions: z-pointed towards tool tip, y is "up", x is "out"-->
+
+  <!-- attachment between saw_guard_link and tool0 -->
+    <joint name="${prefix}fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}guard_link" />
+      <!-- <origin xyz="0.0 0.0 0.065" rpy="0.0 0.0 3.14" /> -->
+      <origin xyz="0.0 0.0 0.0516" rpy="0.00 0.0 -2.64" />       <!-- saw_guard rotation here  3.14 - 0.45-->
+    </joint>
+  
+    <joint name="${prefix}tip_fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}tip_link" />
+      <!-- <origin xyz="-0.182 0.038 0.122" rpy="-0.011 -0.014 -1.070"/> Adjusted orientation with ruler and teach pendant 09/24/20 wide rack at Foothill -->
+      <origin xyz="${saw_TCP['pos'][0]} ${saw_TCP['pos'][1]} ${saw_TCP['pos'][2]}" rpy="${saw_TCP['rpy'][0]} ${saw_TCP['rpy'][1]} ${saw_TCP['rpy'][2]}"/>
+    </joint>
+
+    <link name="${prefix}tip_link">
+      <collision>
+        <geometry>
+          <box size="0.03 0.03 0.03"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 -0.01"/> <!-- saw_TCP tf is from saw_tip_link orientation-->
+      </collision>
+    </link>
+
+   <link name="${prefix}force_sensor">
+      <visual name='visual'>
+        <geometry>
+        <mesh filename="package://bot_digger_description/meshes/200630ATI_assembly.STL" scale="1.0 1.0 1.0"/>          
+        </geometry> 
+      </visual>
+      <collision>
+        <geometry>    
+           <mesh filename="package://bot_digger_description/meshes/200630ATI_assembly.STL" scale="1.0 1.0 1.0"/>
+        </geometry>
+
+       
+      </collision>
+    </link>
+
+  <!-- attachment between force_sensor and tool0 -->
+    <joint name="${prefix}sensor_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}force_sensor" />
+      <!-- <origin xyz="0.0 0.0 0.065" rpy="0.0 0.0 3.14" /> -->
+      <origin xyz="0.0 0.0 0.0084" rpy="0.0 0.0 -1.0471" /> <!-- values provided for ATI Force Sensor July12020 -60 deg around tool Z. 51.6mm from saw guard link-->
+      <!-- <origin xyz="0.0 0.0 0.030" rpy="0.0 0.0 -0.43633231299858238" />   working values for wacoh sensor Mar32020    25 deg around tool-Z -->
+      <!-- <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.327" /> robotiq force sensor 18.75 degrees Mar32020 -->
+    </joint>
+
+<!-- -0.06, 0.06, -0.03 -->
+
+<!-- </xacro:macro> -->
+</xacro:macro>
+
+  
+</robot>

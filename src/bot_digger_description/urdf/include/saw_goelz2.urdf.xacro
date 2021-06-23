@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+
+  <xacro:property name="pi" value="3.14159265" />
+  <xacro:property name="force_sensor_width" value="0.04" />
+  <xacro:macro name="cylinder_inertial" params="radius length mass *origin">
+    <inertial>
+      <mass value="${mass}" />
+      <xacro:insert_block name="origin" />
+      <inertia ixx="${0.0833333 * mass * (3 * radius * radius + length * length)}" ixy="0.0" ixz="0.0"
+        iyy="${0.0833333 * mass * (3 * radius * radius + length * length)}" iyz="0.0"
+        izz="${0.5 * mass * radius * radius}" />
+    </inertial>
+  </xacro:macro>
+
+  <!-- Create a cylinder to model saw_link (blade) -->
+  <xacro:macro name="ur_ow_robot" params="prefix">
+    <material name="silver2">
+    <color rgba="0.8 0.8 0.8 1"/>
+  </material>
+    <link name="${prefix}link">
+      <visual name='visual'>
+        <geometry>
+         <cylinder radius="0.22" length="0.005" />
+        </geometry>
+        <origin xyz="0.0 -0.0625 0.295" rpy="1.57 0 0" />
+         <material name="silver2"/>
+      </visual>
+      <collision>
+        <geometry>
+         <cylinder radius="0.22" length="0.005" />
+        </geometry>
+        <origin xyz="0.0 -0.0625 0.295" rpy="1.57 0 0" />
+         <material name="silver2"/>
+      </collision>
+    </link>
+
+    <link name="${prefix}guard_link">
+      <visual name='visual'>
+        <geometry>
+          <mesh filename="package://bot_digger_description/meshes/Goelz_w_TestRigFlange.STL" scale="1.0 1.0 1.0"/>
+        </geometry>
+      <origin xyz="-0.141 0.062 0.25" rpy="0 0 0" /> 
+      </visual>
+      <collision>
+        <geometry>
+           <mesh filename="package://bot_digger_description/meshes/Goelz_w_TestRigFlange.STL" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <origin xyz="-0.141 0.062 0.25" rpy="0 0 0" />  <!-- saw_guard origin translation here -->
+      </collision>
+    </link>
+
+  <!-- attachment between saw_link (blade) and tool0 -->
+      <joint name="${prefix}blade_joint" type="fixed">
+      <parent link = "${prefix}tool0" />
+      <child link="${prefix}link" />
+      <!-- <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" /> -->
+      <origin xyz="0 0 0.08" rpy="0.0 0.0 2.69" />    <!-- rz = -0.45?-->
+    </joint>
+
+  <!-- attach to tool0  directions: z-pointed towards tool tip, y is "up", x is "out"-->
+
+  <!-- attachment between saw_guard_link and tool0 -->
+    <joint name="${prefix}fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}guard_link" />
+      <origin xyz="0.0 0.0 0.06" rpy="0.0 0.0 2.69" />       <!-- saw_guard rotation here  3.14 - 0.45-->
+    </joint>
+  
+    <joint name="${prefix}tip_fixed_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}tip_link" />
+      <origin xyz="-0.068345 0.170 0.125" rpy="0.0 -0.02 -2.08" />
+    </joint>
+
+    <link name="${prefix}tip_link">
+      <collision>
+        <geometry>
+          <box size="0.03 0.03 0.03"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 -0.01"/> <!-- saw_TCP tf is from saw_tip_link orientation-->
+      </collision>
+    </link>
+
+  <!-- vacuum attachment -->
+  
+
+</xacro:macro>
+
+  
+</robot>

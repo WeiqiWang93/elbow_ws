@@ -1,0 +1,277 @@
+bot_digger_narrow_rack:
+  htc_vive_tracker:
+    child: htc_vive_tracker
+    parent: chisel_base
+    pos:
+    - -0.9542196456113059
+    - -1.116427534907162
+    - 0.14616076154050767
+    rpy:
+    - 1.327549637348049
+    - -0.0035930867437619974
+    - -3.1408190926303847
+  sia20:
+    saw:
+      TCP:
+        child: saw_tip_link
+        parent: saw_tool0
+        pos:
+        - -0.174
+        - 0.035
+        - 0.128
+        rpy:
+        - 0.025
+        - 0.028
+        - -1.055
+      cameras:
+        saw_tool_front:
+          child: camera_saw_tool_front_link
+          parent: saw_tip_link
+          pos:
+          - 0.2765288282951978
+          - -0.0552077456084611
+          - -0.010424479449735125
+          rpy:
+          - -1.6029410472757308
+          - -0.4793682750978352
+          - -1.4885115259318606
+  ur10:
+    chisel:
+      TCP:
+        child: chisel_tip_link
+        parent: chisel_tool0
+        pos:
+        - 0.0033
+        - 0.00397
+        - 0.64076
+        rpy:
+        - 0.0
+        - 0.0
+        - -0.8976249401482459
+      cameras:
+        chisel_tool:
+          child: camera_chisel_tool_link
+          parent: chisel_tool0
+          pos:
+          - -0.027267711975259634
+          - 0.2181369188166895
+          - 0.0879791127659683
+          rpy:
+          - -0.015780772525226906
+          - 0.014559058245575015
+          - 1.4982445100914883
+        chisel_track_down_left:
+          child: camera_chisel_track_down_left_link
+          parent: chisel_base
+          pos:
+          - -0.1464
+          - 0.36894
+          - 0.11268
+          rpy:
+          - 0.02143465100033837
+          - 0.13861226079126832
+          - 2.108071526226278
+        chisel_track_down_right:
+          child: camera_chisel_track_down_right_link
+          parent: chisel_base
+          pos:
+          - -0.05316
+          - 0.44373
+          - 0.16638
+          rpy:
+          - -0.0087175
+          - 0.519718
+          - 1.13123
+        chisel_track_up_left:
+          child: camera_chisel_track_up_left_link
+          parent: chisel_base
+          pos:
+          - -0.03543532165705164
+          - 0.41075527085312197
+          - 0.15159175007197828
+          rpy:
+          - -3.1411999209164456
+          - -0.08120754681165168
+          - 2.0269528541956183
+        chisel_track_up_right:
+          child: camera_chisel_track_up_right_link
+          parent: chisel_base
+          pos:
+          - 0.047996
+          - 0.361831
+          - 0.123532
+          rpy:
+          - 3.09828
+          - -0.18341371
+          - 1.17
+  ur16:
+    e_series: True
+    TCP:
+      child: chisel_tip_link
+      parent: chisel_tool0
+      pos:
+      - -0.006
+      - 0.001
+      - 0.811
+      rpy:
+      - 0.0
+      - 0.0
+      - -0.897
+      # pos:
+      # - 0.0033
+      # - 0.00397
+      # - 0.598
+      # rpy:
+      # - 0.0
+      # - 0.0
+      # -0.8976249401482459
+    cameras:
+      chisel_tool_bosch:
+        # pos:
+        # - 0.04
+        # - -0.0999326
+        # - -0.026333
+        # rpy:
+        # - -0.0045608
+        # - -0.009889
+        # - -1.52467
+        pos:
+          - 0.04
+          - -0.109
+          - 0.027
+        rpy:
+          - 0.0
+          - -0.78
+          - -1.57
+  vive_world:
+    pos:
+    - 3.7748
+    - -1.00135
+    - 1.50456
+    yaw:
+    - 1.23253
+bot_digger_wide_rack:
+  htc_vive_tracker:
+    child: htc_vive_tracker
+    parent: chisel_base
+    pos:
+    - -0.967586480649514
+    - -1.0375196404255869
+    - 0.19803511922768016
+    rpy:
+    - 1.3725956931265568
+    - -0.019824619786584292
+    - 3.1162616361215703
+  sia20:
+    saw:
+      TCP:
+        child: saw_tip_link
+        parent: saw_tool0
+        pos:
+        - -0.18438
+        - 0.038547
+        - 0.15145
+        rpy:
+        - -0.007
+        - 0.03
+        - -1.063
+      cameras:
+        saw_tool_front:
+          child: camera_saw_tool_front_link
+          parent: saw_tip_link
+          pos:
+          - 0.26929310729949163
+          - -0.05875395413719691
+          - -0.013341965829363929
+          rpy:
+          - -1.6116941006831254
+          - -0.4847395282432579
+          - -1.4832138746387884
+  ur10:
+    chisel:
+      TCP:
+        child: chisel_tip_link
+        parent: chisel_tool0
+        pos:
+        - 0.0002
+        - 0.0169
+        - 0.72
+        rpy:
+        - 0.0
+        - 0.0
+        - -0.8691
+      cameras:
+        chisel_tool:
+          child: camera_chisel_tool_link
+          parent: chisel_tool0
+          pos:
+          - -0.02431
+          - 0.2157
+          - 0.0737
+          rpy:
+          - -0.027787300023856442
+          - 0.003689472956264395
+          - 1.5901763932830217
+        chisel_track_down_left:
+          child: camera_chisel_track_down_left_link
+          parent: chisel_base
+          pos:
+          - -0.1464
+          - 0.36894
+          - 0.11268
+          rpy:
+          - 0.02143465100033837
+          - 0.13861226079126832
+          - 2.108071526226278
+        chisel_track_down_right:
+          child: camera_chisel_track_down_right_link
+          parent: chisel_base
+          pos:
+          - -0.05316
+          - 0.44373
+          - 0.16638
+          rpy:
+          - -0.0087175
+          - 0.519718
+          - 1.13123
+        chisel_track_up_left:
+          child: camera_chisel_track_up_left_link
+          parent: chisel_base
+          pos:
+          - -0.015657368326914056
+          - 0.42009799636004336
+          - 0.13118996862161678
+          rpy:
+          - -3.1297845807842655
+          - -0.1409375947326513
+          - 2.100229961124317
+        chisel_track_up_right:
+          child: camera_chisel_track_up_right_link
+          parent: chisel_base
+          pos:
+          - 0.047996
+          - 0.361831
+          - 0.123532
+          rpy:
+          - 3.09828
+          - -0.18341371
+          - 1.17
+  ur16:
+    TCP:
+      child: chisel_tip_link
+      parent: chisel_tool0
+      pos:
+      - -0.006
+      - 0.001
+      - 0.811
+      rpy:
+      - 0.0
+      - 0.0
+      - -2.35
+  vive_world:
+    pos:
+    - -3.51646
+    - -2.15214
+    - 0.648067
+    yaw:
+    - -0.827234

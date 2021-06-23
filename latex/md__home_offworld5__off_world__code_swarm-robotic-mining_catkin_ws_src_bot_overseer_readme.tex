@@ -1,0 +1,79 @@
+\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md13}{}\doxysection{From source code}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md13}
+Just download or update from git\+:
+\begin{DoxyItemize}
+\item {\ttfamily git clone \href{https://github.com/offworld-projects/swarm-robotic-mining/}{\texttt{ https\+://github.\+com/offworld-\/projects/swarm-\/robotic-\/mining/}}}
+\end{DoxyItemize}\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md14}{}\doxysection{C\+O\+T\+S install}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md14}
+Only needed for the first install. The access to Internet is required.
+\begin{DoxyItemize}
+\item {\ttfamily cd $<$bot\+\_\+overseer path$>$/scripts/install/}
+\item {\ttfamily ./install\+\_\+cots}
+\end{DoxyItemize}\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md15}{}\doxysection{Deploy data}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md15}
+Some data including database and default missions definitions are required to be deployed in the expected target folder.
+\begin{DoxyItemize}
+\item If not present, create a folder {\ttfamily /home/offworld/} with rw permissions for the user to execute the software.
+\item {\ttfamily cd $<$bot\+\_\+overseer path$>$/scripts/install/}
+\item {\ttfamily ./deploy\+\_\+data}
+\end{DoxyItemize}\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md16}{}\doxysection{Start-\/up}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md16}
+\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md17}{}\doxysubsection{R\+O\+S core}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md17}
+Make sure R\+OS core is running\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md18}{}\doxysubsection{Start overseer}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md18}
+
+\begin{DoxyItemize}
+\item {\ttfamily cd $<$bot\+\_\+overseer path$>$/scripts/install/}
+\item {\ttfamily ./overseer -\/-\/model $<$bot model$>$}
+\end{DoxyItemize}
+
+Supported bot models are the following\+:
+\begin{DoxyItemize}
+\item {\ttfamily C\+R\+U\+S\+H\+ER}
+\item {\ttfamily D\+I\+G\+G\+ER}
+\end{DoxyItemize}
+
+The overseer also supports a test mode. In this mode test A\+P\+Is and test R\+OS actions are started as wll as a turtlebot navigation stack.
+\begin{DoxyItemize}
+\item {\ttfamily ./overseer -\/-\/model $<$bot model$>$ -\/-\/testmode}
+\end{DoxyItemize}\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md19}{}\doxysection{Missions}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md19}
+\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md20}{}\doxysubsection{Definitions}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md20}
+Mission definitions are located at /home/offworld/data/missions A mission is an A\+S\+C\+II file which defines the operations of the given mission. One operation is specified per line as per the example below\+:
+
+{\ttfamily op(\+C\+R\+U\+S\+H\+E\+R\+\_\+\+O\+N)}
+
+{\ttfamily op(\+P\+A\+U\+S\+E\+\_\+\+M\+I\+S\+S\+I\+O\+N)}
+
+{\ttfamily op(\+C\+R\+U\+S\+H\+E\+R\+\_\+\+O\+F\+F)}
+
+The available operations are specified in the database located at {\ttfamily /home/offworld/data/database}, in the {\ttfamily Operations} tab. The arguments associated with an operation are specified in the {\ttfamily Arguments} tab\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md21}{}\doxysubsubsection{Asynchronous operations}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md21}
+Several asynchronous operations that take time to complete can run in parallel. For this purpose set the flag wait\+\_\+ok to False\+:
+
+{\ttfamily op(\char`\"{}\+L\+O\+N\+G\+\_\+\+O\+P\char`\"{}, wait\+\_\+ok=False)}\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md22}{}\doxysubsubsection{Waiting}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md22}
+A mission can wait for a delay or some previous operation(s) to complete. The {\ttfamily W\+A\+I\+T\+\_\+\+M\+I\+S\+S\+I\+ON} operation provides the following arguments\+:
+\begin{DoxyItemize}
+\item delay\+: a delay in seconds to wait for.
+\item wait\+\_\+ops\+: a flag that indicates whether to wait for previous operations to complete.
+\item ops\+: specifies the list of operation indexes to wait for. When not given, the wait operation waits for all the previous operations to be completed.
+\end{DoxyItemize}
+
+{\ttfamily op(\char`\"{}\+W\+A\+I\+T\+\_\+\+M\+I\+S\+S\+I\+O\+N\char`\"{}, wait\+\_\+ops=True, ops=\mbox{[}7\mbox{]})}\hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md23}{}\doxysubsubsection{Scripting}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md23}
+A mission can also include one or several python scripts either\+:
+\begin{DoxyItemize}
+\item At the main scope of the mission\+: the script is executed upon {\ttfamily loading} the mission
+\item Within a specific {\ttfamily S\+C\+R\+I\+P\+T\+\_\+\+M\+I\+S\+S\+I\+ON} operation scope\+: the script is executed upon execution of the operation. In particular this allows to update the mission automatically based on results from previous operations of the same mission.
+\end{DoxyItemize}
+
+\`{} \hypertarget{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md24}{}\doxysubsection{Control from shell}\label{md__home_offworld5__off_world__code_swarm-robotic-mining_catkin_ws_src_bot_overseer_readme_autotoc_md24}
+The operator can control the mission operations from command line. For this purpose\+:
+\begin{DoxyItemize}
+\item cd $<$bot overseer=\char`\"{}\char`\"{} path$>$=\char`\"{}\char`\"{}$>$/scripts/shell
+\end{DoxyItemize}
+
+You can then control the mission with the following commands\+:
+\begin{DoxyItemize}
+\item Start the mission\+: {\ttfamily ./mission start}
+\item Pause the mission\+: {\ttfamily ./mission pause}
+\item Resume the mission\+: {\ttfamily ./mission resume}
+\item Stop the mission\+: {\ttfamily ./mission stop}
+\item Load a mission\+: ./mission load \char`\"{}mission=$<$mission name$>$\char`\"{}. The mission loaded at start-\/up is called default
+\item Execute a \char`\"{}manual\char`\"{} operation on-\/demand (only possible when the mission is paused)\+: {\ttfamily ./mission run\+\_\+op $<$op name$>$ $<$args$>$}
+\item Insert an operation on-\/demand (only possible when the mission is paused)\+: {\ttfamily ./mission insert\+\_\+op $<$op name$>$ $<$index$>$ $<$args$>$}
+\item Jump to a specific operation (only possible when the mission is paused)\+: {\ttfamily ./mission jump\+\_\+to\+\_\+op index=$<$index$>$}
+\item Help of the command line\+: {\ttfamily ./mission help} 
+\end{DoxyItemize}

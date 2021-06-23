@@ -1,0 +1,13 @@
+<map id="bot_common_ros.arm_server.\lArmServer.data_publisher" name="bot_common_ros.arm_server.\lArmServer.data_publisher">
+<area shape="rect" id="node1" title=" " alt="" coords="5,201,197,243"/>
+<area shape="rect" id="node2" href="$classbot__common__ros_1_1_arm_client_1_1_arm_client.html#a47c05892ecdc8ba5a496edd92405606f" title=" " alt="" coords="247,5,435,47"/>
+<area shape="rect" id="node3" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#a718b12b43f84ff56884430f0287f8173" title=" " alt="" coords="245,71,437,112"/>
+<area shape="rect" id="node4" href="$classbot__common__ros_1_1_arm_client_1_1_arm_client.html#a1cbac9b422a0a9b2323b1dc1a01e3865" title=" " alt="" coords="247,136,435,177"/>
+<area shape="rect" id="node5" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#aaf47e0982b9c45e49efbbbdbd6736c07" title=" " alt="" coords="245,201,437,243"/>
+<area shape="rect" id="node6" href="$classbot__common__ros_1_1_arm_client_1_1_arm_client.html#acd636c29eb936cdf089291e9937be1de" title="data #################################" alt="" coords="247,267,435,308"/>
+<area shape="rect" id="node10" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#a3055f441410a64e1299a01e04e67a598" title="getters #################################" alt="" coords="245,332,437,373"/>
+<area shape="rect" id="node11" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#a70a94e1545f4e935b7adaed2f438a91c" title=" " alt="" coords="245,397,437,439"/>
+<area shape="rect" id="node7" href="$classbot__common__ros_1_1_arm_client_1_1_arm_client.html#aa9697b5064c1c7c51c5908839ecf2207" title=" " alt="" coords="485,201,673,243"/>
+<area shape="rect" id="node8" href="$classbot__common__ros_1_1_arm_client_1_1_arm_client.html#a55fd678c28df398c97c92efe86bb225c" title=" " alt="" coords="485,267,673,308"/>
+<area shape="rect" id="node9" href="$classbot__common__ros_1_1_arm_client_1_1_arm_client.html#a92bd9fecdd228e9dde6c07fe0e23ce56" title=" " alt="" coords="485,332,673,373"/>
+</map>

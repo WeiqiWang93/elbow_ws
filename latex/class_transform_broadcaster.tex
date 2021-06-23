@@ -1,0 +1,89 @@
+\hypertarget{class_transform_broadcaster}{}\doxysection{Transform\+Broadcaster Class Reference}
+\label{class_transform_broadcaster}\index{TransformBroadcaster@{TransformBroadcaster}}
+
+
+{\ttfamily \#include $<$Transform\+Broadcaster.\+h$>$}
+
+
+
+Inheritance diagram for Transform\+Broadcaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_transform_broadcaster__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Transform\+Broadcaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{class_transform_broadcaster__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a9d980d107b25e821523157bfc7730016}\label{class_transform_broadcaster_a9d980d107b25e821523157bfc7730016}} 
+void {\bfseries set\+Enabled} (bool b\+Enabled=true)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_af4d8097a6c006fefa44abc7e33fd76ce}\label{class_transform_broadcaster_af4d8097a6c006fefa44abc7e33fd76ce}} 
+void {\bfseries set\+Disabled} (bool b\+Disabled=true)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a9ac834961c8708210bad538dfbbf4fae}\label{class_transform_broadcaster_a9ac834961c8708210bad538dfbbf4fae}} 
+void {\bfseries set\+Parent\+Frame} (const Q\+String \&frame)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_aee206a6713775e3c7389f99a140867fe}\label{class_transform_broadcaster_aee206a6713775e3c7389f99a140867fe}} 
+void {\bfseries set\+Child\+Frame} (const Q\+String \&frame)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_aedf9a503804f48919dff58ba9bc51fa8}\label{class_transform_broadcaster_aedf9a503804f48919dff58ba9bc51fa8}} 
+void {\bfseries set\+Position} (const Eigen\+::\+Vector3d \&p)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a4d483db9b6c7dbff800ac12c74a9074c}\label{class_transform_broadcaster_a4d483db9b6c7dbff800ac12c74a9074c}} 
+void {\bfseries set\+Quaternion} (const Eigen\+::\+Quaterniond \&q)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_abb9ec84da3ea1e44e32423de2731b291}\label{class_transform_broadcaster_abb9ec84da3ea1e44e32423de2731b291}} 
+void {\bfseries set\+Position} (double x, double y, double z)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a0c119e09d52cde476f2efa4ea97d626a}\label{class_transform_broadcaster_a0c119e09d52cde476f2efa4ea97d626a}} 
+void {\bfseries set\+Quaternion} (double x, double y, double z, double w)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_aefe68de4e6cd101b46bde9878c1d765b}\label{class_transform_broadcaster_aefe68de4e6cd101b46bde9878c1d765b}} 
+{\bfseries Transform\+Broadcaster} (const Q\+String \&parent\+\_\+frame=\char`\"{}\char`\"{}, const Q\+String \&child\+\_\+frame=\char`\"{}\char`\"{}, Q\+Object $\ast$parent=0)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a9544da53f96f309d8d095b6f30c6a849}\label{class_transform_broadcaster_a9544da53f96f309d8d095b6f30c6a849}} 
+const geometry\+\_\+msgs\+::\+Transform\+Stamped \& {\bfseries value} () const
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a369353804ddfb7c4a5d8bdcb06f6ed6b}\label{class_transform_broadcaster_a369353804ddfb7c4a5d8bdcb06f6ed6b}} 
+void {\bfseries set\+Value} (const geometry\+\_\+msgs\+::\+Transform\+Stamped \&tf)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a52e2110046867d847f7431fcd495589e}\label{class_transform_broadcaster_a52e2110046867d847f7431fcd495589e}} 
+void {\bfseries set\+Pose} (const geometry\+\_\+msgs\+::\+Pose \&pose)
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_adeb6f6401d1f2141af98f53e2d59a825}\label{class_transform_broadcaster_adeb6f6401d1f2141af98f53e2d59a825}} 
+bool {\bfseries enabled} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a22739d646934de62d72f84b274492c6b}\label{class_transform_broadcaster_a22739d646934de62d72f84b274492c6b}} 
+void {\bfseries send} ()
+\item 
+\mbox{\Hypertarget{class_transform_broadcaster_a7e60ecf0908f26f819c9057c2c593f03}\label{class_transform_broadcaster_a7e60ecf0908f26f819c9057c2c593f03}} 
+void {\bfseries check} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Q\+Object wrapper for tf2\+\_\+ros\+::\+Static\+Transform\+Broadcaster to allow for signal-\/slot interaction 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld\+\_\+agni\+\_\+tf\+\_\+tools/src/common/Transform\+Broadcaster.\+h\item 
+/home/offworld5/\+Off\+World/\+Code/swarm-\/robotic-\/mining/catkin\+\_\+ws/src/offworld\+\_\+agni\+\_\+tf\+\_\+tools/src/common/Transform\+Broadcaster.\+cpp\end{DoxyCompactItemize}

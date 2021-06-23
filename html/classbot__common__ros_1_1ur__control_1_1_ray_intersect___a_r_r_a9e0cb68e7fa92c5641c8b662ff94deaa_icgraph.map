@@ -1,0 +1,6 @@
+<map id="bot_common_ros.ur_control.\lRayIntersect_ARR.reset" name="bot_common_ros.ur_control.\lRayIntersect_ARR.reset">
+<area shape="rect" id="node1" title=" " alt="" coords="240,71,427,112"/>
+<area shape="rect" id="node2" href="$classbot__common__ros_1_1ur__control_1_1_wait_for_enum.html#ad2e09368226bd84145c62a0ce50e0a98" title=" " alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__control_1_1_wait_for_topic.html#a5c6490af0f0f0f4fbcb2b953728990ba" title=" " alt="" coords="5,71,192,112"/>
+<area shape="rect" id="node4" href="$classbot__common__ros_1_1ur__control_1_1_wait_for_active.html#a1aabf37e7fe51288f0da5f86c6f1a891" title=" " alt="" coords="5,136,192,177"/>
+</map>
