@@ -2,12 +2,7 @@
 from openravepy import *
 import time
 import pdb
-
-
-
-
-
-
+import rospy
 
 
 env = Environment()

@@ -1,0 +1,446 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+  title_transmit_fg_color = "#00ff14"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = cd71ac01-7e08-47a1-bada-bd3b1605081d
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1176
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 922
+      ratio = 0.498652291105
+      type = HPaned
+    [[[child10]]]
+      order = 1
+      parent = child4
+      position = 152
+      ratio = 0.339912280702
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child1
+      position = 459
+      ratio = 0.392857142857
+      type = VPaned
+    [[[child14]]]
+      order = 0
+      parent = child13
+      position = 195
+      ratio = 0.43137254902
+      type = VPaned
+    [[[child17]]]
+      order = 1
+      parent = child13
+      position = 354
+      ratio = 0.502109704641
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 246
+      ratio = 0.211734693878
+      type = VPaned
+    [[[child4]]]
+      order = 1
+      parent = child2
+      position = 462
+      ratio = 0.503246753247
+      type = VPaned
+    [[[child5]]]
+      order = 0
+      parent = child4
+      position = 457
+      ratio = 0.498915401302
+      type = HPaned
+    [[[child6]]]
+      order = 0
+      parent = child5
+      position = 231
+      ratio = 0.506493506494
+      type = VPaned
+    [[[terminal11]]]
+      command = roscore; bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal12]]]
+      command = ""
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+    [[[terminal15]]]
+      order = 2
+      parent = child14
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal16]]]
+      order = 3
+      parent = child14
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal18]]]
+      order = 4
+      parent = child17
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal19]]]
+      order = 5
+      parent = child17
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal3]]]
+      order = 6
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = cd71ac01-7e08-47a1-bada-bd3b1605081d
+    [[[terminal7]]]
+      order = 7
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 6d9324c5-0a9f-49d0-9ef3-21735dbc43dc
+    [[[terminal8]]]
+      command = ""
+      order = 8
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 75b7284e-9626-474a-877c-5d01299ba0c8
+    [[[terminal9]]]
+      command = BLAH
+      order = 9
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 24ac2e3f-32c7-48e7-b969-e98dcf9466fe
+  [[diggerbot_common]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 01a1078e-af87-492f-a9fd-3e089b138ecd
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = parallel_ops
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 923
+      ratio = 0.499191374663
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 460
+      ratio = 0.5
+      type = HPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 460
+      ratio = 0.5
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 525
+      ratio = 0.5
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 458
+      ratio = 0.499458288191
+      type = HPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 458
+      ratio = 0.499458288191
+      type = HPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 525
+      ratio = 0.5
+      type = VPaned
+    [[[terminal11]]]
+      command = roscore
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = f9198744-d6c2-4c2b-bed8-5a7c891074cf
+    [[[terminal12]]]
+      command = sleep 2; roslaunch bot_digger bot_digger.launch sia20:=true use_metabo:=false;bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = e077ce9c-639d-4385-a73f-e37b6335552f
+    [[[terminal14]]]
+      command = sleep 1; cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_ati_server && ./run.sh
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = fa94ca88-9b44-418d-a9a9-b6606c52febf
+    [[[terminal15]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_overseer/scripts/install && ./deploy_data && ../overseer --model DIGGER --updatedb
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = dbb333da-706d-4a2e-87a5-5374d96ca769
+    [[[terminal4]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_teleops_web/server; npm start;bash
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = a6fc9055-aa8a-48c6-9340-ca71baed2315
+    [[[terminal5]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_teleops_web/client; npm start;bash
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 01a1078e-af87-492f-a9fd-3e089b138ecd
+    [[[terminal7]]]
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = cad48655-5f3e-4900-92c4-fdaf58943dc9
+    [[[terminal8]]]
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 1a7ae6fa-2d8f-4b03-a8b0-af8b1caf4c31
+  [[robosaw_sim]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 6d9324c5-0a9f-49d0-9ef3-21735dbc43dc
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 921
+      ratio = 0.498113207547
+      type = HPaned
+    [[[child11]]]
+      order = 1
+      parent = child1
+      position = 411
+      ratio = 0.392045454545
+      type = VPaned
+    [[[child12]]]
+      order = 0
+      parent = child11
+      position = 174
+      ratio = 0.430656934307
+      type = VPaned
+    [[[child15]]]
+      order = 1
+      parent = child11
+      position = 317
+      ratio = 0.500782472613
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 828
+      ratio = 0.786931818182
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 429
+      ratio = 0.521739130435
+      type = VPaned
+    [[[child4]]]
+      order = 0
+      parent = child3
+      position = 233
+      ratio = 0.550116550117
+      type = VPaned
+    [[[child7]]]
+      order = 1
+      parent = child3
+      position = 127
+      ratio = 0.330788804071
+      type = VPaned
+    [[[terminal10]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_overseer/scripts/install && ./deploy_data && ../overseer --model DIGGER --updatedb; bash
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = cd71ac01-7e08-47a1-bada-bd3b1605081d
+    [[[terminal13]]]
+      command = sleep 12; roslaunch bot_saw_slot_manager slotmanager.launch use_map_manager:=true dry_run:=false; bash
+      order = 0
+      parent = child12
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal14]]]
+      command = sleep 20; rqt --force-discover;bash
+      directory = ""
+      order = 1
+      parent = child12
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal16]]]
+      command = sleep 17;python 4_slot_test.py;bash
+      directory = /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_saw/scripts/bot_saw/tests
+      order = 0
+      parent = child15
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal17]]]
+      command = sleep 12; roslaunch bot_saw robosaw.launch sim_sia20:=true;bash
+      directory = ""
+      order = 1
+      parent = child15
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal5]]]
+      command = sleep 14; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_saw/rviz; rviz -d robosaw.rviz;bash
+      order = 0
+      parent = child4
+      profile = default
+      type = Terminal
+      uuid = 6d9324c5-0a9f-49d0-9ef3-21735dbc43dc
+    [[[terminal6]]]
+      command = sleep 10; roslaunch bot_arm_planner motionPlanning.launch arm:=sia20 planning_group:=saw ee:=goelz;bash
+      order = 1
+      parent = child4
+      profile = default
+      type = Terminal
+      uuid = 75b7284e-9626-474a-877c-5d01299ba0c8
+    [[[terminal8]]]
+      command = roslaunch bot_digger_gazebo bot_digger_world.launch sia20:=true sia20_goelz_js:=true world_file:=/home/offworld/swarm-robotic-mining/catkin_ws/src/bot_digger_gazebo/worlds/empty.world; bash
+      order = 0
+      parent = child7
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal9]]]
+      command = sleep 12; roslaunch bot_perception_ros quadrant_locator.launch; bash
+      order = 1
+      parent = child7
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+[plugins]
+  [[CustomCommandsMenu]]
+    [[[4_slot_test]]]
+      command = "roscd bot_saw/scripts/bot_saw/tests/ && python 4_slot_test.py "
+      enabled = True
+      name = 4_slot_test
+      position = 9
+
+    [[[autoscan]]]
+      command = roscd bot_saw/scripts/bot_saw/tests && python auto_scan_test.py
+      enabled = True
+      name = autoscan
+      position = 12
+
+    [[[motion-planning-sia20]]]
+      command = roslaunch bot_arm_planner motionPlanning.launch planning_group:=saw arm:=sia20 ee:=goelz
+      enabled = True
+      name = motion-planning-sia20
+      position = 3
+    [[[overseer]]]
+      command = roscd bot_overseer/scripts/install && ./deploy_data && ../overseer
+      enabled = True
+      name = overseer
+      position = 2
+    [[[quadrant-locator]]]
+      command = roslaunch bot_perception_ros quadrant_locator.launch
+      enabled = True
+      name = quadrant-locator
+      position = 4
+    [[[robosaw_sim]]]
+      command = roslaunch bot_saw robosaw.launch sim_sia20:=true
+      enabled = True
+      name = robosaw_sim
+      position = 6
+    [[[rqt-gui]]]
+      command = rqt --force-discover
+      enabled = True
+      name = rqt-gui
+      position = 8
+    [[[rviz]]]
+      command = roscd bot_saw/rviz && rviz -d robosaw.rviz
+      enabled = True
+      name = rviz
+      position = 7
+    [[[hmi-client]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_teleops_web/client && npm start
+      enabled = True
+      name = hmi-client
+      position = 14
+    [[[hmi-server]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_teleops_web/server && npm start
+      enabled = True
+      name = hmi-server
+      position = 13
+    [[[overseer-shell]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_overseer_api/shell
+      enabled = True
+      name = overseer-shell
+      position = 15
+    [[[slot-manager]]]
+      command = roslaunch bot_saw_slot_manager slotmanager.launch use_map_manager:=true dry_run:=false use_goelz:=true
+      enabled = True
+      name = slot-manager
+      position = 5
+    [[[bot-digger-gazebo]]]
+      command = roslaunch bot_digger_gazebo bot_digger_world.launch sia20:=true sia20_goelz_js:=true world_file:=/home/offworld/swarm-robotic-mining/catkin_ws/src/bot_digger_gazebo/worlds/empty.world
+      enabled = True
+      name = bot-digger-gazebo
+      position = 4
+[profiles]
+  [[default]]
+    background_image = None
+    scrollback_infinite = True
+    scrollback_lines = 50009
+  [[robosaw]]
+    background_image = None

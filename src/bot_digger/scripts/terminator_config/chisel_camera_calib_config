@@ -1,0 +1,1149 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+  title_transmit_fg_color = "#00ff14"
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = cd71ac01-7e08-47a1-bada-bd3b1605081d
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1176
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 922
+      ratio = 0.498652291105
+      type = HPaned
+    [[[child10]]]
+      order = 1
+      parent = child4
+      position = 152
+      ratio = 0.339912280702
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child1
+      position = 459
+      ratio = 0.392857142857
+      type = VPaned
+    [[[child14]]]
+      order = 0
+      parent = child13
+      position = 195
+      ratio = 0.43137254902
+      type = VPaned
+    [[[child17]]]
+      order = 1
+      parent = child13
+      position = 354
+      ratio = 0.502109704641
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 246
+      ratio = 0.211734693878
+      type = VPaned
+    [[[child4]]]
+      order = 1
+      parent = child2
+      position = 462
+      ratio = 0.503246753247
+      type = VPaned
+    [[[child5]]]
+      order = 0
+      parent = child4
+      position = 457
+      ratio = 0.498915401302
+      type = HPaned
+    [[[child6]]]
+      order = 0
+      parent = child5
+      position = 231
+      ratio = 0.506493506494
+      type = VPaned
+    [[[terminal11]]]
+      command = roscore; bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal12]]]
+      command = ""
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+    [[[terminal15]]]
+      order = 2
+      parent = child14
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal16]]]
+      order = 3
+      parent = child14
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal18]]]
+      order = 4
+      parent = child17
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal19]]]
+      order = 5
+      parent = child17
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal3]]]
+      order = 6
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = cd71ac01-7e08-47a1-bada-bd3b1605081d
+    [[[terminal7]]]
+      order = 7
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 6d9324c5-0a9f-49d0-9ef3-21735dbc43dc
+    [[[terminal8]]]
+      command = ""
+      order = 8
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 75b7284e-9626-474a-877c-5d01299ba0c8
+    [[[terminal9]]]
+      command = BLAH
+      order = 9
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 24ac2e3f-32c7-48e7-b969-e98dcf9466fe
+  [[diggerbot_common]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 01a1078e-af87-492f-a9fd-3e089b138ecd
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = parallel_ops
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 923
+      ratio = 0.499191374663
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 460
+      ratio = 0.5
+      type = HPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 460
+      ratio = 0.5
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 525
+      ratio = 0.5
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 458
+      ratio = 0.499458288191
+      type = HPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 458
+      ratio = 0.499458288191
+      type = HPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 525
+      ratio = 0.5
+      type = VPaned
+    [[[terminal11]]]
+      command = roscore
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = f9198744-d6c2-4c2b-bed8-5a7c891074cf
+    [[[terminal12]]]
+      command = sleep 2; roslaunch bot_digger bot_digger.launch sia20:=true use_metabo:=false;bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = e077ce9c-639d-4385-a73f-e37b6335552f
+    [[[terminal14]]]
+      command = sleep 1; cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_ati_server && ./run.sh; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = fa94ca88-9b44-418d-a9a9-b6606c52febf
+    [[[terminal15]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_overseer/scripts/install && ./deploy_data && ../overseer --model DIGGER --updatedb; bash
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = dbb333da-706d-4a2e-87a5-5374d96ca769
+    [[[terminal4]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_teleops_web/server; npm start;bash
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = a6fc9055-aa8a-48c6-9340-ca71baed2315
+    [[[terminal5]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_teleops_web/client; npm start;bash
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 01a1078e-af87-492f-a9fd-3e089b138ecd
+    [[[terminal7]]]
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = cad48655-5f3e-4900-92c4-fdaf58943dc9
+    [[[terminal8]]]
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 1a7ae6fa-2d8f-4b03-a8b0-af8b1caf4c31
+  [[pointcloud_capture]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = c95d1368-c509-44d5-86da-80d70493e023
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 917
+      ratio = 0.495956873315
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 553
+      ratio = 0.526515151515
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 299
+      ratio = 0.546112115732
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301810865191
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 8; roslaunch bot_saw_slot_manager slotmanager.launch use_map_manager:=true dry_run:=false use_goelz:=true; bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 6; roslaunch bot_arm_planner motionPlanning.launch planning_group:=saw arm:=sia20 ee:=goelz; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = ""
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command = ""
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = sleep 14; roslaunch bot_saw robosaw.launch sia20:=true; bash
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 6d9324c5-0a9f-49d0-9ef3-21735dbc43dc
+    [[[terminal5]]]
+      command = sleep 20; python auto_scan_test.py; bash
+      directory = /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_saw/scripts/bot_saw/tests
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 75b7284e-9626-474a-877c-5d01299ba0c8
+    [[[terminal7]]]
+      command = sleep 12; roslaunch bot_cameras multi_astra_bot_digger.launch use_saw_guard_goelz_front:=true;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = sleep 10; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_saw/rviz; rviz -d robosaw.rviz; bash
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+  [[chisel_tool_camera_calibration]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 2b0cf54e-b093-448d-9357-4c79d2341559
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 916
+      ratio = 0.495417789757
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 552
+      ratio = 0.525568181818
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 273
+      ratio = 0.5
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301204819277
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 4; roslaunch bot_chisel_target_manager mapping.launch;bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 2; roslaunch bot_chisel_target_manager ctm.launch; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = sleep 10; rosrun bot_perception_ros camera_calib_server; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command = ""
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 2b0cf54e-b093-448d-9357-4c79d2341559
+    [[[terminal5]]]
+      command = ""
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = b76ddb40-3704-48d9-89c0-6fe018968c03
+    [[[terminal7]]]
+      command = sleep 8; roslaunch bot_cameras multi_astra_bot_digger.launch use_chisel_tool:=true stereo:=true;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_chisel_target_manager/rviz; rviz -d tool_cam_calib.rviz; bash
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+  [[chisel_up_left_camera_calibration]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 2b0cf54e-b093-448d-9357-4c79d2341559
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 916
+      ratio = 0.495417789757
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 552
+      ratio = 0.525568181818
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 273
+      ratio = 0.5
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301204819277
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 6; roslaunch bot_chisel_target_manager mapping.launch;bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 4; roslaunch bot_chisel_target_manager ctm.launch; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = sleep 10; rosrun bot_perception_ros camera_calib_server; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command = sleep 2;  
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 2b0cf54e-b093-448d-9357-4c79d2341559
+    [[[terminal5]]]
+      command = ""
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = b76ddb40-3704-48d9-89c0-6fe018968c03
+    [[[terminal7]]]
+      command = sleep 8; roslaunch bot_cameras multi_astra_bot_digger.launch stereo:=true use_chisel_track_up_left:=true;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_chisel_target_manager/rviz; rviz -d chisel_track_up_left.rviz; bash
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+  [[chisel_up_right_camera_calibration]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 2b0cf54e-b093-448d-9357-4c79d2341559
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 916
+      ratio = 0.495417789757
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 552
+      ratio = 0.525568181818
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 273
+      ratio = 0.5
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301204819277
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 6; roslaunch bot_chisel_target_manager mapping.launch;bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 4; roslaunch bot_chisel_target_manager ctm.launch; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = sleep 10; rosrun bot_perception_ros camera_calib_server; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command =  sleep 2;  
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 2b0cf54e-b093-448d-9357-4c79d2341559
+    [[[terminal5]]]
+      command = ""
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = b76ddb40-3704-48d9-89c0-6fe018968c03
+    [[[terminal7]]]
+      command = sleep 8; roslaunch bot_cameras multi_astra_bot_digger.launch stereo:=true use_chisel_track_up_right:=true;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_chisel_target_manager/rviz; rviz -d chisel_track_up_right.rviz; bash
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+  [[chisel_down_right_camera_calibration]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 2b0cf54e-b093-448d-9357-4c79d2341559
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 916
+      ratio = 0.495417789757
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 552
+      ratio = 0.525568181818
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 273
+      ratio = 0.5
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301204819277
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 6; roslaunch bot_chisel_target_manager mapping.launch;bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 4; roslaunch bot_chisel_target_manager ctm.launch; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = sleep 10; rosrun bot_perception_ros camera_calib_server; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command = sleep 2;  
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 2b0cf54e-b093-448d-9357-4c79d2341559
+    [[[terminal5]]]
+      command = ""
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = b76ddb40-3704-48d9-89c0-6fe018968c03
+    [[[terminal7]]]
+      command = sleep 8; roslaunch bot_cameras multi_astra_bot_digger.launch stereo:=true use_chisel_track_down_right:=true;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_chisel_target_manager/rviz; rviz -d chisel_track_down_right.rviz; bash
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+  [[chisel_down_left_camera_calibration]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 2b0cf54e-b093-448d-9357-4c79d2341559
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 916
+      ratio = 0.495417789757
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 552
+      ratio = 0.525568181818
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 273
+      ratio = 0.5
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301204819277
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 6; roslaunch bot_chisel_target_manager mapping.launch;bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 4; roslaunch bot_chisel_target_manager ctm.launch; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = sleep 10; rosrun bot_perception_ros camera_calib_server; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command = sleep 2;  
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 2b0cf54e-b093-448d-9357-4c79d2341559
+    [[[terminal5]]]
+      command = ""
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = b76ddb40-3704-48d9-89c0-6fe018968c03
+    [[[terminal7]]]
+      command = sleep 8; roslaunch bot_cameras multi_astra_bot_digger.launch stereo:=true use_chisel_track_down_left:=true;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = sleep 6; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_chisel_target_manager/rviz; rviz -d chisel_track_down_left.rviz; bash
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+  [[cameras_feed_check]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 2b0cf54e-b093-448d-9357-4c79d2341559
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 65:24
+      size = 1855, 1056
+      title = offworld@ow-obp-004: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 916
+      ratio = 0.495417789757
+      type = HPaned
+    [[[child10]]]
+      order = 0
+      parent = child9
+      position = 172
+      ratio = 0.427872860636
+      type = VPaned
+    [[[child13]]]
+      order = 1
+      parent = child9
+      position = 316
+      ratio = 0.497659906396
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 552
+      ratio = 0.525568181818
+      type = VPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 273
+      ratio = 0.5
+      type = VPaned
+    [[[child6]]]
+      order = 1
+      parent = child2
+      position = 147
+      ratio = 0.301204819277
+      type = VPaned
+    [[[child9]]]
+      order = 1
+      parent = child1
+      position = 409
+      ratio = 0.390151515152
+      type = VPaned
+    [[[terminal11]]]
+      command = sleep 2; roslaunch bot_digger bot_digger.launch;bash
+      order = 0
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = c95d1368-c509-44d5-86da-80d70493e023
+    [[[terminal12]]]
+      command = sleep 6; roslaunch bot_cameras multi_astra_bot_digger.launch use_chisel_tool:=true use_saw_guard_goelz_front:=true; bash
+      order = 1
+      parent = child10
+      profile = default
+      type = Terminal
+      uuid = 4d7e5f84-134a-4a25-8fd6-76fb50866e95
+    [[[terminal14]]]
+      command = sleep 10; roslaunch bot_cameras track_cameras.launch; bash
+      order = 0
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 8817fb27-e22b-4f1c-bde9-fa429db81f57
+    [[[terminal15]]]
+      command = sleep 2;  
+      order = 1
+      parent = child13
+      profile = default
+      type = Terminal
+      uuid = 4c60479a-acf6-4bc5-be7f-86c93d8296f8
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 2b0cf54e-b093-448d-9357-4c79d2341559
+    [[[terminal5]]]
+      command = ""
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = b76ddb40-3704-48d9-89c0-6fe018968c03
+    [[[terminal7]]]
+      command = sleep 12; cd /home/offworld/swarm-robotic-mining/catkin_ws/src/bot_cameras/rviz;rviz -d cameras_feed_check.rviz;bash
+      order = 0
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 8ab8f4f4-c461-4460-a921-351f94eec92f
+    [[[terminal8]]]
+      command = ""
+      order = 1
+      parent = child6
+      profile = default
+      type = Terminal
+      uuid = 9f051467-1f44-44ea-b862-f8a072504905
+[plugins]
+  [[CustomCommandsMenu]]
+    [[[4_slot_test]]]
+      command = "roscd bot_saw/scripts/bot_saw/tests/ && python 4_slot_test.py "
+      enabled = True
+      name = 4_slot_test
+      position = 9
+    [[[acroname-tester]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/acroname_usb/test && python acroname_tester.py
+      enabled = True
+      name = acroname-tester
+      position = 24
+    [[[ati-demo]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_ati_server/ati-demo && java -jar ATINetFT.jar
+      enabled = True
+      name = ati-demo
+      position = 21
+    [[[ati-server]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_ati_server && ./run.sh
+      enabled = True
+      name = ati-server
+      position = 20
+    [[[autoscan]]]
+      command = roscd bot_saw/scripts/bot_saw/tests && python auto_scan_test.py
+      enabled = True
+      name = autoscan
+      position = 12
+    [[[bot-digger]]]
+      command = roslaunch bot_digger bot_digger.launch sia20:=true use_metabo:=false
+      enabled = True
+      name = bot-digger
+      position = 1
+    [[[build-ati]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_ati_server && mvn clean install
+      enabled = True
+      name = build-ati
+      position = 19
+    [[[cd-startup]]]
+      command = cd ~/swarm-robotic-mining/catkin_ws/src/bot_saw/scripts/bot_saw/startup
+      enabled = True
+      name = cd-startup
+      position = 0
+    [[[chisel-dbc-tester]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_firmware_plugins/tms/test && python chisel_dbc_tester.py
+      enabled = True
+      name = chisel-dbc-tester
+      position = 16
+    [[[chisel-rviz]]]
+      command = roscd bot_chisel_target_manager/rviz/ && rviz -d ./ctm.rviz
+      enabled = True
+      name = chisel-rviz
+      position = 22
+    [[[chisel-tcp-calib-rviz]]]
+      command = roscd bot_chisel_target_manager/rviz/ && rviz -d ./tcp_orient_calib.rviz
+      enabled = True
+      name = chisel-tcp-calib-rviz
+      position = 23
+    [[[force-overseer-tester]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_firmware_plugins/force_sensor/test && python force_overseer_test.py
+      enabled = True
+      name = force-overseer-tester
+      position = 14
+    [[[motion-planning-sia20]]]
+      command = roslaunch bot_arm_planner motionPlanning.launch planning_group:=saw arm:=sia20 ee:=goelz
+      enabled = True
+      name = motion-planning-sia20
+      position = 3
+    [[[overseer]]]
+      command = roscd bot_overseer/scripts/install && ./deploy_data && ../overseer
+      enabled = True
+      name = overseer
+      position = 2
+    [[[quadrant-locator]]]
+      command = roslaunch bot_perception_ros quadrant_locator.launch
+      enabled = True
+      name = quadrant-locator
+      position = 4
+    [[[restart-can]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_firmware_plugins/bot_saw/install && ./restart_can.sh
+      enabled = True
+      name = restart-can
+      position = 17
+    [[[robosaw]]]
+      command = roslaunch bot_saw robosaw.launch sia20:=true
+      enabled = True
+      name = robosaw
+      position = 6
+    [[[rqt-gui]]]
+      command = rqt --force-discover
+      enabled = True
+      name = rqt-gui
+      position = 8
+    [[[rviz]]]
+      command = roscd bot_saw/rviz && rviz -d robosaw.rviz
+      enabled = True
+      name = rviz
+      position = 7
+    [[[saw-dbc-tester]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_firmware_plugins/bot_saw/test && python saw_dbc_tester.py
+      enabled = True
+      name = saw-dbc-tester
+      position = 15
+    [[[saw-front-cam]]]
+      command = roslaunch bot_cameras multi_astra_bot_digger.launch use_saw_guard_goelz_front:=true
+      enabled = True
+      name = saw-front-cam
+      position = 11
+    [[[saw-side-cam]]]
+      command = roslaunch bot_cameras multi_astra_bot_digger.launch use_saw_guard_goelz:=true
+      enabled = True
+      name = saw-side-cam
+      position = 10
+    [[[sia20-driver]]]
+      command = roslaunch bot_saw driver.launch sia20:=true
+      enabled = True
+      name = sia20-driver
+      position = 18
+    [[[slot-manager]]]
+      command = roslaunch bot_saw_slot_manager slotmanager.launch use_map_manager:=true dry_run:=false use_goelz:=true
+      enabled = True
+      name = slot-manager
+      position = 5
+    [[[tms-dbc-tester]]]
+      command = cd /home/offworld/swarm-robotic-mining/dev_ws/src/bot_firmware/bot_firmware_plugins/tms/test && python tms_dbc_tester.py
+      enabled = True
+      name = tms-dbc-tester
+      position = 13
+[profiles]
+  [[default]]
+    background_image = None
+    scrollback_infinite = True
+    scrollback_lines = 50009
+  [[robosaw]]
+    background_image = None

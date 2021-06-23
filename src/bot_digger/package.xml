@@ -1,0 +1,19 @@
+<package>
+  <name>bot_digger</name>
+  <version>0.0.1</version>
+  <description>Launchers for the real bot_digger</description>
+  <maintainer email="arjun.muthuvelu@offworld.ai">Arjun Muthuvelu</maintainer>
+  <license>BSD</license>
+  <author email="arjun.muthuvelu@offworld.ai">OffWorld, Inc</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <run_depend>yocs_cmd_vel_mux</run_depend>
+<!--  <run_depend>create_gazebo_plugins</run_depend> disable irobot create due to the compile error in plugin-->
+  <run_depend>diagnostic_aggregator</run_depend>
+  <run_depend>depthimage_to_laserscan</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>bot_digger_navigation</run_depend>
+  <run_depend>mobilebase_node</run_depend>
+  <run_depend>xacro</run_depend>
+</package>

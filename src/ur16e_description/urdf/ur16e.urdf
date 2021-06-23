@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="ur16e">
+
+  <!-- <xacro:include filename="$(find ur_description)/urdf/ur.transmission.xacro" /> -->
+  <!-- <xacro:include filename="$(find ur_description)/urdf/ur.gazebo.xacro" /> -->
+
+  <!-- <xacro:macro name="ur16_robot"> -->
+  <link name="base_link">
+    <inertial>
+      <origin xyz="1.1489E-34 -1.646E-16 0.046885" rpy="0 0 0" />
+      <mass value="5.438" />
+      <inertia ixx="0.013275" ixy="8.9258E-35" ixz="3.0589E-20" iyy="0.013275" iyz="-1.5807E-17" izz="0.017725" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="shoulder_link">
+    <inertial>
+      <origin xyz="-1.5245E-08 0.012594 0.0014894" rpy="0 0 0" />
+      <mass value="9.4377" />
+      <inertia ixx="0.038911" ixy="8.8912E-10" ixz="5.0205E-09" iyy="0.034442" iyz="-0.00033385" izz="0.032728" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.181" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/shoulder_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.181" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/shoulder_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_pan_joint" type="revolute">
+    <origin xyz="0 0 0.181" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="shoulder_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-6.28" upper="6.28" effort="150.0" velocity="3.14" />
+  </joint>
+  <link name="upper_arm_link">
+    <inertial>
+      <origin xyz="-1.3872E-08 0.00081804 0.18812" rpy="0 0 0" />
+      <mass value="22.37" />
+      <inertia ixx="0.78628" ixy="3.8039E-08" ixz="9.7631E-08" iyy="0.77849" iyz="0.002245" izz="0.058581" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.176 -0.181" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/upper_arm_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.176 -0.181" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/upper_arm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_lift_joint" type="revolute">
+    <origin xyz="0 0.176 0" rpy="0 1.5708 0" />
+    <!-- edited to fix 0 deg config, was 0 0 0  -->
+    <parent link="shoulder_link" />
+    <child link="upper_arm_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-6.28" upper="6.28" effort="150.0" velocity="3.14" />
+  </joint>
+  <link name="forearm_link">
+    <inertial>
+      <origin xyz="-1.2814E-07 0.0067539 0.16344" rpy="0 0 0" />
+      <mass value="9.3652" />
+      <inertia ixx="0.18612" ixy="5.431E-07" ixz="-2.0071E-07" iyy="0.18373" iyz="0.0098497" izz="0.014157" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.0388 -0.6605" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/lower_arm_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0388 -0.6605" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/lower_arm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="elbow_joint" type="revolute">
+    <origin xyz="0 -0.1372 0.4784" rpy="0 0 0" />
+    <parent link="upper_arm_link" />
+    <child link="forearm_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-6.28" upper="6.28" effort="150.0" velocity="3.14" />
+  </joint>
+  <link name="wrist_1_link">
+    <inertial>
+      <origin xyz="-5.602E-08 0.11949 0.0011483" rpy="0 0 0" />
+      <mass value="2.5949" />
+      <inertia ixx="0.0050155" ixy="-6.6962E-10" ixz="-6.2086E-09" iyy="0.0036588" iyz="-0.00010442" izz="0.0041213" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.0388 -1.0194" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/wrist_1_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.0388 -1.0194" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/wrist_1_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_1_joint" type="revolute">
+    <origin xyz="0 0 0.36" rpy="0 1.5708 0" />
+    <!-- edited to fix 0 deg config, was 0 0 0  -->
+    <parent link="forearm_link" />
+    <child link="wrist_1_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-6.28" upper="6.28" effort="150.0" velocity="3.14" />
+  </joint>
+  <link name="wrist_2_link">
+    <inertial>
+      <origin xyz="4.6306E-08 0.0012823 0.1101" rpy="0 0 0" />
+      <mass value="2.3235" />
+      <inertia ixx="0.0039588" ixy="6.2628E-09" ixz="1.2947E-09" iyy="0.003065" iyz="-8.5307E-05" izz="0.0033836" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.17415 -1.0194" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/wrist_2_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.17415 -1.0194" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/wrist_2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_2_joint" type="revolute">
+    <origin xyz="0 0.13535 0" rpy="0 0 0" />
+    <parent link="wrist_1_link" />
+    <child link="wrist_2_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-6.28" upper="6.28" effort="150.0" velocity="3.14" />
+  </joint>
+  <link name="wrist_3_link">
+    <inertial>
+      <origin xyz="-6.798E-19 0.086857 -2.2204E-16" rpy="0 0 0" />
+      <mass value="1.0362" />
+      <inertia ixx="0.0008397" ixy="1.6187E-21" ixz="-4.4721E-35" iyy="0.0010531" iyz="-5.841E-19" izz="0.0008397" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.17415 -1.13895" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/wrist_3_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.17415 -1.13895" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/wrist_3_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_3_joint" type="revolute">
+    <origin xyz="0 0 0.11955" rpy="0 0 0" />
+    <parent link="wrist_2_link" />
+    <child link="wrist_3_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-6.28" upper="6.28" effort="150.0" velocity="3.14" />
+  </joint>
+  <link name="dummy_sensor_link">
+    <inertial>
+      <origin xyz="0 -0.01875 0" rpy="0 0 0" />
+      <mass value="0.16567" />
+      <inertia ixx="7.7658E-05" ixy="-3.0306E-37" ixz="6.3554E-37" iyy="0.00011649" iyz="0" izz="7.7658E-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 -0.32865 -1.13895" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/dummy_sensor_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.7 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.32865 -1.13895" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://ur16e_description/meshes/dummy_sensor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="sensor_mount_fixed" type="fixed">
+    <origin xyz="0 0.1545 0" rpy="0 0 0" />
+    <parent link="wrist_3_link" />
+    <child link="dummy_sensor_link" />
+    <axis xyz="0 1 0" />
+  </joint>
+
+  <link name="tool0"/>
+
+  <joint name="wrist_3_link-tool0_fixed_joint" type="fixed">
+    <origin xyz="0 0.1545 0" rpy="${pi/-2.0} 0 0"/>
+    <parent link="wrist_3_link"/>
+    <child link="tool0"/>
+  </joint>
+
+
+  <!-- <xacro:ur_arm_transmission prefix="" hw_interface="hardware_interface/PositionJointInterface"/> -->
+  <!-- <xacro:ur_arm_gazebo prefix="" /> -->
+
+
+  <!-- </xacro:macro> -->
+</robot>
