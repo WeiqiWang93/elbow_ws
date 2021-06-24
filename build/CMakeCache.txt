@@ -305,6 +305,12 @@ _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 _path_name:FILEPATH=/home/rocky/catkin_ws/src/or_urdf/tests
 
 //Value Computed by CMake
+bot_digger_BINARY_DIR:STATIC=/home/rocky/catkin_ws/build/bot_digger
+
+//Value Computed by CMake
+bot_digger_SOURCE_DIR:STATIC=/home/rocky/catkin_ws/src/bot_digger
+
+//Value Computed by CMake
 bot_digger_description_BINARY_DIR:STATIC=/home/rocky/catkin_ws/build/bot_digger_description
 
 //Value Computed by CMake
@@ -367,6 +373,9 @@ openrave_DIR:PATH=/usr/local/lib/cmake/openrave-0.9
 
 //Value Computed by CMake
 openrave_catkin_BINARY_DIR:STATIC=/home/rocky/catkin_ws/build/openrave_catkin
+
+//The directory containing a CMake configuration file for openrave_catkin.
+openrave_catkin_DIR:PATH=/home/rocky/catkin_ws/devel/share/openrave_catkin/cmake
 
 //Value Computed by CMake
 openrave_catkin_SOURCE_DIR:STATIC=/home/rocky/catkin_ws/src/openrave_catkin
@@ -561,7 +570,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

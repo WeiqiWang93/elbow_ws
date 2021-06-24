@@ -6,11 +6,11 @@
 
 # new environment variables
 export OPENRAVE_DATA='/home/rocky/catkin_ws/devel/share/openrave-0.9/data:/opt/ros/kinetic/share/openrave-0.9/data:'
-export OPENRAVE_PLUGINS='/home/rocky/catkin_ws/devel/lib/openrave-0.9:/home/rocky/catkin_ws/devel/share/openrave-0.9/plugins:/opt/ros/kinetic/share/openrave-0.9/plugins:'
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/rocky/catkin_ws/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/rocky/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export OPENRAVE_PLUGINS="/home/rocky/catkin_ws/devel/share/openrave-0.9/plugins:/opt/ros/kinetic/share/openrave-0.9/plugins:$OPENRAVE_PLUGINS"
 export PKG_CONFIG_PATH="/home/rocky/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/rocky/catkin_ws/build'
 export ROSLISP_PACKAGE_DIRECTORIES='/home/rocky/catkin_ws/devel/share/common-lisp'

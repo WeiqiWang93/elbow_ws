@@ -4,10 +4,26 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="or_ur" xmlns:xacro="http://ros.org/wiki/xacro">
-  <!-- <xacro:macro name="robo_chisel"> -->
-  <!-- common stuff -->
-  <!-- <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" /> -->
-  <!-- <xacro:property name="calibration_data" value="${load_yaml(diggerbot_calibration_file)}"/> -->
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="ros_control">
+      <!--robotNamespace>/</robotNamespace-->
+      <!--robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType-->
+    </plugin>
+    <!--
+    <plugin name="gazebo_ros_power_monitor_controller" filename="libgazebo_ros_power_monitor.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>1.0</updateRate>
+      <timeout>5</timeout>
+      <powerStateTopic>power_state</powerStateTopic>
+      <powerStateRate>10.0</powerStateRate>
+      <fullChargeCapacity>87.78</fullChargeCapacity>     
+      <dischargeRate>-474</dischargeRate>
+      <chargeRate>525</chargeRate>
+      <dischargeVoltage>15.52</dischargeVoltage>
+      <chargeVoltage>16.41</chargeVoltage>
+    </plugin>
+-->
+  </gazebo>
   <link name="chisel_base_link">
     <inertial>
       <origin rpy="0 0 0" xyz="1.1489E-34 -1.646E-16 0.046885"/>
@@ -234,7 +250,13 @@
     <child link="chisel_dummy_sensor_link"/>
     <axis xyz="0 1 0"/>
   </joint>
-  <link name="chisel_tool0"/>
+  <link name="chisel_tool0">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 -0.01875 0"/>
+      <mass value="0.1"/>
+      <inertia ixx="1.1E-05" ixy="-3.0306E-37" ixz="6.3554E-37" iyy="1.1E-05" iyz="0" izz="1.1E-05"/>
+    </inertial>
+  </link>
   <joint name="chisel_wrist_3_link-tool0_fixed_joint" type="fixed">
     <origin rpy="-1.57079632679 0 0" xyz="0 0.1545 0"/>
     <parent link="chisel_wrist_3_link"/>
@@ -316,21 +338,80 @@
     <selfCollide>true</selfCollide>
   </gazebo>
   <!-- ROS base_link to UR 'Base' Coordinates transform -->
-  <!-- <link name="chisel_base"/> -->
-  <!-- <joint name="chisel_base_link-base_fixed_joint" type="fixed"> -->
-  <!-- NOTE: this rotation is only needed as long as base_link itself is
+  <link name="chisel_base"/>
+  <joint name="chisel_base_link-base_fixed_joint" type="fixed">
+    <!-- NOTE: this rotation is only needed as long as base_link itself is
                 not corrected wrt the real robot (ie: rotated over 180
                 degrees)
     -->
-  <!-- <origin xyz="0 0 0" rpy= "0.0 1.5707963267948966 0.0" />  -->
-  <!--"3.14 -1.5707963267948966 0.0"/-->
-  <!-- <parent link="chisel_base"/> -->
-  <!-- <child link="chisel_base_link"/> -->
+    <origin rpy="0.0 1.5707963267948966 0.0" xyz="0 0 0"/>
+     
+    &quot;3.14 -1.5707963267948966 0.0&quot;/
+    
+    <parent link="chisel_base"/>
+    <child link="chisel_base_link"/>
+  </joint>
+  <!-- attach to tool0  directions: z-pointed towards tool tip, y is "up", x is "out"-->
+  <!-- <joint name="chisel_makita_fixed_joint" type="fixed">
+    <parent link="chisel_tool0"/>
+    <child link="chisel_makita_link"/> -->
+    <!-- <origin xyz="0.0 0.0 0.0" rpy="1.57 0.0 3.14" /> -->
   <!-- </joint> -->
-  <!-- end effector -->
-  <!-- <xacro:include filename="$(find bot_digger_description)/urdf/include/chisel_bosch.urdf.xacro" /> -->
-  <!-- attach -->
-  <!-- <xacro:ow_chisel prefix="chisel_" chassis_type="bot_digger_narrow_rack" calibration_data="${calibration_data}"/> -->
+  <!-- <link name="chisel_makita_link">
+    <visual name="visual">
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/20210408Bosch_top45camera.STL"/>
+      </geometry>
+      <origin rpy="0.0 0 0.0" xyz="0 0.0 0.0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://bot_digger_description/meshes/20210408Bosch_top45camera.STL"/>
+      </geometry>
+      <origin rpy="0.0 0 0.0" xyz="0.0 0.0 0.0"/>
+    </collision>
+  </link> -->
+  <joint name="chisel_chisel_fixed_joint" type="fixed">
+    <parent link="chisel_tool0"/>
+    <child link="chisel_chisel_link"/>
+    <origin rpy="0.0 0.0 1.57" xyz="0.0 0.0 0.54"/>
+  </joint>
+  <link name="chisel_chisel_link">
+    <visual name="visual">
+      <geometry>
+        <cylinder length="0.28" radius="0.015"/>
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1.0"/>
+      </material>
+      <origin rpy="0 0 0" xyz="0 0 0.12"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.28" radius="0.015"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.12"/>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.12"/>
+      <inertia ixx="0.0048562480575" ixy="0.0" ixz="0.0" iyy="0.0048562480575" iyz="0.0" izz="0.0001125"/>
+    </inertial>
+  </link>
+  <!-- <joint name="chisel_tip_fixed_joint" type="fixed">
+    <parent link="chisel_tool0"/>
+    <child link="chisel_tip_link"/>
+    <origin rpy="0.0 0.0 -0.897" xyz="-0.006 0.001 0.811"/>
+  </joint> -->
+  <!-- frame directions: z along rotation axis, x out top of drill, y out side of drill -->
+  <!-- <link name="chisel_tip_link">
+    <collision>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 -0.01"/>
+    </collision>
+  </link> -->
   <!-- </xacro:macro> -->
 </robot>
 

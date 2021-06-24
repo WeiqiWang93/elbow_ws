@@ -387,6 +387,56 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory bot_digger
+
+# Convenience name for "all" pass in the directory.
+bot_digger/all:
+
+.PHONY : bot_digger/all
+
+# Convenience name for "clean" pass in the directory.
+bot_digger/clean: bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : bot_digger/clean
+
+# Convenience name for "preinstall" pass in the directory.
+bot_digger/preinstall:
+
+.PHONY : bot_digger/preinstall
+
+#=============================================================================
+# Target rules for target bot_digger/CMakeFiles/_catkin_empty_exported_target.dir
+
+# All Build rule for target.
+bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/build.make bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/build.make bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rocky/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/all
+
+# Build rule for subdir invocation for target.
+bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rocky/catkin_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rocky/catkin_ws/build/CMakeFiles 0
+.PHONY : bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# clean rule for target.
+bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/build.make bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+# clean rule for target.
+clean: bot_digger/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory openrave_catkin
 
 # Convenience name for "all" pass in the directory.
@@ -395,7 +445,7 @@ openrave_catkin/all:
 .PHONY : openrave_catkin/all
 
 # Convenience name for "clean" pass in the directory.
-openrave_catkin/clean: openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/clean
+openrave_catkin/clean:
 
 .PHONY : openrave_catkin/clean
 
@@ -403,38 +453,6 @@ openrave_catkin/clean: openrave_catkin/CMakeFiles/_catkin_empty_exported_target.
 openrave_catkin/preinstall:
 
 .PHONY : openrave_catkin/preinstall
-
-#=============================================================================
-# Target rules for target openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir
-
-# All Build rule for target.
-openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/build.make openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/build.make openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rocky/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/all
-
-# Build rule for subdir invocation for target.
-openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rocky/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rocky/catkin_ws/build/CMakeFiles 0
-.PHONY : openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# clean rule for target.
-openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/build.make openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-# clean rule for target.
-clean: openrave_catkin/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory or_test

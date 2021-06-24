@@ -4,8 +4,8 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
 
-  <!-- <xacro:include filename="$(find ur_description)/urdf/ur.transmission.xacro" /> -->
-  <!-- <xacro:include filename="$(find ur_description)/urdf/ur.gazebo.xacro" /> -->
+  <xacro:include filename="$(find ur_description)/urdf/ur.transmission.xacro" />
+  <xacro:include filename="$(find ur_description)/urdf/ur.gazebo.xacro" />
 
 
  <xacro:macro name="ur16_robot" params="prefix">

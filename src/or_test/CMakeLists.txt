@@ -10,6 +10,9 @@ project(or_test)
 find_package(catkin REQUIRED COMPONENTS
   rospy
 )
+find_package(openrave REQUIRED)
+find_package(openrave_catkin REQUIRED)
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

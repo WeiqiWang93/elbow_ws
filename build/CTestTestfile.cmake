@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(bot_digger)
 subdirs(openrave_catkin)
 subdirs(or_test)
 subdirs(or_urdf)
