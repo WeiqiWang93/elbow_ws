@@ -1,8 +1,8 @@
-# Install script for directory: /home/rocky/catkin_ws/src/bot_digger_description
+# Install script for directory: /home/rocky/elbow_ws/src/bot_digger_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/rocky/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/rocky/elbow_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,18 +32,23 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rocky/catkin_ws/build/bot_digger_description/catkin_generated/installspace/bot_digger_description.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rocky/elbow_ws/build/bot_digger_description/catkin_generated/installspace/bot_digger_description.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_digger_description/cmake" TYPE FILE FILES
-    "/home/rocky/catkin_ws/build/bot_digger_description/catkin_generated/installspace/bot_digger_descriptionConfig.cmake"
-    "/home/rocky/catkin_ws/build/bot_digger_description/catkin_generated/installspace/bot_digger_descriptionConfig-version.cmake"
+    "/home/rocky/elbow_ws/build/bot_digger_description/catkin_generated/installspace/bot_digger_descriptionConfig.cmake"
+    "/home/rocky/elbow_ws/build/bot_digger_description/catkin_generated/installspace/bot_digger_descriptionConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_digger_description" TYPE FILE FILES "/home/rocky/catkin_ws/src/bot_digger_description/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/bot_digger_description" TYPE FILE FILES "/home/rocky/elbow_ws/src/bot_digger_description/package.xml")
 endif()
 

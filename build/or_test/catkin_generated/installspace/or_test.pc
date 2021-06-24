@@ -1,4 +1,4 @@
-prefix=/home/rocky/catkin_ws/install
+prefix=/home/rocky/elbow_ws/install
 
 Name: or_test
 Description: Description of or_test

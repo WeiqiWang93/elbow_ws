@@ -7,7 +7,7 @@
   <!-- <xacro:include filename="$(find ur_description)/urdf/ur.transmission.xacro" /> -->
   <!-- <xacro:include filename="$(find ur_description)/urdf/ur.gazebo.xacro" /> -->
 
-  <!-- <xacro:macro name="ur16_robot"> -->
+  <xacro:macro name="ur16_robot">
   <link name="base_link">
     <inertial>
       <origin xyz="1.1489E-34 -1.646E-16 0.046885" rpy="0 0 0" />
@@ -248,5 +248,5 @@
   <!-- <xacro:ur_arm_gazebo prefix="" /> -->
 
 
-  <!-- </xacro:macro> -->
+  </xacro:macro>
 </robot>

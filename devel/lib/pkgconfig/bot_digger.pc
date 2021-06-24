@@ -1,0 +1,8 @@
+prefix=/home/rocky/elbow_ws/devel
+
+Name: bot_digger
+Description: Description of bot_digger
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

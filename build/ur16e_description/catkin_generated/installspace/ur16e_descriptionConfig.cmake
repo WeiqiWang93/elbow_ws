@@ -67,14 +67,14 @@ set(ur16e_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ur16e_description_SOURCE_PREFIX /home/rocky/catkin_ws/src/ur16e_description)
-  set(ur16e_description_DEVEL_PREFIX /home/rocky/catkin_ws/devel)
+  set(ur16e_description_SOURCE_PREFIX /home/rocky/elbow_ws/src/ur16e_description)
+  set(ur16e_description_DEVEL_PREFIX /home/rocky/elbow_ws/devel)
   set(ur16e_description_INSTALL_PREFIX "")
   set(ur16e_description_PREFIX ${ur16e_description_DEVEL_PREFIX})
 else()
   set(ur16e_description_SOURCE_PREFIX "")
   set(ur16e_description_DEVEL_PREFIX "")
-  set(ur16e_description_INSTALL_PREFIX /home/rocky/catkin_ws/install)
+  set(ur16e_description_INSTALL_PREFIX /home/rocky/elbow_ws/install)
   set(ur16e_description_PREFIX ${ur16e_description_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/rocky/catkin_ws/install/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/rocky/elbow_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -211,7 +211,7 @@ foreach(depend ${depends})
   _unpack_libraries_with_build_configuration(ur16e_description_LIBRARIES ${ur16e_description_LIBRARIES})
 
   _list_append_unique(ur16e_description_LIBRARY_DIRS ${${ur16e_description_dep}_LIBRARY_DIRS})
-  list(APPEND ur16e_description_EXPORTED_TARGETS ${${ur16e_description_dep}_EXPORTED_TARGETS})
+  _list_append_deduplicate(ur16e_description_EXPORTED_TARGETS ${${ur16e_description_dep}_EXPORTED_TARGETS})
 endforeach()
 
 set(pkg_cfg_extras "")

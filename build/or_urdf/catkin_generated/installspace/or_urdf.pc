@@ -1,8 +1,0 @@
-prefix=/home/rocky/catkin_ws/install
-
-Name: or_urdf
-Description: Description of or_urdf
-Version: 0.4.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
