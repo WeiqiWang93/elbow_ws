@@ -1,2 +1,0 @@
-bot_digger:bot_digger_description:openrave_catkin:or_test:or_urdf:ur16e_description
--DCATKIN_DEVEL_PREFIX=/home/rocky/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rocky/catkin_ws/install -G Unix Makefiles

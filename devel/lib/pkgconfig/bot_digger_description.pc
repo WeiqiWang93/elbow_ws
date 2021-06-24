@@ -1,8 +1,0 @@
-prefix=/home/rocky/catkin_ws/devel
-
-Name: bot_digger_description
-Description: Description of bot_digger_description
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
