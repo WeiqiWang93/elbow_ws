@@ -4,7 +4,8 @@ from openravepy._openravepy_ import *
 import time
 import pdb
 import rospy
-import numpy
+import numpy as np
+import matplotlib.pyplot as plt
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Float32MultiArray
 
@@ -20,6 +21,7 @@ class JointMonitor(object):
 
         self.dof_value = [0]*6
         self.dof_torque = [0]*6
+        self.collected = {'pos':[] , 'eff':[], 'for':[]}
 
         plugin = RaveCreateModule(self.env, 'urdf')
         self.name = plugin.SendCommand(
@@ -64,14 +66,8 @@ class JointMonitor(object):
                     name)]
             except ValueError:
                 continue
+        self.collectData()
 
-        body = self.env.GetKinBody(self.name)
-        body.SetDOFValues(self.dof_value)
-        body.SetDOFTorques(self.dof_torque)
-        self.env.StepSimulation(1/CONTROL_RATE)
-
-        link = body.GetLink('chisel_forearm_link')
-        print(self.physics.GetLinkForceTorque(link))
 
     def jointeffortCallback(self, jt_data):
         # Match joint name
@@ -81,6 +77,42 @@ class JointMonitor(object):
         for idx in range(6):
             self.dof_torque[self.jt_names.index[default_name[idx]]
                             ] = jt_data[idx]
+
+
+    def collectData(self):
+        body = self.env.GetKinBody(self.name)
+        body.SetDOFValues(self.dof_value)
+        body.SetDOFTorques(self.dof_torque)
+        self.env.StepSimulation(1/CONTROL_RATE)
+        link = body.GetLink('chisel_forearm_link')
+        self.collected['pos'].append(self.dof_value)
+        self.collected['eff'].append(self.dof_torque)
+        self.collected['for'].append(self.physics.GetLinkForceTorque(link))
+
+        print(self.physics.GetLinkForceTorque(link))
+
+
+    def plotData(self):
+        x1 = np.linspace(0.0, len(self.collected['pos'])/1000., num=len(self.collected['pos']))
+
+        y_pos = np.array(self.collected['pos'])
+        y_eff = np.array(self.collected['eff'])
+        y_for = np.array(self.collected['for'])
+
+        fig, (ax1, ax2, ax3) = plt.subplots(3, 1)
+        fig.suptitle('Hmm')
+
+        ax1.plot(x1, y_pos, 'o-')
+        ax1.set_ylabel('Position')
+
+        ax2.plot(x1, y_eff, '.-')
+        ax2.set_ylabel('Effort')
+
+        ax2.plot(x1, y_for, '.-')
+        ax2.set_xlabel('time (s)')
+        ax2.set_ylabel('Link Force')
+
+        plt.show()
 
     def show(self):
         self.env.SetViewer('qtcoin')
