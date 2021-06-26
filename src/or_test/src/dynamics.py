@@ -4,15 +4,17 @@ from openravepy._openravepy_ import *
 import time
 import pdb
 import rospy
+import json
 import numpy as np
 import matplotlib.pyplot as plt
+from openravepy import misc
 from sensor_msgs.msg import JointState
-from std_msgs.msg import Float32MultiArray
-
+from std_msgs.msg import Float32MultiArray, Bool
+import time
 # openravepy.loadstable()
 
 
-CONTROL_RATE = 1000
+CONTROL_RATE = 1000.
 
 class JointMonitor(object):
     def __init__(self):
@@ -31,7 +33,7 @@ class JointMonitor(object):
             # set a physics engine
             self.physics = RaveCreatePhysicsEngine(self.env, 'ode')
             self.env.SetPhysicsEngine(self.physics)
-            self.physics.SetGravity(numpy.array((0, 0, -9.8)))
+            self.physics.SetGravity(numpy.array((0, -9.81, 0)))
 
             # need to set base as static or it flies off
             base_link = self.env.GetKinBody('or_ur').GetLink('chisel_base')
@@ -39,16 +41,11 @@ class JointMonitor(object):
 
             # record the joint names since we need the order
             body = self.env.GetKinBody(self.name)
-            self.jt_names = [jt.GetName() for jt in body.GetLinks()]
+            self.jt_names = [str(jt.GetName()) for jt in body.GetJoints()]
 
             self.env.StopSimulation()
 
-        # set up ros last
-        rospy.init_node("or_test_dynamics")
-        rospy.Subscriber("/chisel/joint_state", JointState,
-                         self.jointstateCallback)
-        rospy.Subscriber("/chisel/joint_torques", JointState,
-                         self.jointstateCallback)
+
 
     def jointstateCallback(self, jt_data):
 
@@ -75,22 +72,32 @@ class JointMonitor(object):
         default_name = ['chisel_shoulder_pan_joint', 'chisel_shoulder_lift_joint',
                         'chisel_elbow_joint', 'chisel_wrist_1_joint', 'chisel_wrist_2_joint', 'chisel_wrist_3_joint']
         for idx in range(6):
-            self.dof_torque[self.jt_names.index[default_name[idx]]
-                            ] = jt_data[idx]
+            self.dof_torque[self.jt_names.index(default_name[idx])
+                            ] = jt_data.data[idx]
 
 
     def collectData(self):
         body = self.env.GetKinBody(self.name)
-        body.SetDOFValues(self.dof_value)
-        body.SetDOFTorques(self.dof_torque)
-        self.env.StepSimulation(1/CONTROL_RATE)
-        link = body.GetLink('chisel_forearm_link')
+        print(self.dof_torque)
+        # body.SetDOFValues(self.dof_value)
+        body.SetDOFTorques(self.dof_torque,False)
+
+        for tt in range(10):
+            self.env.StepSimulation(1./CONTROL_RATE)
+        # link = body.GetLink('chisel_forearm_link')
+        link = body.GetLink('chisel_chisel_link')
         self.collected['pos'].append(self.dof_value)
         self.collected['eff'].append(self.dof_torque)
         self.collected['for'].append(self.physics.GetLinkForceTorque(link))
 
+        print(link.GetTransform())
         print(self.physics.GetLinkForceTorque(link))
 
+
+    def saveData(self,data):
+        timestr = time.strftime("%Y%m%d-%H%M%S")
+        with open(timestr + ".csv" , "w") as outfile:
+            json.dump(self.collected, outfile)
 
     def plotData(self):
         x1 = np.linspace(0.0, len(self.collected['pos'])/1000., num=len(self.collected['pos']))
@@ -121,6 +128,19 @@ class JointMonitor(object):
 if __name__ == "__main__":
     jm = JointMonitor()
     jm.show()
+
+    misc.DrawAxes(jm.env,matrixFromAxisAngle([0,0,0]))
+
+    rospy.init_node('joint_money')
+        # set up ros last
+
+    rospy.Subscriber("/joint_states", JointState,
+                     jm.jointstateCallback)
+    rospy.Subscriber("/chisel/target_moment", Float32MultiArray,
+                     jm.jointeffortCallback)
+    rospy.Subscriber("/save_data", Bool,
+                     jm.saveData)
+
     rospy.spin()
 
 
