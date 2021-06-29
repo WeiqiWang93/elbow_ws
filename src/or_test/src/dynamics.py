@@ -16,6 +16,7 @@ import time
 
 CONTROL_RATE = 1000.
 
+
 class JointMonitor(object):
     def __init__(self):
         self.env = Environment()
@@ -23,7 +24,7 @@ class JointMonitor(object):
 
         self.dof_value = [0]*6
         self.dof_torque = [0]*6
-        self.collected = {'pos':[] , 'eff':[], 'for':[]}
+        self.collected = {'pos': [], 'eff': [], 'for': []}
 
         plugin = RaveCreateModule(self.env, 'urdf')
         self.name = plugin.SendCommand(
@@ -39,13 +40,15 @@ class JointMonitor(object):
             base_link = self.env.GetKinBody('or_ur').GetLink('chisel_base')
             base_link.SetStatic(True)
 
+            eef_link = self.env.GetKinBody(
+                'or_ur').GetLink('chisel_chisel_link')
+            eef_link.SetStatic(True)
+
             # record the joint names since we need the order
             body = self.env.GetKinBody(self.name)
             self.jt_names = [str(jt.GetName()) for jt in body.GetJoints()]
 
             self.env.StopSimulation()
-
-
 
     def jointstateCallback(self, jt_data):
 
@@ -65,7 +68,6 @@ class JointMonitor(object):
                 continue
         self.collectData()
 
-
     def jointeffortCallback(self, jt_data):
         # Match joint name
         # jt_data = Float32MultiArray()
@@ -75,12 +77,12 @@ class JointMonitor(object):
             self.dof_torque[self.jt_names.index(default_name[idx])
                             ] = jt_data.data[idx]
 
-
     def collectData(self):
+        self.env.StopSimulation()
         body = self.env.GetKinBody(self.name)
         print(self.dof_torque)
-        # body.SetDOFValues(self.dof_value)
-        body.SetDOFTorques(self.dof_torque,False)
+        body.SetDOFValues(self.dof_value)
+        body.SetDOFTorques(self.dof_torque, False)
 
         for tt in range(10):
             self.env.StepSimulation(1./CONTROL_RATE)
@@ -93,14 +95,14 @@ class JointMonitor(object):
         print(link.GetTransform())
         print(self.physics.GetLinkForceTorque(link))
 
-
-    def saveData(self,data):
+    def saveData(self, data):
         timestr = time.strftime("%Y%m%d-%H%M%S")
-        with open(timestr + ".csv" , "w") as outfile:
+        with open(timestr + ".csv", "w") as outfile:
             json.dump(self.collected, outfile)
 
     def plotData(self):
-        x1 = np.linspace(0.0, len(self.collected['pos'])/1000., num=len(self.collected['pos']))
+        x1 = np.linspace(
+            0.0, len(self.collected['pos'])/1000., num=len(self.collected['pos']))
 
         y_pos = np.array(self.collected['pos'])
         y_eff = np.array(self.collected['eff'])
@@ -129,10 +131,10 @@ if __name__ == "__main__":
     jm = JointMonitor()
     jm.show()
 
-    misc.DrawAxes(jm.env,matrixFromAxisAngle([0,0,0]))
+    misc.DrawAxes(jm.env, matrixFromAxisAngle([0, 0, 0]))
 
     rospy.init_node('joint_money')
-        # set up ros last
+    # set up ros last
 
     rospy.Subscriber("/joint_states", JointState,
                      jm.jointstateCallback)
