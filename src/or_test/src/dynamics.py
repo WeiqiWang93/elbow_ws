@@ -80,7 +80,7 @@ class JointMonitor(object):
     def collectData(self):
         self.env.StopSimulation()
         body = self.env.GetKinBody(self.name)
-        print(self.dof_torque)
+        # print(self.dof_torque)
         body.SetDOFValues(self.dof_value)
         body.SetDOFTorques(self.dof_torque, False)
 
@@ -117,9 +117,9 @@ class JointMonitor(object):
         ax2.plot(x1, y_eff, '.-')
         ax2.set_ylabel('Effort')
 
-        ax2.plot(x1, y_for, '.-')
-        ax2.set_xlabel('time (s)')
-        ax2.set_ylabel('Link Force')
+        ax3.plot(x1, y_for, '.-')
+        ax3.set_xlabel('time (s)')
+        ax3.set_ylabel('Link Force')
 
         plt.show()
 
