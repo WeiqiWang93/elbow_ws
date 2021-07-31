@@ -1,9 +1,0 @@
-<map id="scripts.operations.Operation" name="scripts.operations.Operation">
-<area shape="rect" id="node1" title=" " alt="" coords="111,74,296,101"/>
-<area shape="rect" id="node3" href="$classscripts_1_1operations_1_1_api_operation.html" title=" " alt="" coords="348,17,552,43"/>
-<area shape="rect" id="node5" href="$classscripts_1_1operations_1_1_ros_operation.html" title=" " alt="" coords="345,74,555,101"/>
-<area shape="rect" id="node7" href="$classscripts_1_1operations_1_1_wait_operation.html" title=" " alt="" coords="344,125,556,151"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,74,63,101"/>
-<area shape="rect" id="node4" href="$classscripts_1_1operations_1_1_overseer_operation.html" title=" " alt="" coords="608,5,791,47"/>
-<area shape="rect" id="node6" href="$classscripts_1_1operations_1_1_move_base_operation.html" title=" " alt="" coords="604,71,795,112"/>
-</map>

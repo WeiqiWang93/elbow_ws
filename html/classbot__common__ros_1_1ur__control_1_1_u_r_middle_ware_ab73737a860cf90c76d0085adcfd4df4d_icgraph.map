@@ -1,7 +1,0 @@
-<map id="bot_common_ros.ur_control.\lURMiddleWare.get_tool_euler_angles" name="bot_common_ros.ur_control.\lURMiddleWare.get_tool_euler_angles">
-<area shape="rect" id="node1" title=" " alt="" coords="761,39,1003,80"/>
-<area shape="rect" id="node2" href="$classbot__common__ros_1_1ur__control_1_1_u_r_middle_ware.html#ad55630d1191889697a5caf981eaf3586" title=" " alt="" coords="504,5,713,47"/>
-<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__control_1_1_u_r_middle_ware.html#ae7825b38ee24783756acd5b03c9a10e3" title=" " alt="" coords="515,71,702,112"/>
-<area shape="rect" id="node4" href="$classbot__common__ros_1_1ur__control_1_1_u_r_middle_ware.html#ac0dc5d953b214f94107f833388d86d52" title=" " alt="" coords="252,71,456,112"/>
-<area shape="rect" id="node5" href="$classbot__common__ros_1_1ur__control_1_1_motion_planner.html#af2cc909348cd33d41edb8987735904fa" title=" " alt="" coords="5,71,204,112"/>
-</map>

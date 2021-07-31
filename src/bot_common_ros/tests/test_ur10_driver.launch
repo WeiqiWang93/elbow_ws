@@ -1,0 +1,12 @@
+<launch>
+  <arg name="dry_run" default="False"/>
+
+  <!-- Run UR10 Driver -->
+  <node pkg="bot_commons_ros" name="UR10Driver" output="screen" ns="test">
+    <rosparam>
+      input_param_path: "/ur10_driver/arm_1"
+    </rosparam>
+    <param name="dry_run", type="bool", value= "$(arg dry_run)" />
+  </node>
+
+</launch>

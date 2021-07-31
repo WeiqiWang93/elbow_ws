@@ -1,0 +1,46 @@
+<launch>
+  <arg name="output_frame" default="/chisel_base" />
+
+  <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" ns="wall" />
+
+  <!-- this section decays the reconstructed/points pointcloud -->
+
+  <!-- Run VoxelGrid Filter -->
+  <node pkg="nodelet" type="nodelet" name="voxelGridFilter" args="load pcl/VoxelGrid pcl_manager" output="screen" ns="wall">
+    <remap from="~input" to="points" />
+    <rosparam>
+      filter_limit_max: 5.0
+      filter_limit_min: -5.0
+      leaf_size: 0.0075
+    </rosparam>
+  </node>
+
+  <!-- Run Radius Filter -->
+  <node pkg="nodelet" type="nodelet" name="radiusOutlierRemoval" args="load pcl/RadiusOutlierRemoval pcl_manager" output="screen" ns="wall" >
+    <remap from="~input" to="voxelGridFilter/output" />
+    <rosparam>
+      min_neighbors: 2
+      radius_search: 0.0076
+    </rosparam>
+  </node>
+
+  <!-- Run Statistical Outlier Removal -->
+  <!-- mean_k: 75 and stddev: 0.1 is good when we the input is the full point cloud meaning not already filtered -->
+  <node pkg="nodelet" type="nodelet" name="statisticalOutlierRemoval" args="load pcl/StatisticalOutlierRemoval pcl_manager" output="screen" ns="wall" >
+    <remap from="~input" to="voxelGridFilter/output" />
+    <remap from="~output" to="reconstructed/points" />
+    <rosparam>
+      mean_k: 50
+      stddev: 3.0
+      approximate_sync: true
+    </rosparam>
+  </node>
+
+
+  <!-- relay XYZ data to reconstructed Output -->
+  <node pkg="topic_tools" type="relay" name="xyzRelay" args="statisticalOutlierRemoval/output reconstructed/points" output="screen" ns="wall">
+    <rosparam>
+      latch: true <!-- need this relay to latch so that mapping loop gets the topic that it published to the relay -->
+    </rosparam>
+  </node>
+</launch>

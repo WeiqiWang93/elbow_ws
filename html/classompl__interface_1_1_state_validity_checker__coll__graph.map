@@ -1,9 +1,0 @@
-<map id="ompl_interface::StateValidity\lChecker" name="ompl_interface::StateValidity\lChecker">
-<area shape="rect" id="node1" title="An interface for a OMPL state validity checker." alt="" coords="1019,71,1208,112"/>
-<area shape="rect" id="node2" title=" " alt="" coords="673,5,841,47"/>
-<area shape="rect" id="node3" href="$classompl__interface_1_1_model_based_planning_context.html" title=" " alt="" coords="664,71,851,112"/>
-<area shape="rect" id="node4" title=" " alt="" coords="405,52,532,93"/>
-<area shape="rect" id="node5" href="$structompl__interface_1_1_model_based_planning_context_specification.html" title=" " alt="" coords="372,117,565,159"/>
-<area shape="rect" id="node6" href="$structompl__interface_1_1same__shared__ptr.html" title=" " alt="" coords="5,110,241,166"/>
-<area shape="rect" id="node7" href="$classompl__interface_1_1_t_s_state_storage.html" title=" " alt="" coords="653,137,861,163"/>
-</map>

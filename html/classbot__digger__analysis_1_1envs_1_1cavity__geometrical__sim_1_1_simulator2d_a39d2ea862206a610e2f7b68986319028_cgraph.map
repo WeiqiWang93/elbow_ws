@@ -1,7 +1,0 @@
-<map id="bot_digger_analysis.envs.cavity\l_geometrical_sim.Simulator2d.fault" name="bot_digger_analysis.envs.cavity\l_geometrical_sim.Simulator2d.fault">
-<area shape="rect" id="node1" title=" " alt="" coords="5,113,232,155"/>
-<area shape="rect" id="node2" href="$namespacebot__digger__analysis_1_1envs_1_1cavity__geometrical__sim.html#aa57e0c3197fc48e97489f1833a529628" title=" " alt="" coords="303,5,511,47"/>
-<area shape="rect" id="node3" href="$classbot__digger__analysis_1_1envs_1_1cavity__geometrical__sim_1_1_simulator2d.html#a1aaf1befd771e79972b86a5df9f2658b" title=" " alt="" coords="295,70,520,126"/>
-<area shape="rect" id="node4" href="$classbot__digger__analysis_1_1envs_1_1cavity__geometrical__sim_1_1_simulator2d.html#a706bd4e93d3ad18823afefcc3e1413fd" title=" " alt="" coords="280,149,535,191"/>
-<area shape="rect" id="node5" href="$classbot__common__ros_1_1actions_1_1_f_s_m_action_server.html#aef491cb0a717d5e686ce78b1293d491b" title=" " alt="" coords="289,215,526,256"/>
-</map>

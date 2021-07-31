@@ -1,0 +1,10 @@
+uint8 INIT=0
+uint8 RESET=1
+uint8 EXECUTE=2
+uint8 CONTINUE=3
+uint8 PAUSE=4
+uint8 SHUTDOWN=5
+uint8 MANUAL=6
+uint8 EXTRACT=7
+#
+int32 type

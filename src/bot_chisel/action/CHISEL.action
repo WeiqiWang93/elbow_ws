@@ -1,0 +1,24 @@
+
+bot_common_ros/ActionType action_type
+geometry_msgs/Pose attack_pose
+geometry_msgs/Pose[] attack_pose_traj
+
+geometry_msgs/Pose target_frame
+
+AttackParams attack_params
+
+# scan goal 
+float32 x_min
+float32 x_max
+int32 dir_to_attack
+---
+
+bot_common_ros/ProcessStatus process_status
+bot_common_ros/ArmStatus arm_status
+ChiselStatus chisel_status
+geometry_msgs/Pose chisel_pose
+
+---
+# Define a feedback message
+bot_common_ros/ProcessStatus process_status
+bot_common_ros/ArmStatus arm_status

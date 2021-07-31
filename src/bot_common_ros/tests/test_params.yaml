@@ -1,0 +1,35 @@
+
+test_ur10_driver:
+  arm:
+    id: 1
+    name: "/chisel"
+    TCP: [0.0, 0.0, 0.6, 0.0, 0.0, 0.0] # position and orientation of TCP w.r.t. Nominal-TCP
+    mass: 0.0
+    CG: [0.0, 0.0, 0.0] # center of gravity in m of end-effector
+
+checkerboard_calibration:
+  arm:
+    id: 1
+    name: "/chisel"
+    TCP: [-0.06, -0.084, 0.025, 0.0, 0.0, 0.0] # position and orientation of TCP w.r.t. Nominal-TCP
+    mass: 0.0
+    CG: [0.0, 0.0, 0.0] # center of gravity in m of end-effector
+
+ur10_driver:
+  arm_2_sim:
+    params:
+      id: 1
+      name: "/chisel"
+      #ping: 192.168.2.101
+      ping: 0.0.0.0
+      MOUNT_TO_BASE: # quaternion
+        x: 0.707107
+        y: 0.0
+        z: 0.707107
+        w: 0.0
+      NOMINAL_TCP_TO_SENSOR: # quaternion
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      use_force_sensor: False

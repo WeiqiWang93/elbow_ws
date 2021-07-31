@@ -1,0 +1,32 @@
+
+# Syntax:
+# module-name:
+#   node-name:
+#     node-param: [value]
+
+
+bot_digger_chisel:
+  rayIntersect:
+    maxDist: 0.15
+  centroidFinder:
+    maxDist: 0.15
+  peakFinder:
+    maxDist: 0.2
+  chiselidentification:
+    scaleSmall: 0.03
+    scaleLarge: 0.08
+    DoNThreshold: 0.075
+    segmentRadius: 0.025
+  ug2Targeter:
+   search_radius: 0.02
+   convexity_thresh: 0.25
+   shell_width: 0.005
+   shell_radius: 0.02
+   prox_angle: 25
+   grain_angle: 45 #Increases in the anticlockwise direction
+   beta: 45 # Angle between characteristic vector and grain direction
+  mapping:
+    distFromBaseFilter: 0.8 # 1.05 for slotting, 1.08 for chiseling
+    maxDistance: 1.5
+
+

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="standalone" default="true" />
+  <arg name="use_motion_planning" default="true"/>
+  <arg name="simulation" default="false"/>
+  <arg name="dry_run" default="false"/>
+  <arg name="allow_stowing" default="true"/>
+  <arg name="system_ns" default="chisel" />
+  <arg name="system_frame" default="chisel_base" />
+  <arg name="screen_output" default="screen" />
+  <arg name="gazebo" default="false"/>
+  <arg name="rcas_param_file_name" value="$(find bot_chisel)/params/robo_chisel_action_server.yaml" />
+
+  <!-- load params -->
+  <rosparam command="load" file="$(find bot_chisel)/params/bot_digger.yaml" />
+  
+  <rosparam command="load" file="$(find bot_chisel)/params/robo_chisel_action_server.yaml"/>
+  
+
+
+<!-- load params -->
+  <rosparam command="load" file="$(find bot_chisel)/params/bot_digger.yaml" />
+  <rosparam command="load" file="$(find bot_chisel)/params/arm_params.yaml"/>
+
+  <rosparam command="load" file="$(find bot_chisel)/params/data_retention.yaml" ns="/chisel_rosbag"/>
+
+
+
+
+  <!-- start the action-server -->
+  <node name="rcas" pkg="bot_chisel" type="chisel_action_server.py" ns="$(arg system_ns)" output="$(arg screen_output)">
+  <rosparam param="rcas_param_file_name" subst_value="true">$(arg rcas_param_file_name)</rosparam>
+    <rosparam> 
+      use_overseer: true
+      frame_id: "chisel_base"
+      client_topic: "/robo_chisel/arm" 
+      input_param_path: "/ur10_driver/arm_2_chisel/params"
+      run_api: false
+      sim: false
+      dry_run: false
+      run_collision_check: true
+      use_motion_planning: false
+      allow_stowing: false
+    </rosparam>
+    <rosparam if="$(arg use_motion_planning)">
+      use_motion_planning: true
+    </rosparam>
+    <rosparam if="$(arg gazebo)">
+      gazebo: true
+    </rosparam>
+    <rosparam if="$(arg simulation)">
+      input_param_path: "/ur10_driver/arm_chisel_sim/params"
+      sim: true
+      dry_run: false
+    </rosparam>
+
+    <rosparam if="$(arg dry_run)">
+      dry_run: true
+    </rosparam>
+    <rosparam if="$(arg allow_stowing)">
+      allow_stowing: true
+    </rosparam>
+  </node>
+
+</launch>

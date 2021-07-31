@@ -1,0 +1,31 @@
+# operation: chisel
+ActionType action_type
+int32 quadrant_id
+visualization_msgs/Marker quadrant
+float32 vertical_pitch
+float32 slots_z0
+int32 start_index
+float32 slot_x_coordinate 
+int32 slot_idx
+int32 layer_idx
+int32 quadrant_idx
+float32 plane_distance
+float32 plane_x_rotation
+float32 plane_y_rotation
+float32 plane_z_rotation
+int32 num_vert_slots
+int32 num_hor_slots
+string slot_type
+geometry_msgs/Point[] slot_wall_points
+trajectory_msgs/JointTrajectoryPoint pre_plunge_jtp
+geometry_msgs/Pose pre_plunge_pose
+---
+# Define the result
+ProcessStatus process_status
+ArmStatus arm_status
+---
+# Define a feedback message
+ProcessStatus process_status
+ArmStatus arm_status
+float32 percent_complete
+float32[] slots_percent_complete

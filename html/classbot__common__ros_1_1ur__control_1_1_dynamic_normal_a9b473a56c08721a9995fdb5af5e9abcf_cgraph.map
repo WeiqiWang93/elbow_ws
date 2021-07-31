@@ -1,6 +1,0 @@
-<map id="bot_common_ros.ur_control.\lDynamicNormal.main_simple" name="bot_common_ros.ur_control.\lDynamicNormal.main_simple">
-<area shape="rect" id="node1" title=" " alt="" coords="5,85,199,126"/>
-<area shape="rect" id="node2" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#a6c0a05bd3781c45a5442550f4626c336" title=" " alt="" coords="247,5,483,61"/>
-<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__control_1_1_dynamic_normal.html#a20dc9296657932a3107d418f32d57dc9" title=" " alt="" coords="255,85,474,126"/>
-<area shape="rect" id="node4" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#af3475006270097be0ce2e8fe46410683" title=" " alt="" coords="265,149,464,205"/>
-</map>

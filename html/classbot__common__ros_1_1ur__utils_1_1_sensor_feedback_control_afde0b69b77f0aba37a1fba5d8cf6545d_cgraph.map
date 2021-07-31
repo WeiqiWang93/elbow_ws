@@ -1,6 +1,0 @@
-<map id="bot_common_ros.ur_utils.\lSensorFeedbackControl.main" name="bot_common_ros.ur_utils.\lSensorFeedbackControl.main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,85,200,126"/>
-<area shape="rect" id="node2" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_check_progress.html#ac422d32187d580683c23743dc0ce8af9" title=" " alt="" coords="255,5,446,61"/>
-<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__utils_1_1_u_r___f_o_r_c_e___p_i_d.html#acfca5b916b8e5d866bdd7b1b7f7d0f76" title=" " alt="" coords="265,85,437,126"/>
-<area shape="rect" id="node4" href="$classbot__common__ros_1_1ur__utils_1_1_sensor_feedback_control.html#ad758095f12a12a474f57f10f826c770a" title=" " alt="" coords="248,150,453,191"/>
-</map>

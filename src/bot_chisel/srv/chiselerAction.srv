@@ -1,0 +1,5 @@
+std_msgs/Bool COMPLETE
+---
+float32 angle
+float32 force
+bool SUCCESS

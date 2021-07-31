@@ -1,8 +1,0 @@
-<map id="bot_common_ros.ur_control.\lCentroidFinder.publish" name="bot_common_ros.ur_control.\lCentroidFinder.publish">
-<area shape="rect" id="node1" title=" " alt="" coords="5,118,192,159"/>
-<area shape="rect" id="node2" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_check_progress.html#a04f3b40c0b7dbd9e0441be7fa153666b" title=" " alt="" coords="240,5,431,61"/>
-<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__control_1_1_mapping_flag.html#aeb6de5570f10f027c04dfcfbff761018" title=" " alt="" coords="242,85,429,126"/>
-<area shape="rect" id="node5" href="$classbot__common__ros_1_1ur__control_1_1_peak_finder.html#ad6e9096a49cec4ff6fffda42864ab03c" title=" " alt="" coords="242,150,429,191"/>
-<area shape="rect" id="node6" href="$classbot__common__ros_1_1ur__control_1_1_centroid_finder.html#a0bfe56899d4a80cdb504b5c798da90bd" title=" " alt="" coords="242,215,429,257"/>
-<area shape="rect" id="node4" href="$classbot__common__ros_1_1ur__control_1_1_mapping_flag.html#a2df60331cf736ab66d6dbbd48dc11914" title=" " alt="" coords="479,85,665,126"/>
-</map>

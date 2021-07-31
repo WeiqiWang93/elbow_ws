@@ -1,7 +1,0 @@
-<map id="bot_common_ros.arm_server.\lArmServer.on_shutdown" name="bot_common_ros.arm_server.\lArmServer.on_shutdown">
-<area shape="rect" id="node1" title=" " alt="" coords="495,86,687,127"/>
-<area shape="rect" id="node2" href="$classbot__common__ros_1_1_arm_server_1_1_arm_server.html#a088f8afc273ed94161c9f0b30481e781" title=" " alt="" coords="253,53,445,94"/>
-<area shape="rect" id="node5" href="$classbot__common__ros_1_1ur__gazebo__driver_1_1_u_r_gazebo_driver.html#a463afb9b685ecddf7d6b2123dfdbad52" title=" " alt="" coords="252,118,447,159"/>
-<area shape="rect" id="node3" href="$classbot__common__ros_1_1robo__chisel__action__server_1_1_robo_chisel_action_server.html#aa301bad3c787d70d91f142153df10fdd" title=" " alt="" coords="13,5,196,61"/>
-<area shape="rect" id="node4" href="$classbot__common__ros_1_1robo__saw__action__server_1_1_robo_saw_action_server.html#a49354b12f9800f6fedd310943bca9f07" title=" " alt="" coords="5,85,204,141"/>
-</map>

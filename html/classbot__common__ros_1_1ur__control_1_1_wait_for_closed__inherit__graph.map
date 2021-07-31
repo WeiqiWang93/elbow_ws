@@ -1,7 +1,0 @@
-<map id="bot_common_ros.ur_control.\lWaitForClosed" name="bot_common_ros.ur_control.\lWaitForClosed">
-<area shape="rect" id="node1" title=" " alt="" coords="111,71,297,112"/>
-<area shape="rect" id="node3" href="$classbot__common__ros_1_1ur__control_1_1_wait_for_active.html" title=" " alt="" coords="345,5,532,47"/>
-<area shape="rect" id="node4" href="$classbot__common__ros_1_1ur__control_1_1_wait_for_enum.html" title=" " alt="" coords="345,71,532,112"/>
-<area shape="rect" id="node5" href="$classbot__common__ros_1_1ur__control_1_1_wait_for_topic.html" title=" " alt="" coords="345,136,532,177"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,78,63,105"/>
-</map>

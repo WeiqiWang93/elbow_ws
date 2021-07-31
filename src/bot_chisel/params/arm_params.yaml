@@ -1,0 +1,86 @@
+robo_chisel:
+  arm:
+    arm_type: "ur10"
+    name: "/chisel"
+    id: 2
+    # TCP: [0.0, 0.0, 0.5865, 0.0, 0.0, 0.0] # position and orientation of TCP w.r.t. nominal-tcp
+    TCP: [0.0002, 0.0169, 0.720, 0.0, 0.0, 2.355] # position and orientation of TCP w.r.t. nominal-tcp    
+    mass: 6.5
+    CG: [-0.0254, 0.0, 0.2032] # center of gravity in m of end-effector
+
+
+ur10_driver:
+  arm_chisel_sim:
+    params:
+      name: "/chisel"
+      id: 2
+      ping: 0.0.0.0
+      MOUNT_TO_BASE: # quaternion
+        x: 0.707107
+        y: 0.0
+        z: 0.707107
+        w: 0.0
+      NOMINAL_TCP_TO_SENSOR: # quaternion
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+        w: 0.0
+      use_force_sensor: False
+  arm_1_chisel:
+    params:
+      arm_type: "ur10"
+      joint_names: ['shoulder_pan_joint', 'shoulder_lift_joint', 'elbow_joint', 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint']
+      name: "/chisel"
+      id: 1
+      ping: 192.168.2.101
+      #ping: 0.0.0.0
+      MOUNT_TO_BASE: # quaternion
+        x: 0.707107
+        y: 0.0
+        z: -0.707107
+        w: 0.0
+      NOMINAL_TCP_TO_SENSOR: # quaternion
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      use_force_sensor: True
+  arm_2_chisel:
+    params:
+      arm_type: "ur10"
+      joint_names: ['shoulder_pan_joint', 'shoulder_lift_joint', 'elbow_joint', 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint']
+      name: "/chisel"
+      id: 2
+      ping: 127.0.0.1 #192.168.3.102
+      MOUNT_TO_BASE: # quaternion
+        x: 0.707107
+        y: 0.0
+        z: 0.707107
+        w: 0.0
+      NOMINAL_TCP_TO_SENSOR: # quaternion
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+      use_force_sensor: False
+      
+ur_gazebo_driver:
+  arm_2_sim:
+    params:
+      name: "/chisel"
+      id: 2
+      joint_names: ['chisel_shoulder_pan_joint', 'chisel_shoulder_lift_joint', 'chisel_elbow_joint', 'chisel_wrist_1_joint', 'chisel_wrist_2_joint', 'chisel_wrist_3_joint']
+      #ping: 192.168.1.102
+      ping: 0.0.0.0
+      MOUNT_TO_BASE: # quaternion
+        x: 0.0
+        y: 0.0
+        z: 1.0
+        w: 0.0
+      NOMINAL_TCP_TO_SENSOR: # quaternion
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 0.0
+      use_force_sensor: False

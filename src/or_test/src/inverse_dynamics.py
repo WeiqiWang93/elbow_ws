@@ -12,6 +12,7 @@ from openravepy import *
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Float32MultiArray, Bool
 from geometry_msgs.msg import WrenchStamped
+# from bot_chisel.msg import ChiselStatus
 import time
 # openravepy.loadstable()
 
@@ -31,6 +32,8 @@ class JointMonitor(object):
         self.torque = [0]*3
         self.force_cmd = [0]*3
         self.torque_cmd = [0]*3
+        self.jt_msg = [0]*6
+        self.tm_msg = [0]*6
 
         plugin = RaveCreateModule(self.env, 'urdf')
         self.name = plugin.SendCommand(
@@ -39,8 +42,9 @@ class JointMonitor(object):
         with self.env:
             # set a physics engine
             self.physics = RaveCreatePhysicsEngine(self.env, 'ode')
-            self.env.SetPhysicsEngine(self.physics)
             self.physics.SetGravity(numpy.array((0, 0, -9.81)))
+            self.env.SetPhysicsEngine(self.physics)
+            
 
             # need to set base as static or it flies off
             base_link = self.env.GetKinBody('or_ur').GetLink('chisel_base')
@@ -48,11 +52,19 @@ class JointMonitor(object):
 
             eef_link = self.env.GetKinBody(
                 'or_ur').GetLink('chisel_chisel_link')
-            eef_link.SetStatic(True)
+            # eef_link.SetStatic(True)
 
             # record the joint names since we need the order
             body = self.env.GetKinBody(self.name)
             self.jt_names = [str(jt.GetName()) for jt in body.GetJoints()]
+
+            # default joint order?
+            #'chisel_elbow_joint'
+            #'chisel_shoulder_lift_joint'
+            #'chisel_shoulder_pan_joint'
+            #'chisel_wrist_1_joint'
+            #'chisel_wrist_2_joint'
+            #'chisel_wrist_3_joint's
 
             self.env.StopSimulation()
 
@@ -90,6 +102,14 @@ class JointMonitor(object):
         self.force_cmd = data.data[:3]
         self.torque_cmd = data.data[3:]
 
+
+    def jointTorqueCallback(self, data):
+        # data = WrenchStamped()
+        self.jt_msg = data.data
+
+    def targetMomentCallback(self, data):
+        self.tm_msg = data.data
+
     def collectData(self):
         self.env.StopSimulation()
         body = self.env.GetKinBody(self.name)
@@ -98,12 +118,19 @@ class JointMonitor(object):
 
 
         # calculate joint torque from measurement
-        link_id = body.GetLink('chisel_tool0').GetIndex()
+        # link_id = body.GetLink('chisel_tool0').GetIndex()
+
+        link_id = body.GetLink('chisel_chisel_link').GetIndex()
+        
+
+
+
         # link = body.GetLinks()[7]
         # self.collected['pos'].append(self.dof_value)
         # self.collected['eff'].append(self.dof_torque)
         # self.collected['for'].append(self.physics.GetLinkForceTorque(link))
         torque = np.array(body.ComputeInverseDynamics(dofaccelerations = [0]*6,externalforcetorque={link_id:self.force+self.torque}))
+
         # torque = body.ComputeInverseDynamics(dofaccelerations = [0]*6,externalforcetorque={link_id:[0]*6})
         # print(link.GetTransform())
         # print(self.printInOrder(torque))
@@ -112,6 +139,11 @@ class JointMonitor(object):
         # print(self.printInOrder(torque))
 
         print(np.abs(torque-torque_cmd))
+
+
+    def isChiseling(self):
+        if np.abs(self.force_cmd[2]) > 50:
+            return True
 
     def printInOrder(self, data):
         default_name = ['chisel_shoulder_pan_joint', 'chisel_shoulder_lift_joint',
@@ -144,6 +176,12 @@ if __name__ == "__main__":
                      jm.externalForceCallback)
     rospy.Subscriber("/chisel/force_cmd_ft", Float32MultiArray,
                      jm.commandForceCallback)
+
+    rospy.Subscriber("/chisel/joint_torque", Float32MultiArray,
+                     jm.jointTorqueCallback)
+
+    rospy.Subscriber("/chisel/target_moment", Float32MultiArray,
+                     jm.jointTorqueCallback)
 
     misc.DrawAxes(jm.env, matrixFromAxisAngle([0, 0, 0]))
 

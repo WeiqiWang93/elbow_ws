@@ -1,0 +1,15 @@
+# operation: SPLAM
+geometry_msgs/PoseStamped target_pose
+ActionType action_type
+---
+# Define the result
+ProcessStatus process_status
+---
+# Define a feedback message
+geometry_msgs/PoseStamped base_position
+ProcessStatus process_status
+BaseStatus base_status
+PlanningStatus plan_status
+LocalizationStatus localize_status 
+MappingStatus map_status
+SensorArrayStatus sensors_status

@@ -1,0 +1,38 @@
+mesh_use_embedded_materials: false
+scale:
+  y: 0.6
+  x: 0.12449999999999997
+  z: 0.7749999999999999
+frame_locked: false
+color:
+  a: 0.5
+  r: 0.0
+  b: 0.0
+  g: 1.0
+text: ''
+pose:
+  position:
+    y: 1.0639532804489136
+    x: -1.03975
+    z: 0.07500000000000001
+  orientation:
+    y: 0.0
+    x: 0.0
+    z: 0.0
+    w: 1.0
+mesh_resource: ''
+header:
+  stamp:
+    secs: 1569371404
+    nsecs: 578678031
+  frame_id: saw_base
+  seq: 4
+colors: []
+points: []
+action: 0
+lifetime:
+  secs: 0
+  nsecs: 0
+ns: basic_shapes
+type: 1
+id: 0

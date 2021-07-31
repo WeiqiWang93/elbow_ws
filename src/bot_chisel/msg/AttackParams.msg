@@ -1,0 +1,3 @@
+float32 nominal_angle
+float32 direction_to_chisel
+float32 exit_x_value

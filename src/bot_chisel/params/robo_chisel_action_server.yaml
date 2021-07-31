@@ -1,0 +1,29 @@
+chisel:
+  action_server:
+    motion_primitive_timeout: 120.0
+    nominal_angle: 60.0
+    # stall stuff
+    stall_recovery_offset_default: 0.0
+    stall_distance_threshold: 0.01 # distance threshold for checking consecutive stall poses
+    stall_recovery_offset: 0.0
+    current_num_stalls: 0 # adding the number of stalls so far, we can use this to set the stall recovery offset
+    stall_alpha: 1.0
+    maximum_nb_stalls: 1 # this is now zero-indexed
+    minimum_progress_timeout: 3.0
+    minimum_progress_dist: 0.015
+    slip_timeout: 0.5
+    slip_dist   : 0.05
+    move_spline_offset: 0.1
+    stall_random_z_offset: 0.02
+    stall_randomize_z: True
+    shave_offset: 0.03
+    x_start_offset: 0.04 # 0.02
+    z_start_offset: 0.02
+    nominal_cut_depth: 0.12
+
+  middleware:
+    URmonitor_percent: 1.75   
+    initial_angle: 40.0
+    direction_to_chisel: -1.0 
+    direction_of_mount: 1.0 
+    use_motion_planning: False

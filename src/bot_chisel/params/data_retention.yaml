@@ -1,0 +1,22 @@
+subsystem_name: "chisel"
+topics: 
+  - /joints
+  - /rgb/image_raw/compressed
+  - /camera_chisel_track_up_left/rgb/image_raw/compressed
+  - /camera_chisel_track_down_right/rgb/image_raw/compressed
+  - /camera_chisel_track_down_left/rgb/image_raw/compressed
+  - /camera_chisel_track_up_right/depth/image_raw/compressed
+  - /camera_chisel_track_up_left/depth/image_raw/compressed
+  - /camera_chisel_track_down_right/depth/image_raw/compressed
+  - /camera_chisel_track_down_left/depth/image_raw/compressed
+  - /chunks
+  - /joint_states
+  - /chisel/RoboChisel/FSM/state
+  - /tf
+  - /tf_static
+  - /chisel/wrench
+  - /chisel/mode
+  
+storage_path: "/mnt/data2"
+compression: false
+encryption: false
