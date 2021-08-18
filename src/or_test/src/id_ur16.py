@@ -34,6 +34,7 @@ class IDMonitor(object):
         self.jt_msg = [0]*6
         self.tm_msg = [0]*6
         self.threshold = np.array([70,100,100,40,40,40])
+        self.worst_offset = np.array([0,0, -150, 0 , 0 ,0])
 
         plugin = RaveCreateModule(self.env, 'urdf')
         self.name = plugin.SendCommand(
@@ -49,7 +50,7 @@ class IDMonitor(object):
             base_link = self.env.GetKinBody('or_ur').GetLink('chisel_base')
             base_link.SetStatic(True)
 
-            self.eef_link_str = 'chisel_chisel_link'
+            self.eef_link_str = 'chisel_tip_link'
 
             self.eef_link = self.env.GetKinBody(
                 'or_ur').GetLink(self.eef_link_str)
@@ -68,12 +69,26 @@ class IDMonitor(object):
 
             self.env.StopSimulation()
 
+    def setWorstOffset(self, offset):
+        self.worst_offset = offset
+
+    def getEFFForce(self,force):
+        body = self.env.GetKinBody(self.name)
+        link = body.GetLink('chisel_tip_link')
+        T = link.GetTransform()
+        adj = np.zeros((6,6))
+        adj[:3,:3] = T[:3,:3]
+        adj[3:,3:] = T[:3,:3]
+        return adj.dot(force)
+
+
 
     def calInverseDynamics(self, jt_data , eef_force):
         body = self.env.GetKinBody(self.name)
         self.setJointState(jt_data)
+        eef_force_body = self.getEFFForce(np.array(eef_force))
         link_id = body.GetLink(self.eef_link_str).GetIndex()
-        torque = np.array(body.ComputeInverseDynamics(dofaccelerations = [0.]*6,externalforcetorque={link_id:eef_force})) 
+        torque = np.array(body.ComputeInverseDynamics(dofaccelerations = [0.]*6,externalforcetorque={link_id:eef_force_body})) 
         return torque
 
     def calInverseDynamicsService(self, req):
@@ -83,14 +98,23 @@ class IDMonitor(object):
         res.je = self.wrapJointEffortMsg(torque)
         return res
 
-
     def calProtectivePrediction(self, jt_data , eef_force, eef_target):
         torque_expected = self.calInverseDynamics(jt_data,eef_force)
 
         eef_worst = deepcopy(eef_force)
-        eef_worst[2] -= 100
+
+
+        for idx in range(len(eef_worst)):
+            eef_worst[idx] += self.worst_offset[idx]
+        ## -------------------------------------
+        # eef_worst[2] -= 100
+        # eef_worst[0] += 70
+        ## -------------------------------------
 
         torque_worst = self.calInverseDynamics(jt_data,eef_worst)
+
+        # print(eef_force)
+        # print(eef_worst)
 
         torque_diff = np.abs(torque_expected-torque_worst) 
 
@@ -99,7 +123,6 @@ class IDMonitor(object):
 
         return True,torque_diff
 
-
     def calProtectivePredictionService(self, req):
         eef_force = wrench2List(req.eef_force)
         is_valid,torque_diff = self.calProtectivePrediction(req.js, eef_force, req.eef_target)
@@ -107,7 +130,6 @@ class IDMonitor(object):
         res.je_diff = self.wrapJointEffortMsg(torque_diff) 
         res.is_valid.data = is_valid
         return res
-
 
     def wrapJointEffortMsg(self, data):
         joints = JointState()
@@ -151,12 +173,13 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
 
-    if args.Visual:
-        misc.DrawAxes(self.env, matrixFromAxisAngle([0, 0, 0]))
-
     rospy.init_node('inverse_dynamics_monitor')
 
     idm = IDMonitor()
+        # if args.Visual:
+    
+    idm.env.SetViewer('qtcoin')
+    misc.DrawAxes(idm.env, matrixFromAxisAngle([0, 0, 0]))
 
     id_service = rospy.Service('/chisel/inverse_dynamics', inverse_dynamics, idm.calInverseDynamicsService)
     pp_service = rospy.Service('/chisel/protective_prediction', protective_prediction, idm.calProtectivePredictionService)

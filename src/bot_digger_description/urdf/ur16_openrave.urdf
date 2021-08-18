@@ -427,20 +427,25 @@
     </inertial>
   </link> -->
 
-  <!-- <joint name="chisel_tip_fixed_joint" type="fixed">
-    <parent link="chisel_tool0"/>
+  <joint name="chisel_tip_fixed_joint" type="fixed">
+    <parent link="chisel_chisel_link"/>
     <child link="chisel_tip_link"/>
-    <origin rpy="0.0 0.0 -0.897" xyz="-0.006 0.001 0.811"/>
-  </joint> -->
+    <origin rpy="0.0 0.0 0" xyz="0 -0.013 0.576"/>
+  </joint>
   <!-- frame directions: z along rotation axis, x out top of drill, y out side of drill -->
-  <!-- <link name="chisel_tip_link">
+  <link name="chisel_tip_link">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01"/>
+    </inertial>
     <collision>
       <geometry>
         <box size="0.01 0.01 0.01"/>
       </geometry>
-      <origin rpy="0 0 0" xyz="0 0 -0.01"/>
+      <origin rpy="0 0 0" xyz="0 0 0.0"/>
     </collision>
-  </link> -->
+  </link>
   <!-- </xacro:macro> -->
 </robot>
 

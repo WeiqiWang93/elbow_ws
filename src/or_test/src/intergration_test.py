@@ -29,6 +29,9 @@ class JointMonitor(object):
     def commandForceCallback(self, data):
         self.force_cmd = data
 
+        # DEBUG
+        self.checkPP(data)
+
 
     def checkID(self,data):
         rospy.wait_for_service('/chisel/inverse_dynamics')
@@ -57,6 +60,7 @@ class JointMonitor(object):
             req.js = self.js_msg
             w = Wrench()
             w.force.x,w.force.y,w.force.z = self.force_cmd.data[:3]
+            # w.force.x,w.force.y,w.force.z = (0,0,-150)
             w.torque.x,w.torque.y,w.torque.z = self.force_cmd.data[3:]
             req.eef_force = w
             res = serviceFun(req)
